@@ -79,6 +79,10 @@ echo "=================================================Coscheduled RN50 by throt
 echo "MB:0=10" > /sys/fs/resctrl/p0/schemata
 echo "MB:0=100" > /sys/fs/resctrl/p1/schemata
 
+#echo "L3:0=3ff\nMB:0=10" > /sys/fs/resctrl/p0/schemata
+#echo "
+
+
 #CLOS4 & CLOS7
 
 docker run --rm --name=rn50_hpt --cpu-shares=56 -e OMP_NUM_THREADS=56 mxnet_benchmark &
@@ -131,4 +135,4 @@ do
 done
 
 
-sleep 300
+
