@@ -30,4 +30,4 @@ LP or HP -> 265.51
 
 LP + HP No MBA -> 117.641 + 117.15
 
-LP + HP with MBA -> 116.11 + 67.60
+LP + HP with MBA -> 67.60 + 116.11
