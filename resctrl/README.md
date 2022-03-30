@@ -32,16 +32,22 @@ LP + HP No MBA -> 117.641 + 117.15
 
 LP + HP with MBA -> 67.60 + 116.11
 
+# Long Added these results
 
-in previours DRC validation HP 60% cores vs LP 40% cores
+in previous DRC validation HP 60% cores vs LP 40% cores
 in pqos test: 
+
 rn50 + rn50 
 
 HP	LP
 Baseline	149	122.1
+
 HWDRC	167.7	78
+
 hponly-hwdrc	176.6	0
+
 hponly	176	0
+
 MBA10	167.9	39.1
 
 in resctrl test:
