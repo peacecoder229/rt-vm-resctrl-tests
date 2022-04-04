@@ -15,8 +15,8 @@ ret=`cpupower idle-set -d 2`
 ret=`cpupower idle-set -d 3`
 
 echo "Set max, min to 2.7Ghz"
-ret=`cpupower frequency-set -u 2700Mhz`
-ret=`cpupower frequency-set -d 2700Mhz`
+ret=`cpupower frequency-set -u 2300Mhz`
+ret=`cpupower frequency-set -d 2300Mhz`
 
 pqos -R
 init_resctrl
