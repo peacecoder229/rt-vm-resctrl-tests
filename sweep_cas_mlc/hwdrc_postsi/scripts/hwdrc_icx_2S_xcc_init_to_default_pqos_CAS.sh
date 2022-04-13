@@ -38,8 +38,8 @@ LP_CORES=$2
 #ret=`cpupower frequency-set -u 2700Mhz`
 #ret=`cpupower frequency-set -d 2700Mhz`
 
-pqos -R
-umount resctrl
+#pqos -R
+#umount resctrl
 
 #pare g_CLOSToMEMCLOS for hwdrc_settings_update()
 #Assume MCLOS0 is highest priority and MCLOS1-2 has lower priority accordingly, MCLOS 3 with lowest priority
