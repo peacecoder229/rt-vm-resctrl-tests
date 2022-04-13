@@ -1,0 +1,15 @@
+INFO:logger:batch size = 128 for inference
+INFO:logger:num_batches = None
+INFO:logger:rgb_mean = 123.68,116.779,103.939
+INFO:logger:label_name = softmax_label
+INFO:logger:Input data shape = (3, 224, 224)
+INFO:logger:Dataset for inference: data/ILSVRC2012_img_val.rec
+[13:38:57] src/io/iter_image_recordio_2.cc:170: ImageRecordIOParser2: data/ILSVRC2012_img_val.rec, use 1 threads for decoding..
+INFO:logger:Loading symbol from file /mxnet/model/imagenet1k-resnet-50-v1-symbol.json
+INFO:logger:Loading params from file /mxnet/model/imagenet1k-resnet-50-v1-0000.params
+INFO:logger:Skipping the first 0 batches
+INFO:logger:Running model model/imagenet1k-resnet-50-v1-symbol.json for inference
+[13:38:58] src/operator/nn/mkldnn/mkldnn_base.cc:74: Allocate 147456 bytes with malloc directly
+[13:38:58] src/operator/nn/mkldnn/mkldnn_base.cc:74: Allocate 589824 bytes with malloc directly
+[13:38:58] src/operator/nn/mkldnn/mkldnn_base.cc:74: Allocate 2359296 bytes with malloc directly
+[13:38:58] src/operator/nn/mkldnn/mkldnn_base.cc:74: Allocate 9437184 bytes with malloc directly
