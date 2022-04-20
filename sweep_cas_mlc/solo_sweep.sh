@@ -5,7 +5,7 @@
 
 umount resctrl
 pqos -R
-: << 'END_COMMENT'
+
 for cores in {7..55..6}
 do
    for casValue in {15..255..30}
@@ -42,9 +42,9 @@ do
    done
 echo $cores
 done
-END_COMMENT
 
-for cores in {7..13..6}
+: << 'END_COMMENT'
+for cores in {7..55..6}
 do
    for casValue in {15..255..30}
    do
@@ -82,7 +82,7 @@ do
 echo $cores
 done
 
-
+END_COMMENT
 
 
 #for cores in {7..55..6}
