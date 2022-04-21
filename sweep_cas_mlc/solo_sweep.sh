@@ -15,7 +15,8 @@ do
       cd -
       echo "pqos"
       pqos -m "all:[0-$cores]"  >> ${cores}_mlc_monitor_temp.csv &
-      mlcScore=$(mlc --loaded_latency -R -t60 -d0 -k1-$cores | tail -1 | awk '{print $3}')
+      mlc --loaded_latency -W6 -t60 -d0 -k1-$cores | tail -1 | awk '{print $2,$3}' > temp_mlc
+
       killall -SIGINT pqos
       entries=$(grep -irn "CORE" ${cores}_mlc_monitor_temp.csv | cut -d : -f 1)
       for entry in $entries
@@ -26,7 +27,8 @@ do
         sed $line ${cores}_mlc_monitor_temp.csv | awk '{print $4}' >> ${cores}_mlc_LLC_monitor.csv
 	sed $line ${cores}_mlc_monitor_temp.csv | awk '{print $5}' >> ${cores}_mlc_MBL_monitor.csv
       done	      
-      
+      mlcBwScore=$(cat temp_mlc | awk '{print $1}')
+      mlcLaScore=$(cat temp_mlc | awk '{print $2}')
       MISSES=$(cat ${cores}_mlc_MISSES_monitor.csv | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }') 
       LLC=$(cat ${cores}_mlc_LLC_monitor.csv | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }') 
       MBL=$(cat ${cores}_mlc_MBL_monitor.csv | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }') 
@@ -36,8 +38,9 @@ do
       rm -rf ${cores}_mlc_MBL_monitor.csv
       rm -rf ${cores}_mlc_monitor_temp.csv	
       rm -rf ${cores}_mlc_LLC_monitor.csv
+      rm -rf temp_mlc
 
-      echo $cores,$casValue,$mlcScore,$MISSES,$LLC,$MBL >> ${cores}_mlc_monitor.csv
+      echo $cores,$casValue,$mlcBwScore,$mlcLaScore,$MISSES,$LLC,$MBL >> ${cores}_mlc_monitor.csv
 
    done
 echo $cores

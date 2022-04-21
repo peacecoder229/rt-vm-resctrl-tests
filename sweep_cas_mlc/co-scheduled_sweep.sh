@@ -44,14 +44,14 @@ echGMW-DCG-0604o $cores
 done
 END_COMMENT
 
-cores=8
-offset=7
+cores=14
+offset=13
 echo $cores
 echo $((cores+offset))
-for casValue in {195..255..30}
+for casValue in {15..105..30}
 do
    cd $PWD/hwdrc_postsi/scripts
-   ./hwdrc_icx_2S_xcc_init_to_default_pqos_CAS.sh $casValue $cores-$((cores+offset)) 0-$((cores-1))
+   ./hwdrc_icx_2S_xcc_init_to_default_pqos_CAS.sh $casValue 0-$((cores+offset)) 54-55 #$((cores-1))
    cd -
    echo "pqos"
    pqos -m "all:[$cores-$((cores+offset))]"  >> ${cores}_rn50_monitor_temp.csv &
