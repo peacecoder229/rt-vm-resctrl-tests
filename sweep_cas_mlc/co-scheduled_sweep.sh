@@ -60,7 +60,8 @@ do
    HPMON=$!
    mlc --loaded_latency -R -t550 -d0 -k1-$((cores-1)) | tail -1 | awk '{print $3}' > mlc_temp &
    MLCP1=$!
-   docker run --rm --name=rn50 --cpuset-cpus=$cores-$((cores+offset)) -e OMP_NUM_THREADS=$cores mxnet_benchmark 2>  temp
+   mlc --loaded_latency -R -t550 -d0 -k1-$((cores-1)) | tail -1 | awk 'print $3}' > mlc_temp2
+   #docker run --rm --name=rn50 --cpuset-cpus=$cores-$((cores+offset)) -e OMP_NUM_THREADS=$cores mxnet_benchmark 2>  temp
   
    kill -SIGINT $LPMON
   
