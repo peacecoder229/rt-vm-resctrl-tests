@@ -10,21 +10,27 @@ cores=28
 offset=$((cores-1))
 echo $cores
 echo $((cores+offset))
-for casValue in {15..30..30}
+
+declare -a exe_duration=("385" "180" "140" "130" "128" "128" "128" "128" "128")
+count=0
+for casValue in {15..255..30}
 do
-   #cd $PWD/hwdrc_postsi/scripts
-   #./hwdrc_icx_2S_xcc_init_to_default_pqos_CAS.sh $casValue 0-$((cores+offset)) 56-57 #$cores-$((cores+offset))
-   #cd -
+   cd $PWD/hwdrc_postsi/scripts
+   ./hwdrc_icx_2S_xcc_init_to_default_pqos_CAS.sh $casValue 0-$((cores-1)) $cores-$((cores+offset))
+   cd -
    echo "pqos"
+   #echo ${exe_duration[casValue]}
    pqos -m "all:[$cores-$((cores+offset))]"  >> ${cores}_rn50_monitor_temp.csv &
    LPMON=$!
    pqos -m "all:[0-$((cores-1))]" >> ${cores}_mlc_monitor_temp.csv &
    HPMON=$!
-   mlc --loaded_latency -R -t120 -d0 -c0 -k1-$((cores-1)) | grep 00000  > mlc_temp &
+   #mlc --loaded_latency -R -t"${exe_duration[$count]}" -d0 -c0 -k1-$((cores-1)) | grep 00000  > mlc_temp &
+   mlc --loaded_latency -R -t120 -d0 -c0 -k1-$((cores-1)) | grep 00000 > mlc_temp &
    MLCP1=$!
    docker run --rm --name=rn50 --cpuset-cpus=$cores-$((cores+offset)) -e OMP_NUM_THREADS=$cores mxnet_benchmark 2>  rn50_temp  
    kill -SIGINT $LPMON
   
+   count=$((count+1))
    
    wait $MLCP1
    killall -SIGINT pqos
