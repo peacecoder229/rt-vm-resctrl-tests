@@ -71,13 +71,13 @@ cd hwdrc_postsi/scripts
 ./hwdrc_icx_2S_xcc_init_to_default_resctrl.sh
 cd -
 
-sleep 1
+sleep 5
 
 #CLOS4 & CLOS7
 echo $$ > /sys/fs/resctrl/C04/tasks
 docker run --rm --name=rn50_hpt --cpu-shares=56 -e OMP_NUM_THREADS=56 mxnet_benchmark &
 #/home/mlc --loaded_latency -R -t200 -d0 &
-sleep 2
+sleep 5
 P1=$!
 echo $P1 > /sys/fs/resctrl/C04/tasks
 
@@ -104,7 +104,7 @@ echo $$ > /sys/fs/resctrl/C07/tasks
 docker run --rm --name=rn50_lpt --cpu-shares=56 -e OMP_NUM_THREADS=56 mxnet_benchmark &
 #/home/mlc --loaded_latency -R -t200 -d0 &
 #docker run --rm --cpuset-mems=0 -e RUNTIME=200 -e MSIZEMB=16384 -e MTHREAD=56 -e CTHREAD=2 stressapp:latest &
-sleep 2
+sleep 5
 P0=$!
 echo $P0 > /sys/fs/resctrl/C07/tasks
 
