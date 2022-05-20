@@ -3,8 +3,8 @@
 echo "Nginx Coscheduled MLC"
 
 
-cpupower frequency-set -u 2300000 -d 2300000
-echo off > /sys/devices/system/cpu/smt/control
+#cpupower frequency-set -u 2300000 -d 2300000
+#echo off > /sys/devices/system/cpu/smt/control
 
 for casValue in {15..255..30}
 do

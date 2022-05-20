@@ -1,0 +1,37 @@
+ffmpeg started on 2022-05-06 at 14:33:13
+Report written to "ffmpeg-20220506-143313.log"
+Command line:
+ffmpeg -i uhd1.webm -preset ultrafast -c:v libx264 -b:v 100M -bufsize 200M -maxrate 200M -threads 64 -g 120 -tune psnr -report uhd1.mp4
+ffmpeg version 4.2.6 Copyright (c) 2000-2022 the FFmpeg developers
+  built with gcc 8 (GCC)
+  configuration: --prefix=/usr --bindir=/usr/bin --datadir=/usr/share/ffmpeg --docdir=/usr/share/doc/ffmpeg --incdir=/usr/include/ffmpeg --libdir=/usr/lib64 --mandir=/usr/share/man --arch=x86_64 --optflags='-O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection' --extra-ldflags='-Wl,-z,relro -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld ' --extra-cflags=' ' --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libvo-amrwbenc --enable-version3 --enable-bzlib --disable-crystalhd --enable-fontconfig --enable-frei0r --enable-gcrypt --enable-gnutls --enable-ladspa --enable-libaom --enable-libdav1d --enable-libass --enable-libbluray --enable-libcdio --enable-libdrm --enable-libjack --enable-libfreetype --enable-libfrib  libavutil      56. 31.100 / 56. 31.100
+  libavcodec     58. 54.100 / 58. 54.100
+  libavformat    58. 29.100 / 58. 29.100
+  libavdevice    58.  8.100 / 58.  8.100
+  libavfilter     7. 57.100 /  7. 57.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  5.100 /  5.  5.100
+  libswresample   3.  5.100 /  3.  5.100
+  libpostproc    55.  5.100 / 55.  5.100
+Splitting the commandline.
+Reading option '-i' ... matched as input url with argument 'uhd1.webm'.
+Reading option '-preset' ... matched as AVOption 'preset' with argument 'ultrafast'.
+Reading option '-c:v' ... matched as option 'c' (codec name) with argument 'libx264'.
+Reading option '-b:v' ... matched as option 'b' (video bitrate (please use -b:v)) with argument '100M'.
+Reading option '-bufsize' ... matched as AVOption 'bufsize' with argument '200M'.
+Reading option '-maxrate' ... matched as AVOption 'maxrate' with argument '200M'.
+Reading option '-threads' ... matched as AVOption 'threads' with argument '64'.
+Reading option '-g' ... matched as AVOption 'g' with argument '120'.
+Reading option '-tune' ... matched as AVOption 'tune' with argument 'psnr'.
+Reading option '-report' ... matched as option 'report' (generate a report) with argument '1'.
+Reading option 'uhd1.mp4' ... matched as output url.
+Finished splitting the commandline.
+Parsing a group of options: global .
+Applying option report (generate a report) with argument 1.
+Successfully parsed a group of options.
+Parsing a group of options: input url uhd1.webm.
+Successfully parsed a group of options.
+Opening an input file: uhd1.webm.
+[NULL @ 0x558fd8ebdc00] Opening 'uhd1.webm' for reading
+[file @ 0x558fd8ebe680] Setting default whitelist 'file,crypto'
+uhd1.webm: No such file or directory

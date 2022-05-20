@@ -6,17 +6,18 @@
 umount resctrl
 pqos -R
 
-for cores in {7..55..6}
+for cores in {7..56..2}
 do
-   for casValue in {15..255..30}
-   do
-      cd $PWD/hwdrc_postsi/scripts
-      ./hwdrc_icx_2S_xcc_init_to_default_pqos_CAS.sh $casValue 0-$cores 56-57
-      cd -
+   #for casValue in {15..15..30}
+   #do
+      #cd $PWD/hwdrc_postsi/scripts
+      #./hwdrc_icx_2S_xcc_init_to_default_pqos_CAS.sh $casValue 0-$cores 56-57
+      #cd -
       echo "pqos"
       pqos -m "all:[0-$cores]"  >> ${cores}_mlc_monitor_temp.csv &
       #mlc --loaded_latency -W6 -t60 -d0 -k1-$cores | tail -1 | awk '{print $2,$3}' > temp_mlc
-      mlc --loaded_latency -W2 -t60 -c0 -k1-$cores -d0 -e | tail -1 | awk '{print $2,$3}' > temp_mlc
+      mlc --loaded_latency -W6 -t60 -c0 -k1-$cores -d0  | tail -1 | awk '{print $2,$3}' > temp_mlc
+      #mlc --loaded_latency -W2 -t60 -c0 -k1-$cores -d0 | tail -1 | awk '{print $2,$3}' > temp_mlc
       killall -SIGINT pqos
       entries=$(grep -irn "CORE" ${cores}_mlc_monitor_temp.csv | cut -d : -f 1)
       for entry in $entries
@@ -42,7 +43,7 @@ do
 
       echo $cores,$casValue,$mlcBwScore,$mlcLaScore,$MISSES,$LLC,$MBL >> ${cores}_mlc_monitor.csv
 
-   done
+   #done
 echo $cores
 done
 

@@ -14,18 +14,42 @@ cpupower frequency-set -u 2300000 -d 2300000
 
 rm -rf *.log
 rm -rf *.csv
-rm -rf sample_28.mp4
+rm -rf uhd*.mp4
 
-pqos -m "all:[0-32]"  >> monitor_temp.csv &
-
-#taskset -c 0-35 ffmpeg -i 1080p_video.mp4 -preset veryslow -c:v libx264 -b:v 50M -bufsize 20M -maxrate 10.5M -threads 36 -g 120 -tune psnr -report sample_28.mp4 
+pqos -m "all:[0-55]"  >> monitor_temp.csv &
 
 
-#taskset -c 0-35 ffmpeg -i uhd.webm -c:v libx264 -threads 36 -g 120 -tune psnr -report sample_uhd.mp4 
-taskset -c 0-15 ffmpeg -i uhd1.webm -crf 0 -c:v libx264 -report vid-report.mp4 &
-taskset -c 16-31 ffmpeg -i uhd2.webm -crf 0 -c:v libx264 -report sample-16.mp4
 
-sleep 1
+
+taskset -c 0-7 ffmpeg -i uhd1.webm -preset ultrafast -c:v libx264 -b:v 100M -bufsize 200M -maxrate 200M -threads 32 -g 120 -tune psnr -report uhd1.mp4 2> cores_8_ffmpeg.csv &
+
+taskset -c 8-15 ffmpeg -i uhd1.webm -preset ultrafast -c:v libx264 -b:v 100M -bufsize 200M -maxrate 200M -threads 32 -g 120 -tune psnr -report uhd2.mp4 2> cores_16_ffmpeg.csv & 
+
+taskset -c 16-23 ffmpeg -i uhd1.webm -preset ultrafast -c:v libx264 -b:v 100M -bufsize 200M -maxrate 200M -threads 32 -g 120 -tune psnr -report uhd3.mp4 2> cores_24_ffmpeg.csv &
+
+taskset -c 24-31 ffmpeg -i uhd1.webm -preset ultrafast -c:v libx264 -b:v 100M -bufsize 200M -maxrate 200M -threads 32 -g 120 -tune psnr -report uhd4.mp4 2> cores_32_ffmpeg.csv &
+
+
+taskset -c 32-39 ffmpeg -i uhd1.webm -preset ultrafast -c:v libx264 -b:v 100M -bufsize 200M -maxrate 200M -threads 32 -g 120 -tune psnr -report uhd5.mp4 2> cores_40_ffmpeg.csv &
+
+
+taskset -c 40-47 ffmpeg -i uhd1.webm -preset ultrafast -c:v libx264 -b:v 100M -bufsize 200M -maxrate 200M -threads 32 -g 120 -tune psnr -report uhd6.mp4 2> cores_48_ffmpeg.csv &
+
+taskset -c 48-55 ffmpeg -i uhd1.webm -preset ultrafast -c:v libx264 -b:v 100M -bufsize 200M -maxrate 200M -threads 32 -g 120 -tune psnr -report uhd7.mp4 2> cores_55_ffmpeg.csv &
+
+
+
+#taskset -c 40-47 ffmpeg -i uhd2.webm -preset ultrafast -c:v libx264 -b:v 100M -bufsize 200M -maxrate 200M -threads 32 -g 120 -tune psnr -report uhd6.mp4 &
+P1=$!
+
+#nice -n -5 taskset -c 16-31 ffmpeg -i uhd2.webm -preset ultrafast -c:v libx264 -b:v 100M -bufsize 100M -maxrate 200M -threads 16 -g 120 -tune psnr -report uhd2.mp4
+
+#mlc --loaded_latency -W6 -t400 -d0 -c0 -k1-15
+
+
+wait $P1
+
+#sleep 1
 killall -SIGINT pqos
 
 entries=$(grep -irn "CORE" monitor_temp.csv | cut -d : -f 1)
@@ -42,4 +66,4 @@ MISSES=$(cat MISSES_monitor.csv | awk '{ sum += $1; n++ } END { if (n > 0) print
 LLC=$(cat LLC_monitor.csv | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }')
 MBL=$(cat MBL_monitor.csv | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }')
 
-echo $MISSES,$MBL,$LLC
+echo $MISSES,$LLC,$MBL
