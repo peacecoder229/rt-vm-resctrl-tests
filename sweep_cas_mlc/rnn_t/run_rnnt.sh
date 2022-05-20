@@ -1,7 +1,29 @@
 #!/bin/bash
 
+echo "Remove previously active containers"
 
-docker exec pytorch_spr_2022_ww16 /bin/bash -c "/home/dataset/pytorch/rnnt.sh $total_cores"
+docker container stop $(docker container ls -aq)
+
+docker container rm $(docker container ls -aq)
+
+
+
+sleep 10
+
+docker pull dcsorepo.jf.intel.com/dlboost/pytorch:2022_ww16
+
+docker run -itd --privileged --net host --shm-size 4g --name pytorch_spr_2022_ww$1 \
+           -v /home/dataset/pytorch:/home/dataset/pytorch \
+           -v /home/dl_boost/log/pytorch:/home/dl_boost/log/pytorch \
+           dcsorepo.jf.intel.com/dlboost/pytorch:2022_ww16 bash
+
+
+sleep 10
+cp rnnt.sh /home/dataset/pytorch/
+
+total_cores=$1
+
+docker exec pytorch_spr_2022_ww$1 /bin/bash -c "/home/dataset/pytorch/rnnt.sh $total_cores"
 
 cd /home/dataset/pytorch
 

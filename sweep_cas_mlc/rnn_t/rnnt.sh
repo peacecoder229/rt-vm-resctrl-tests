@@ -1,12 +1,4 @@
 #/bin/bash
-
-docker pull dcsorepo.jf.intel.com/dlboost/pytorch:2022_ww16
-
-docker run -itd --privileged --net host --shm-size 4g --name pytorch_spr_2022_ww16 \
-           -v /home/dataset/pytorch:/home/dataset/pytorch \
-           -v /home/dl_boost/log/pytorch:/home/dl_boost/log/pytorch \
-           dcsorepo.jf.intel.com/dlboost/pytorch:2022_ww16 bash
-
 total_cores=$1
 instances=$((total_cores/4))
 
