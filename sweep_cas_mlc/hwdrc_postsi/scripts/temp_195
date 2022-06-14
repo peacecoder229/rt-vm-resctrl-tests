@@ -1,0 +1,1205 @@
+NOTE:  Mixed use of MSR and kernel interfaces to manage
+       CAT or CMT & MBM may lead to unexpected behavior.
+TIME 2022-06-08 05:24:32
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.93    1026235k    106288.0    107280.2         9.5
+TIME 2022-06-08 05:24:33
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.70    1394673k    107520.0    136594.9         4.3
+TIME 2022-06-08 05:24:34
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.76    1168396k    106960.0    115930.1        62.6
+TIME 2022-06-08 05:24:35
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.87     548306k    107408.0     48622.1         0.0
+TIME 2022-06-08 05:24:36
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.71    1426733k    107520.0    135298.8         1.5
+TIME 2022-06-08 05:24:37
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.69    1205761k    106960.0    117764.0         1.6
+TIME 2022-06-08 05:24:38
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.76     642017k    107296.0     60685.1         2.0
+TIME 2022-06-08 05:24:39
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.74     594489k    105056.0     56240.7         4.8
+TIME 2022-06-08 05:24:40
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     215385k    107408.0     20159.2         0.2
+TIME 2022-06-08 05:24:41
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     236429k    107520.0     21273.5         2.3
+TIME 2022-06-08 05:24:42
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     362360k    107072.0     32430.7         1.0
+TIME 2022-06-08 05:24:43
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     529974k    107520.0     48359.8         2.6
+TIME 2022-06-08 05:24:44
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78     764241k    107408.0     71316.9         5.2
+TIME 2022-06-08 05:24:45
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     754894k    107520.0     67643.2         0.0
+TIME 2022-06-08 05:24:46
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84     317845k    107520.0     23689.2         2.5
+TIME 2022-06-08 05:24:47
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     475281k    107408.0     40537.9         0.2
+TIME 2022-06-08 05:24:48
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.77    1274491k    107520.0    118529.4         4.9
+TIME 2022-06-08 05:24:49
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80    1180384k    107520.0    114771.6         0.8
+TIME 2022-06-08 05:24:50
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.88     818131k    107520.0     73001.7         2.2
+TIME 2022-06-08 05:24:51
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.77    1579103k    107520.0    152020.9         5.2
+TIME 2022-06-08 05:24:52
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.74    1605761k    107520.0    153134.3         0.4
+TIME 2022-06-08 05:24:53
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.77    1339470k    107520.0    133407.9         0.1
+TIME 2022-06-08 05:24:54
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     611652k    107520.0     52584.1         3.1
+TIME 2022-06-08 05:24:55
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.76    1316395k    107520.0    123466.3         3.4
+TIME 2022-06-08 05:24:56
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.73    1043439k    107520.0    101176.2         0.0
+TIME 2022-06-08 05:24:57
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.76     609750k    107520.0     57125.1         3.5
+TIME 2022-06-08 05:24:58
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.77     527193k     99120.0     49945.0         0.7
+TIME 2022-06-08 05:24:59
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     145826k    106624.0     12769.2         2.4
+TIME 2022-06-08 05:25:00
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     337543k    107408.0     30912.3         2.3
+TIME 2022-06-08 05:25:01
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     466912k    107296.0     42140.1         3.3
+TIME 2022-06-08 05:25:02
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78     547826k    107408.0     50155.2         1.0
+TIME 2022-06-08 05:25:03
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     790662k    107408.0     73220.2         1.4
+TIME 2022-06-08 05:25:04
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     614193k    107520.0     53222.6         1.4
+TIME 2022-06-08 05:25:05
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     466606k    107520.0     39403.7         0.2
+TIME 2022-06-08 05:25:06
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86     602630k    107296.0     53213.7         2.1
+TIME 2022-06-08 05:25:07
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79    1392853k    107520.0    131305.5         4.3
+TIME 2022-06-08 05:25:08
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79    1100846k    107520.0    103841.7         1.0
+TIME 2022-06-08 05:25:09
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.89    1047223k    107408.0     98482.2         2.6
+TIME 2022-06-08 05:25:10
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.77    1590266k    107520.0    155382.5         3.0
+TIME 2022-06-08 05:25:11
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.76    1561629k    107520.0    147942.8         1.4
+TIME 2022-06-08 05:25:12
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80    1148667k    107520.0    108725.1         1.6
+TIME 2022-06-08 05:25:13
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84     800250k    107520.0     72713.5         3.5
+TIME 2022-06-08 05:25:14
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78    1341742k    105952.0    130533.4         1.8
+TIME 2022-06-08 05:25:15
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.75     829693k    106400.0     76119.5         1.4
+TIME 2022-06-08 05:25:16
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78     546778k    106176.0     51233.7         3.0
+TIME 2022-06-08 05:25:17
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     231776k    102704.0     20911.4         2.0
+TIME 2022-06-08 05:25:18
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     266794k    103712.0     24273.3         2.2
+TIME 2022-06-08 05:25:19
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     549179k    107520.0     51059.5         3.5
+TIME 2022-06-08 05:25:20
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     354678k    107296.0     30762.9         1.8
+TIME 2022-06-08 05:25:21
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     618791k    107520.0     56572.9         1.2
+TIME 2022-06-08 05:25:22
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     859205k    107520.0     78419.6         1.8
+TIME 2022-06-08 05:25:23
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     527571k    107296.0     45226.2         0.9
+TIME 2022-06-08 05:25:24
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86     628318k    107520.0     55574.1         2.3
+TIME 2022-06-08 05:25:25
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     915452k    107520.0     83177.5         4.0
+TIME 2022-06-08 05:25:26
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.77    1422031k    107520.0    137017.3         0.5
+TIME 2022-06-08 05:25:27
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.88    1056354k    107520.0     98839.1         3.6
+TIME 2022-06-08 05:25:28
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1391680k    107520.0    131519.9         2.4
+TIME 2022-06-08 05:25:29
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81    1556524k    107296.0    150377.7         2.5
+TIME 2022-06-08 05:25:30
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.77    1427827k    107408.0    137820.9         1.8
+TIME 2022-06-08 05:25:31
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     783534k    107296.0     70169.1         2.0
+TIME 2022-06-08 05:25:32
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80    1136098k    107520.0    105892.0         4.3
+TIME 2022-06-08 05:25:33
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78     959881k    106848.0     92395.4         0.0
+TIME 2022-06-08 05:25:34
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78     533748k    107184.0     49808.8         3.7
+TIME 2022-06-08 05:25:35
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78     454494k    106736.0     42442.8         0.2
+TIME 2022-06-08 05:25:36
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     251373k    107072.0     22715.7         1.9
+TIME 2022-06-08 05:25:37
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     448199k    107520.0     41632.8         2.6
+TIME 2022-06-08 05:25:38
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     476157k    107408.0     43027.4         1.3
+TIME 2022-06-08 05:25:39
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     538306k    107520.0     48061.7         2.4
+TIME 2022-06-08 05:25:40
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     672897k    107520.0     60918.2         2.1
+TIME 2022-06-08 05:25:41
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84     714064k    107520.0     64213.2         0.0
+TIME 2022-06-08 05:25:42
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     682935k    107072.0     60616.6         1.5
+TIME 2022-06-08 05:25:43
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     694807k    107520.0     60254.4         3.0
+TIME 2022-06-08 05:25:44
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80    1421869k    107520.0    134356.8         3.2
+TIME 2022-06-08 05:25:45
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1236942k    107296.0    119320.7         0.8
+TIME 2022-06-08 05:25:46
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.88    1181910k    107520.0    111735.8         3.9
+TIME 2022-06-08 05:25:47
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83    1518057k    107520.0    145263.0         3.1
+TIME 2022-06-08 05:25:48
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78    1485515k    107296.0    140598.8         1.9
+TIME 2022-06-08 05:25:49
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78     976443k    107520.0     92668.3         1.5
+TIME 2022-06-08 05:25:50
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     912813k    107520.0     85489.4         3.9
+TIME 2022-06-08 05:25:51
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78    1132148k    107520.0    109308.4         1.0
+TIME 2022-06-08 05:25:52
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78     586978k    106512.0     53257.0         1.1
+TIME 2022-06-08 05:25:53
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78     491735k    106288.0     45779.0         1.9
+TIME 2022-06-08 05:25:54
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     239930k    106176.0     21504.1         2.3
+TIME 2022-06-08 05:25:55
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     367884k    107408.0     33599.9         3.5
+TIME 2022-06-08 05:25:56
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     581449k    107296.0     53472.9         1.2
+TIME 2022-06-08 05:25:57
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     453430k    107296.0     39872.9         1.2
+TIME 2022-06-08 05:25:58
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     592086k    107520.0     53010.2         0.1
+TIME 2022-06-08 05:25:59
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     852107k    106960.0     77578.8         3.3
+TIME 2022-06-08 05:26:00
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     684552k    107520.0     61713.3         1.4
+TIME 2022-06-08 05:26:01
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84     668223k    107520.0     58313.2         3.2
+TIME 2022-06-08 05:26:02
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1201424k    107520.0    111474.7         2.0
+TIME 2022-06-08 05:26:03
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81    1446642k    107408.0    140967.0         1.9
+TIME 2022-06-08 05:26:04
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.88    1159215k    107520.0    109288.2         2.7
+TIME 2022-06-08 05:26:05
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1360160k    107520.0    127565.9         2.1
+TIME 2022-06-08 05:26:06
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80    1481289k    107520.0    142098.4         2.1
+TIME 2022-06-08 05:26:07
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79    1254605k    107520.0    120379.9         1.9
+TIME 2022-06-08 05:26:08
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     796963k    107520.0     73301.2         1.2
+TIME 2022-06-08 05:26:09
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81    1073393k    107408.0    101546.8         3.4
+TIME 2022-06-08 05:26:10
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.77     738698k    103600.0     69442.7         1.5
+TIME 2022-06-08 05:26:11
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     442055k    104720.0     41039.1         2.3
+TIME 2022-06-08 05:26:12
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     287628k    107072.0     25933.8         2.2
+TIME 2022-06-08 05:26:13
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     318174k    107520.0     28723.1         1.6
+TIME 2022-06-08 05:26:14
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     588892k    107520.0     54396.1         2.8
+TIME 2022-06-08 05:26:15
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     511824k    106848.0     45684.8         0.5
+TIME 2022-06-08 05:26:16
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     541873k    107520.0     47949.6         2.4
+TIME 2022-06-08 05:26:17
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     831246k    107296.0     74986.4         3.1
+TIME 2022-06-08 05:26:18
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     707279k    107520.0     64174.6         1.4
+TIME 2022-06-08 05:26:19
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     714678k    107520.0     64092.7         1.0
+TIME 2022-06-08 05:26:20
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86     952160k    107408.0     86536.7         2.8
+TIME 2022-06-08 05:26:21
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.77    1527842k    107520.0    149706.3         2.2
+TIME 2022-06-08 05:26:22
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1291521k    107184.0    121070.0         1.4
+TIME 2022-06-08 05:26:23
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83    1193890k    107520.0    112314.1         3.7
+TIME 2022-06-08 05:26:24
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84    1460134k    107296.0    138397.8         1.3
+TIME 2022-06-08 05:26:25
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79    1417250k    107520.0    136855.6         1.9
+TIME 2022-06-08 05:26:26
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     831789k    107520.0     76215.1         0.8
+TIME 2022-06-08 05:26:27
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     959217k    107296.0     89566.6         2.7
+TIME 2022-06-08 05:26:28
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     791848k    106960.0     75685.1         2.1
+TIME 2022-06-08 05:26:29
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     446465k    107072.0     41643.1         1.5
+TIME 2022-06-08 05:26:30
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     377451k    106176.0     34650.5         1.6
+TIME 2022-06-08 05:26:31
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     285839k    106960.0     25681.9         1.5
+TIME 2022-06-08 05:26:32
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     545466k    107408.0     50549.3         2.0
+TIME 2022-06-08 05:26:33
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     592621k    107520.0     53543.1         1.5
+TIME 2022-06-08 05:26:34
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     490129k    107520.0     42844.7         2.5
+TIME 2022-06-08 05:26:35
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     679924k    107408.0     60379.2         1.6
+TIME 2022-06-08 05:26:36
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     794085k    107520.0     72053.7         0.4
+TIME 2022-06-08 05:26:37
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     825313k    107184.0     76199.2         2.6
+TIME 2022-06-08 05:26:38
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86     855903k    107296.0     76824.6         1.8
+TIME 2022-06-08 05:26:39
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79    1465182k    107520.0    140574.9         4.0
+TIME 2022-06-08 05:26:40
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1353976k    107408.0    129356.1         0.8
+TIME 2022-06-08 05:26:41
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86    1166777k    107520.0    110517.4         3.2
+TIME 2022-06-08 05:26:42
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1420258k    107520.0    134623.3         2.0
+TIME 2022-06-08 05:26:43
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79    1421054k    107520.0    135583.8         2.1
+TIME 2022-06-08 05:26:44
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78     960560k    107520.0     89914.0         0.2
+TIME 2022-06-08 05:26:45
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     846976k    107520.0     79014.9         3.2
+TIME 2022-06-08 05:26:46
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     867552k    107072.0     82640.4         3.5
+TIME 2022-06-08 05:26:47
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     471682k    107408.0     43438.8         2.1
+TIME 2022-06-08 05:26:48
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     413488k    105952.0     38181.3         1.1
+TIME 2022-06-08 05:26:49
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     288140k    106512.0     25831.6         1.5
+TIME 2022-06-08 05:26:50
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     531675k    106400.0     48844.6         3.3
+TIME 2022-06-08 05:26:51
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     608389k    107296.0     55837.8         1.2
+TIME 2022-06-08 05:26:52
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     453190k    107520.0     38912.2         1.2
+TIME 2022-06-08 05:26:53
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     642811k    107296.0     56839.0         1.9
+TIME 2022-06-08 05:26:54
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84     836573k    107520.0     76680.5         3.2
+TIME 2022-06-08 05:26:55
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86     833347k    107296.0     76606.1         0.0
+TIME 2022-06-08 05:26:56
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86     892191k    107408.0     80856.2         2.8
+TIME 2022-06-08 05:26:57
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83    1322888k    107520.0    125450.7         3.7
+TIME 2022-06-08 05:26:58
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81    1428031k    107296.0    137079.6         2.7
+TIME 2022-06-08 05:26:59
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1208669k    107408.0    114961.7         0.5
+TIME 2022-06-08 05:27:00
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1349347k    107408.0    127951.8         3.5
+TIME 2022-06-08 05:27:01
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79    1407827k    107520.0    132909.5         0.7
+TIME 2022-06-08 05:27:02
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79    1094163k    107520.0    103938.4         1.0
+TIME 2022-06-08 05:27:03
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     771661k    107296.0     71579.2         3.5
+TIME 2022-06-08 05:27:04
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     898711k    107296.0     85876.4         1.5
+TIME 2022-06-08 05:27:05
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     501875k    106736.0     46015.6         1.3
+TIME 2022-06-08 05:27:06
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     388553k    105728.0     35761.5         2.6
+TIME 2022-06-08 05:27:07
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     292915k    103376.0     26392.6         0.9
+TIME 2022-06-08 05:27:08
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     502254k    107408.0     46208.3         2.2
+TIME 2022-06-08 05:27:09
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     636242k    106960.0     58824.7         1.9
+TIME 2022-06-08 05:27:10
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     502772k    107296.0     44304.3         1.5
+TIME 2022-06-08 05:27:11
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     647561k    107520.0     57365.7         1.0
+TIME 2022-06-08 05:27:12
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     796717k    107408.0     72680.8         1.3
+TIME 2022-06-08 05:27:13
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     807009k    107520.0     73687.2         3.5
+TIME 2022-06-08 05:27:14
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86     965026k    107296.0     89081.8         1.8
+TIME 2022-06-08 05:27:15
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83    1235527k    107520.0    116138.3         2.3
+TIME 2022-06-08 05:27:16
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1441474k    107408.0    138740.1         2.1
+TIME 2022-06-08 05:27:17
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86    1297826k    107520.0    122415.9         3.4
+TIME 2022-06-08 05:27:18
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84    1296520k    107520.0    123360.2         2.0
+TIME 2022-06-08 05:27:19
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1341711k    107296.0    125977.6         9.0
+TIME 2022-06-08 05:27:20
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.77    1201860k    107520.0    115376.0         0.0
+TIME 2022-06-08 05:27:21
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     730839k    107184.0     67479.2         1.9
+TIME 2022-06-08 05:27:22
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     929811k    107520.0     89508.6         3.1
+TIME 2022-06-08 05:27:23
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     525323k    106624.0     47799.7         0.7
+TIME 2022-06-08 05:27:24
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     376135k    107408.0     34393.3         3.0
+TIME 2022-06-08 05:27:25
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     330336k    107296.0     29945.8         1.3
+TIME 2022-06-08 05:27:26
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     463027k    106400.0     42307.7         1.6
+TIME 2022-06-08 05:27:27
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     611196k    107296.0     56285.5         3.0
+TIME 2022-06-08 05:27:28
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     495877k    107408.0     43354.2         1.2
+TIME 2022-06-08 05:27:29
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     650883k    107520.0     57564.0         0.7
+TIME 2022-06-08 05:27:30
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     739888k    107408.0     66871.7         2.4
+TIME 2022-06-08 05:27:31
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     817474k    107520.0     74710.1         1.2
+TIME 2022-06-08 05:27:32
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.87    1006358k    107408.0     93563.4         2.3
+TIME 2022-06-08 05:27:33
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84    1127913k    107408.0    104521.9         5.0
+TIME 2022-06-08 05:27:34
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81    1458289k    107520.0    141504.3         0.0
+TIME 2022-06-08 05:27:35
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86    1353561k    107520.0    126959.4         3.9
+TIME 2022-06-08 05:27:36
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1277061k    107520.0    121100.1         1.3
+TIME 2022-06-08 05:27:37
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83    1295202k    107520.0    122774.9         2.3
+TIME 2022-06-08 05:27:38
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78    1286298k    107184.0    123367.8         2.4
+TIME 2022-06-08 05:27:39
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     727119k    107296.0     66768.8         0.2
+TIME 2022-06-08 05:27:40
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     907108k    104608.0     86804.6         3.1
+TIME 2022-06-08 05:27:41
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     550030k    106288.0     50417.9         1.5
+TIME 2022-06-08 05:27:42
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     391179k    106960.0     35953.1         2.7
+TIME 2022-06-08 05:27:43
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     333344k    106400.0     30332.6         0.4
+TIME 2022-06-08 05:27:44
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     416032k    106736.0     37522.5         1.9
+TIME 2022-06-08 05:27:45
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     635044k    107296.0     58590.0         3.3
+TIME 2022-06-08 05:27:46
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     523560k    106736.0     46230.5         0.8
+TIME 2022-06-08 05:27:47
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     661996k    107520.0     58934.2         3.3
+TIME 2022-06-08 05:27:48
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     679483k    107520.0     60486.5         0.7
+TIME 2022-06-08 05:27:49
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84     836284k    107520.0     76287.4         2.5
+TIME 2022-06-08 05:27:50
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.87    1066874k    107072.0    100365.9         1.0
+TIME 2022-06-08 05:27:51
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84    1073306k    107520.0     98098.0         5.5
+TIME 2022-06-08 05:27:52
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81    1457376k    107520.0    140797.1         1.3
+TIME 2022-06-08 05:27:53
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86    1355471k    107520.0    127205.8         2.0
+TIME 2022-06-08 05:27:54
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1257817k    107520.0    119651.0         1.5
+TIME 2022-06-08 05:27:55
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84    1267260k    107520.0    120701.3         2.6
+TIME 2022-06-08 05:27:56
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78    1323209k    107520.0    126775.1         1.6
+TIME 2022-06-08 05:27:57
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     760329k    107072.0     69852.8         3.2
+TIME 2022-06-08 05:27:58
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     880310k    105952.0     83611.9         3.2
+TIME 2022-06-08 05:27:59
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     565143k    107184.0     52521.4         1.0
+TIME 2022-06-08 05:28:00
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     395481k    107520.0     36376.4         1.2
+TIME 2022-06-08 05:28:01
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     365650k    106624.0     33547.2         2.1
+TIME 2022-06-08 05:28:02
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     390973k    106288.0     35084.9         1.1
+TIME 2022-06-08 05:28:03
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     613077k    106848.0     56635.1         2.8
+TIME 2022-06-08 05:28:04
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     566753k    106400.0     50433.8         1.4
+TIME 2022-06-08 05:28:05
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     660652k    107408.0     59223.8         1.4
+TIME 2022-06-08 05:28:06
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84     652377k    107408.0     57367.0         2.7
+TIME 2022-06-08 05:28:07
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84     810419k    107520.0     73791.5         1.3
+TIME 2022-06-08 05:28:08
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1104950k    107296.0    103839.5         0.8
+TIME 2022-06-08 05:28:09
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86    1034405k    107408.0     95864.8         3.4
+TIME 2022-06-08 05:28:10
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81    1433649k    107520.0    136786.1         2.2
+TIME 2022-06-08 05:28:11
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1422824k    107408.0    134546.0         1.9
+TIME 2022-06-08 05:28:12
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83    1269125k    107520.0    120537.4         2.4
+TIME 2022-06-08 05:28:13
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1252918k    107408.0    119515.2         2.3
+TIME 2022-06-08 05:28:14
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79    1319927k    107408.0    125681.6         0.0
+TIME 2022-06-08 05:28:15
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     797989k    106400.0     73682.1         2.4
+TIME 2022-06-08 05:28:16
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     864147k    106960.0     82100.0         4.0
+TIME 2022-06-08 05:28:17
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78     579409k    103376.0     53996.7         0.9
+TIME 2022-06-08 05:28:18
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     361667k    107408.0     33214.2         2.1
+TIME 2022-06-08 05:28:19
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     376537k    107296.0     34441.2         2.6
+TIME 2022-06-08 05:28:20
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     381034k    107296.0     34175.1         0.3
+TIME 2022-06-08 05:28:21
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     607195k    107520.0     56007.9         3.3
+TIME 2022-06-08 05:28:22
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     577382k    107520.0     51668.6        34.2
+TIME 2022-06-08 05:28:23
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     689231k    107408.0     62304.8        18.2
+TIME 2022-06-08 05:28:24
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     639266k    107408.0     56226.5        30.5
+TIME 2022-06-08 05:28:25
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     759113k    107520.0     67475.1         0.0
+TIME 2022-06-08 05:28:26
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86    1155679k    107296.0    110023.7         2.3
+TIME 2022-06-08 05:28:27
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1038301k    107520.0     96001.4         4.0
+TIME 2022-06-08 05:28:28
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81    1385624k    107520.0    131137.6         1.6
+TIME 2022-06-08 05:28:29
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1411418k    107184.0    133811.0         1.3
+TIME 2022-06-08 05:28:30
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81    1306975k    107520.0    124199.2         1.2
+TIME 2022-06-08 05:28:31
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1232153k    107520.0    117426.4         2.7
+TIME 2022-06-08 05:28:32
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79    1277956k    107520.0    122220.4         3.3
+TIME 2022-06-08 05:28:33
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     833285k    107520.0     77052.9         1.6
+TIME 2022-06-08 05:28:34
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     836263k    105616.0     79111.6         1.9
+TIME 2022-06-08 05:28:35
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78     629384k    106736.0     58792.9         2.8
+TIME 2022-06-08 05:28:36
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     376289k    107296.0     34577.9         1.3
+TIME 2022-06-08 05:28:37
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     409319k    107184.0     37798.1         2.7
+TIME 2022-06-08 05:28:38
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     370828k    107296.0     33211.2         0.5
+TIME 2022-06-08 05:28:39
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     557302k    107296.0     50930.1         2.6
+TIME 2022-06-08 05:28:40
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     573317k    107184.0     51259.6         1.0
+TIME 2022-06-08 05:28:41
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     712065k    107408.0     64942.2         1.3
+TIME 2022-06-08 05:28:42
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     632667k    107520.0     55877.1         1.9
+TIME 2022-06-08 05:28:43
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84     745114k    107520.0     66105.4         2.1
+TIME 2022-06-08 05:28:44
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1175786k    107520.0    111041.1         2.3
+TIME 2022-06-08 05:28:45
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1041143k    107520.0     97622.1         1.8
+TIME 2022-06-08 05:28:46
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1318518k    107520.0    124150.6         3.5
+TIME 2022-06-08 05:28:47
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84    1432412k    107296.0    135800.1         1.0
+TIME 2022-06-08 05:28:48
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1349336k    107520.0    128384.7         0.9
+TIME 2022-06-08 05:28:49
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84    1221943k    107520.0    115738.8         1.9
+TIME 2022-06-08 05:28:50
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80    1225537k    107520.0    117223.9         2.4
+TIME 2022-06-08 05:28:51
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     905630k    107296.0     84710.0         3.0
+TIME 2022-06-08 05:28:52
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     812522k    106176.0     76486.7        73.4
+TIME 2022-06-08 05:28:53
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78     631751k    107296.0     59086.3         0.0
+TIME 2022-06-08 05:28:54
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     383196k    105840.0     35405.6         2.0
+TIME 2022-06-08 05:28:55
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     409702k    105056.0     37977.0         1.5
+TIME 2022-06-08 05:28:56
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     384754k    106960.0     34362.3        22.3
+TIME 2022-06-08 05:28:57
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     516729k    107520.0     46830.7         0.0
+TIME 2022-06-08 05:28:58
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     552247k    107520.0     49732.0         2.0
+TIME 2022-06-08 05:28:59
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     782767k    107296.0     71900.3         1.3
+TIME 2022-06-08 05:29:00
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     637019k    107520.0     56329.2         1.6
+TIME 2022-06-08 05:29:01
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     708324k    107520.0     62341.6         2.0
+TIME 2022-06-08 05:29:02
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1159064k    107520.0    108927.9         6.1
+TIME 2022-06-08 05:29:03
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1072674k    107520.0    101462.5         0.0
+TIME 2022-06-08 05:29:04
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1258290k    107520.0    118452.1         3.8
+TIME 2022-06-08 05:29:05
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83    1456733k    107520.0    137804.5         3.0
+TIME 2022-06-08 05:29:06
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80    1363886k    107520.0    130731.1         0.0
+TIME 2022-06-08 05:29:07
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83    1255514k    107296.0    119089.7         1.9
+TIME 2022-06-08 05:29:08
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79    1175008k    106400.0    112286.2         2.8
+TIME 2022-06-08 05:29:09
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     940511k    107520.0     88190.9         1.6
+TIME 2022-06-08 05:29:10
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     803200k    107520.0     75482.4         3.7
+TIME 2022-06-08 05:29:11
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78     653073k    107184.0     60948.3         1.8
+TIME 2022-06-08 05:29:12
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     397176k    107520.0     36540.9         1.2
+TIME 2022-06-08 05:29:13
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     382403k    105952.0     35525.5         2.1
+TIME 2022-06-08 05:29:14
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     427449k    106288.0     38662.0         0.5
+TIME 2022-06-08 05:29:15
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     468458k    107408.0     42355.0         2.2
+TIME 2022-06-08 05:29:16
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     546542k    107072.0     48647.5         1.1
+TIME 2022-06-08 05:29:17
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     820745k    107520.0     75623.8         2.7
+TIME 2022-06-08 05:29:18
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     630272k    107408.0     55880.2         1.1
+TIME 2022-06-08 05:29:19
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84     695892k    107520.0     60769.4         2.3
+TIME 2022-06-08 05:29:20
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86    1116284k    107520.0    104465.0         2.3
+TIME 2022-06-08 05:29:21
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1124792k    107520.0    106980.3         1.2
+TIME 2022-06-08 05:29:22
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1265792k    107520.0    118941.9         3.2
+TIME 2022-06-08 05:29:23
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1396294k    107520.0    133111.2         2.4
+TIME 2022-06-08 05:29:24
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80    1371579k    107520.0    129419.7         0.8
+TIME 2022-06-08 05:29:25
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83    1295703k    107296.0    123835.6         2.1
+TIME 2022-06-08 05:29:26
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1118968k    107184.0    107081.7         2.2
+TIME 2022-06-08 05:29:27
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     965295k    107520.0     89826.2         1.6
+TIME 2022-06-08 05:29:28
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     831229k    106848.0     78247.0         2.5
+TIME 2022-06-08 05:29:29
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     648006k    105728.0     60392.2         1.3
+TIME 2022-06-08 05:29:30
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     398684k    107184.0     36760.4         2.6
+TIME 2022-06-08 05:29:31
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     409625k    103824.0     37946.8         2.0
+TIME 2022-06-08 05:29:32
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     387631k    106960.0     34869.3         0.5
+TIME 2022-06-08 05:29:33
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     482827k    106736.0     43456.4         1.8
+TIME 2022-06-08 05:29:34
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     526620k    107520.0     46878.1         0.9
+TIME 2022-06-08 05:29:35
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     825027k    107520.0     76186.0         2.8
+TIME 2022-06-08 05:29:36
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     642540k    107184.0     56753.5         0.9
+TIME 2022-06-08 05:29:37
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     698358k    107520.0     61356.2         1.3
+TIME 2022-06-08 05:29:38
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86    1097589k    107520.0    103125.2         3.6
+TIME 2022-06-08 05:29:39
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84    1162908k    107520.0    110098.4         0.9
+TIME 2022-06-08 05:29:40
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1266638k    107520.0    118975.6         5.1
+TIME 2022-06-08 05:29:41
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1351304k    107296.0    128032.1         0.0
+TIME 2022-06-08 05:29:42
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83    1390557k    107520.0    131487.5         3.0
+TIME 2022-06-08 05:29:43
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81    1319781k    107520.0    126871.8         0.3
+TIME 2022-06-08 05:29:44
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83    1106324k    105056.0    105889.8         2.3
+TIME 2022-06-08 05:29:45
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     897316k    104944.0     83648.9         2.3
+TIME 2022-06-08 05:29:46
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     896632k    107072.0     83833.9         1.5
+TIME 2022-06-08 05:29:47
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78     645419k    107520.0     60259.6         3.2
+TIME 2022-06-08 05:29:48
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     411616k    106512.0     38203.7         2.0
+TIME 2022-06-08 05:29:49
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     405110k    107520.0     37522.4         0.7
+TIME 2022-06-08 05:29:50
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     411394k    107296.0     36999.5         1.0
+TIME 2022-06-08 05:29:51
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     440324k    107296.0     39310.1         2.0
+TIME 2022-06-08 05:29:52
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     533393k    107408.0     47543.1         0.5
+TIME 2022-06-08 05:29:53
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     835567k    107520.0     77258.1         3.3
+TIME 2022-06-08 05:29:54
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     677715k    107520.0     60270.0         1.5
+TIME 2022-06-08 05:29:55
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     680699k    107520.0     60081.8         2.1
+TIME 2022-06-08 05:29:56
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1089948k    107520.0    100066.8         2.6
+TIME 2022-06-08 05:29:57
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1164598k    107520.0    112494.8         0.4
+TIME 2022-06-08 05:29:58
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85    1229498k    107520.0    115678.3         3.5
+TIME 2022-06-08 05:29:59
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84    1348263k    107296.0    126376.7         2.6
+TIME 2022-06-08 05:30:00
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1384630k    107520.0    132741.7         3.8
+TIME 2022-06-08 05:30:01
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81    1362013k    107520.0    130521.3         0.0
+TIME 2022-06-08 05:30:02
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1112163k    107408.0    105746.6         0.7
+TIME 2022-06-08 05:30:03
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     858856k    107184.0     79716.5         2.2
+TIME 2022-06-08 05:30:04
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     915357k    107296.0     86022.6         3.9
+TIME 2022-06-08 05:30:05
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     635196k    107296.0     59258.4         1.1
+TIME 2022-06-08 05:30:06
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     423587k    107184.0     39546.3         1.4
+TIME 2022-06-08 05:30:07
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     416148k    103936.0     38613.2         1.4
+TIME 2022-06-08 05:30:08
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     423420k    106960.0     38586.2         1.4
+TIME 2022-06-08 05:30:09
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     456815k    107408.0     41210.1         2.8
+TIME 2022-06-08 05:30:10
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     560103k    107296.0     50914.4         0.3
+TIME 2022-06-08 05:30:11
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     849432k    107520.0     79509.5         1.4
+TIME 2022-06-08 05:30:12
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     695555k    107408.0     63199.8         2.2
+TIME 2022-06-08 05:30:13
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84     688193k    107520.0     60572.3         1.8
+TIME 2022-06-08 05:30:14
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.87    1008271k    107520.0     93585.2         1.9
+TIME 2022-06-08 05:30:15
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84    1209001k    107520.0    115887.6         2.5
+TIME 2022-06-08 05:30:16
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84    1272932k    107520.0    120152.8         3.2
+TIME 2022-06-08 05:30:17
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84    1272431k    107520.0    118329.0         3.4
+TIME 2022-06-08 05:30:18
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81    1413174k    107520.0    135112.6         2.0
+TIME 2022-06-08 05:30:19
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1375268k    107296.0    131672.5         2.1
+TIME 2022-06-08 05:30:20
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1129669k    107408.0    107211.0         1.3
+TIME 2022-06-08 05:30:21
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     848332k    105952.0     78627.6         1.2
+TIME 2022-06-08 05:30:22
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     920784k    107520.0     86880.9         4.0
+TIME 2022-06-08 05:30:23
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     643628k    107296.0     60257.2         2.1
+TIME 2022-06-08 05:30:24
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     441190k    107072.0     40799.9         0.9
+TIME 2022-06-08 05:30:25
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     414269k    106736.0     38382.1         1.4
+TIME 2022-06-08 05:30:26
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     391923k    106064.0     35182.9        81.9
+TIME 2022-06-08 05:30:27
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     463786k    107072.0     41728.2         0.0
+TIME 2022-06-08 05:30:28
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     527802k    107296.0     46914.4        37.3
+TIME 2022-06-08 05:30:29
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     813073k    107520.0     75135.2         0.0
+TIME 2022-06-08 05:30:30
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     699990k    107184.0     62495.1        51.3
+TIME 2022-06-08 05:30:31
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.85     705605k    107520.0     62997.5         0.0
+TIME 2022-06-08 05:30:32
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86    1018816k    107408.0     94152.0         2.3
+TIME 2022-06-08 05:30:33
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86    1166347k    107520.0    110688.3         2.5
+TIME 2022-06-08 05:30:34
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83    1284223k    107520.0    121937.5         3.0
+TIME 2022-06-08 05:30:35
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84    1287495k    107520.0    121025.7         1.8
+TIME 2022-06-08 05:30:36
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81    1378146k    107520.0    131185.0         3.0
+TIME 2022-06-08 05:30:37
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80    1371764k    107520.0    130495.6         0.0
+TIME 2022-06-08 05:30:38
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83    1142229k    106960.0    107875.4        95.7
+TIME 2022-06-08 05:30:39
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     808686k    107520.0     75179.1         0.0
+TIME 2022-06-08 05:30:40
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     930421k    107520.0     88559.0         3.6
+TIME 2022-06-08 05:30:41
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     635492k    106960.0     59116.5         0.0
+TIME 2022-06-08 05:30:42
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     445741k    106624.0     41199.9         2.0
+TIME 2022-06-08 05:30:43
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80     427467k    104160.0     39589.9         1.9
+TIME 2022-06-08 05:30:44
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     380895k    106736.0     33997.2         1.4
+TIME 2022-06-08 05:30:45
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     475014k    107184.0     42862.4         2.7
+TIME 2022-06-08 05:30:46
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     534368k    107408.0     47697.3         0.5
+TIME 2022-06-08 05:30:47
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     804464k    107520.0     74436.4         3.1
+TIME 2022-06-08 05:30:48
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     685136k    107520.0     60738.0         2.0
+TIME 2022-06-08 05:30:49
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86     729509k    107520.0     64686.2         2.2
+TIME 2022-06-08 05:30:50
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.87    1034505k    107520.0     97040.6         1.8
+TIME 2022-06-08 05:30:51
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86    1147656k    107520.0    108074.3         2.0
+TIME 2022-06-08 05:30:52
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.84    1267775k    107408.0    119726.6         4.0
+TIME 2022-06-08 05:30:53
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1315627k    107520.0    125024.5         1.5
+TIME 2022-06-08 05:30:54
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83    1362347k    107520.0    128586.4         3.0
+TIME 2022-06-08 05:30:55
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.80    1362540k    107520.0    130634.7         0.0
+TIME 2022-06-08 05:30:56
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82    1168180k    107408.0    110252.6        87.3
+TIME 2022-06-08 05:30:57
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     792883k    107072.0     73275.5         0.0
+TIME 2022-06-08 05:30:58
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.78     919310k    107296.0     86891.4         3.5
+TIME 2022-06-08 05:30:59
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     636732k    106960.0     59892.2         1.0
+TIME 2022-06-08 05:31:00
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.79     451190k    106624.0     41832.9         0.9
+TIME 2022-06-08 05:31:01
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     461100k    106400.0     42737.0         1.8
+TIME 2022-06-08 05:31:02
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     347795k    106736.0     30786.7         1.1
+TIME 2022-06-08 05:31:03
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     456824k    107520.0     41146.3         2.2
+TIME 2022-06-08 05:31:04
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.82     567381k    107520.0     50895.6         0.9
+TIME 2022-06-08 05:31:05
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.81     808189k    107520.0     74335.3         3.4
+TIME 2022-06-08 05:31:06
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.83     660291k    107520.0     58495.6         0.3
+TIME 2022-06-08 05:31:07
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.87     771194k    107520.0     68832.8         2.2
+TIME 2022-06-08 05:31:08
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.86     898422k    107408.0     84095.3         4.9
+TIME 2022-06-08 05:31:09
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.87     851111k    107408.0     78434.0         3.6
+TIME 2022-06-08 05:31:10
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.87    1055810k    107520.0     98862.2         6.6
+TIME 2022-06-08 05:31:11
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        0.90     653518k    107520.0     60147.7        10.7
+TIME 2022-06-08 05:31:12
+    CORE         IPC      MISSES     LLC[KB]   MBL[MB/s]   MBR[MB/s]
+    0-55        1.00     586210k    107520.0     54909.3         9.7
