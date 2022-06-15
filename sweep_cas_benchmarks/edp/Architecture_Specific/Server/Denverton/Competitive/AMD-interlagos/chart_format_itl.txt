@@ -1,0 +1,14 @@
+instr_retired
+cpu_clk_unhalted
+
+metric_CPU utilization %
+metric_CPU utilization% in kernel mode
+
+metric_CPI
+
+metric_L2 MPI (includes demand+pref)
+metric_L3 (includes demand+pref) MPI
+
+metric_memory bandwidth read (MB/sec)
+metric_memory bandwidth write (MB/sec)
+metric_memory bandwidth total (MB/sec)

@@ -1,0 +1,502 @@
+<?xml version="1.0"?>
+<root>
+
+	<metric name="metric_CPU operating frequency (in GHz)">
+		<event alias="a">CPU_CLK_UNHALTED.THREAD</event>
+		<event alias="b">CPU_CLK_UNHALTED.REF_TSC</event>
+		<constant alias="c">system.tsc_freq</constant>
+
+		<formula>(a/b*c)/1000000000</formula>
+	</metric>
+
+	<metric name="metric_CPU utilization %">
+		<event alias="a">CPU_CLK_UNHALTED.REF_TSC</event>
+		<event alias="b">TSC</event>
+
+		<formula>100*a/b</formula>
+	</metric>
+
+	<metric name="metric_CPU utilization% in kernel mode">
+		<event alias="a">CPU_CLK_UNHALTED.REF_TSC:SUP</event>
+		<event alias="b">TSC</event>
+
+		<formula>100*a/b</formula>
+	</metric>
+
+	<metric name="metric_CPI">
+		<event alias="a">CPU_CLK_UNHALTED.THREAD</event>
+		<event alias="b">INST_RETIRED.ANY</event>
+
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_kernel_CPI">
+		<event alias="a">CPU_CLK_UNHALTED.THREAD:SUP</event>
+		<event alias="b">INST_RETIRED.ANY:SUP</event>
+
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_EMON event mux reliability% (>95% good)">
+		<event alias="a">CPU_CLK_UNHALTED.CORE_P</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(((a-b)&lt;0)?(a/b):(b/a))</formula>
+	</metric>
+
+	<metric name="metric_EDP EMON Sampling time (seconds)">
+		<constant alias="time">$samplingTime</constant>
+		<formula>time</formula>
+	</metric>
+
+	<metric name="metric_EDP EMON total number of samples">
+		<constant alias="samples">$processed_samples</constant>
+		<formula>samples</formula>
+	</metric>
+
+	<metric name="metric_branch mispredict ratio">
+		<event alias="a">BR_MISP_RETIRED.ALL_BRANCHES</event>
+		<event alias="b">BR_INST_RETIRED.ALL_BRANCHES</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_branch mispredict to unknown branch ratio">
+		<event alias="a">BR_MISP_RETIRED.ALL_BRANCHES</event>
+		<event alias="b">BACLEARS.ANY</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_TMA_Frontend_Bound(%)">
+		<event alias="a">TOPDOWN_FE_BOUND.ALL</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_..Frontend_Latency(%)">
+		<event alias="a">TOPDOWN_FE_BOUND.ICACHE</event>
+		<event alias="b">TOPDOWN_FE_BOUND.ITLB</event>
+		<event alias="c">TOPDOWN_FE_BOUND.BRANCH_DETECT</event>
+		<event alias="d">TOPDOWN_FE_BOUND.BRANCH_RESTEER</event>
+		<event alias="e">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*((a + b + c + d) / (5 * e))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....Icache(%)">
+		<event alias="a">TOPDOWN_FE_BOUND.ICACHE</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....ITLB(%)">
+		<event alias="a">TOPDOWN_FE_BOUND.ITLB</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....Branch_Detect(%)">
+		<event alias="a">TOPDOWN_FE_BOUND.BRANCH_DETECT</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....Branch_Resteer(%)">
+		<event alias="a">TOPDOWN_FE_BOUND.BRANCH_RESTEER</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_..Frontend_Bandwidth(%)">
+		<event alias="a">TOPDOWN_FE_BOUND.CISC</event>
+		<event alias="b">TOPDOWN_FE_BOUND.DECODE</event>
+		<event alias="c">TOPDOWN_FE_BOUND.PREDECODE</event>
+		<event alias="d">TOPDOWN_FE_BOUND.OTHER</event>
+		<event alias="e">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*((a + b + c + d) / (5 * e))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....Cisc(%)">
+		<event alias="a">TOPDOWN_FE_BOUND.CISC</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....Decode(%)">
+		<event alias="a">TOPDOWN_FE_BOUND.DECODE</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....Predecode(%)">
+		<event alias="a">TOPDOWN_FE_BOUND.PREDECODE</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....Other_FB(%)">
+		<event alias="a">TOPDOWN_FE_BOUND.OTHER</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_Bad_Speculation(%)">
+		<event alias="a">TOPDOWN_BAD_SPECULATION.ALL</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_..Branch_Mispredicts(%)">
+		<event alias="a">TOPDOWN_BAD_SPECULATION.MISPREDICT</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_..Machine_Clears(%)">
+		<event alias="a">TOPDOWN_BAD_SPECULATION.NUKE</event>
+		<event alias="b">TOPDOWN_BAD_SPECULATION.FASTNUKE</event>
+		<event alias="c">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*((a + b) / (5 * c))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....Nuke(%)">
+		<event alias="a">TOPDOWN_BAD_SPECULATION.NUKE</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....FastNuke_MoNuke(%)">
+		<event alias="a">TOPDOWN_BAD_SPECULATION.FASTNUKE</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_Backend_Bound(%)">
+		<event alias="a">TOPDOWN_BE_BOUND.ALL</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_..Resource_Bound(%)">
+		<event alias="a">TOPDOWN_BE_BOUND.ALL</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....Mem_Scheduler(%)">
+		<event alias="a">TOPDOWN_BE_BOUND.MEM_SCHEDULER</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....Non_Mem_Scheduler(%)">
+		<event alias="a">TOPDOWN_BE_BOUND.NON_MEM_SCHEDULER</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....Register(%)">
+		<event alias="a">TOPDOWN_BE_BOUND.REGISTER</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....Reorder_Buffer(%)">
+		<event alias="a">TOPDOWN_BE_BOUND.REORDER_BUFFER</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....Alloc_Restriction(%)">
+		<event alias="a">TOPDOWN_BE_BOUND.ALLOC_RESTRICTIONS</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....Serialization(%)">
+		<event alias="a">TOPDOWN_BE_BOUND.SERIALIZATION</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_..Core_Bound(%)">
+		<event alias="a">TOPDOWN_BE_BOUND.ALL</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+		<event alias="c">MEM_BOUND_STALLS.LOAD_L2_HIT</event>
+		<event alias="d">MEM_BOUND_STALLS.LOAD_LLC_HIT</event>
+		<event alias="e">MEM_BOUND_STALLS.LOAD_DRAM_HIT</event>
+
+		<formula>100*(a / (5 * b) - ((c + d + e) / b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_..Memory_Bound(%)">
+		<event alias="a">MEM_BOUND_STALLS.LOAD_L2_HIT</event>
+		<event alias="b">MEM_BOUND_STALLS.LOAD_LLC_HIT</event>
+		<event alias="c">MEM_BOUND_STALLS.LOAD_DRAM_HIT</event>
+		<event alias="d">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*((a + b + c) / d)</formula>
+	</metric>
+
+	<metric name="metric_TMA_....L2_Hit(%)">
+		<event alias="a">MEM_BOUND_STALLS.LOAD_L2_HIT</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / b)</formula>
+	</metric>
+
+	<metric name="metric_TMA_....LLC_Hit(%)">
+		<event alias="a">MEM_BOUND_STALLS.LOAD_LLC_HIT</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / b)</formula>
+	</metric>
+
+	<metric name="metric_TMA_....DRAM_Hit(%)">
+		<event alias="a">MEM_BOUND_STALLS.LOAD_DRAM_HIT</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / b)</formula>
+	</metric>
+
+	<metric name="metric_TMA_Retiring(%)">
+		<event alias="a">TOPDOWN_RETIRING.ALL</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_..Base(%)">
+		<event alias="a">TOPDOWN_RETIRING.ALL</event>
+		<event alias="b">UOPS_RETIRED.MS</event>
+		<event alias="c">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*((a - b) / (5 * c))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....FP_uops(%)">
+		<event alias="a">UOPS_RETIRED.FPDIV</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_TMA_....Other(%)">
+		<event alias="a">TOPDOWN_RETIRING.ALL</event>
+		<event alias="b">UOPS_RETIRED.MS</event>
+		<event alias="c">UOPS_RETIRED.FPDIV</event>
+		<event alias="d">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*((a - b - c) / (5 * d))</formula>
+	</metric>
+
+	<metric name="metric_TMA_..MS_uops(%)">
+		<event alias="a">UOPS_RETIRED.MS</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100*(a / (5 * b))</formula>
+	</metric>
+
+	<metric name="metric_IPC">
+		<event alias="a">INST_RETIRED.ANY</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>a / b</formula>
+	</metric>
+
+	<metric name="metric_CPI">
+		<event alias="a">CPU_CLK_UNHALTED.THREAD</event>
+		<event alias="b">INST_RETIRED.ANY</event>
+
+		<formula>a / b</formula>
+	</metric>
+
+	<metric name="metric_UPI">
+		<event alias="a">UOPS_RETIRED.ALL</event>
+		<event alias="b">INST_RETIRED.ANY</event>
+
+		<formula>a / b</formula>
+	</metric>
+
+	<metric name="metric_Inst_per_Branch">
+		<event alias="a">INST_RETIRED.ANY</event>
+		<event alias="b">BR_INST_RETIRED.ALL_BRANCHES</event>
+
+		<formula>a / b</formula>
+	</metric>
+
+	<metric name="metric_Branch_per_1KI">
+		<event alias="a">BR_INST_RETIRED.ALL_BRANCHES</event>
+		<event alias="b">INST_RETIRED.ANY</event>
+
+		<formula>1000 * a / b</formula>
+	</metric>
+
+	<metric name="metric_Inst_per_Call">
+		<event alias="a">INST_RETIRED.ANY</event>
+		<event alias="b">BR_INST_RETIRED.CALL</event>
+
+		<formula>a / b</formula>
+	</metric>
+
+	<metric name="metric_Inst_per_Load">
+		<event alias="a">INST_RETIRED.ANY</event>
+		<event alias="b">MEM_UOPS_RETIRED.ALL_LOADS</event>
+
+		<formula>a / b</formula>
+	</metric>
+
+	<metric name="metric_Inst_per_Store">
+		<event alias="a">INST_RETIRED.ANY</event>
+		<event alias="b">MEM_UOPS_RETIRED.ALL_STORES</event>
+
+		<formula>a / b</formula>
+	</metric>
+
+	<metric name="metric_Inst_per_Mispredict">
+		<event alias="a">INST_RETIRED.ANY</event>
+		<event alias="b">BR_MISP_RETIRED.ALL_BRANCHES</event>
+
+		<formula>a / b</formula>
+	</metric>
+
+	<metric name="metric_Branch_Mispredict_Ratio">
+		<event alias="a">BR_MISP_RETIRED.ALL_BRANCHES</event>
+		<event alias="b">BR_INST_RETIRED.ALL_BRANCHES</event>
+
+		<formula>a / b</formula>
+	</metric>
+
+	<metric name="metric_Branch_Mispredict_to_Unknown_Branch_Ratio">
+		<event alias="a">BR_MISP_RETIRED.ALL_BRANCHES</event>
+		<event alias="b">BACLEARS.ANY</event>
+
+		<formula>a / b</formula>
+	</metric>
+
+	<metric name="metric_Microcode_Uops(%)">
+		<event alias="a">UOPS_RETIRED.MS</event>
+		<event alias="b">UOPS_RETIRED.ALL</event>
+
+		<formula>100 * a / b</formula>
+	</metric>
+
+	<metric name="metric_FPDiv_Uops(%)">
+		<event alias="a">UOPS_RETIRED.FPDIV</event>
+		<event alias="b">UOPS_RETIRED.ALL</event>
+
+		<formula>100 * a / b</formula>
+	</metric>
+
+	<metric name="metric_Turbo_Utilization">
+		<event alias="a">CPU_CLK_UNHALTED.THREAD</event>
+		<event alias="b">CPU_CLK_UNHALTED.REF_TSC</event>
+
+		<formula>a / b</formula>
+	</metric>
+
+	<metric name="metric_Kernel_Utilization">
+		<event alias="a">CPU_CLK_UNHALTED.THREAD:SUP</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>a / b</formula>
+	</metric>
+
+	<metric name="metric_Inst_per_FarBranch">
+		<event alias="a">INST_RETIRED.ANY</event>
+		<event alias="b">BR_INST_RETIRED.FAR_BRANCH</event>
+
+		<formula>a / (b / 2)</formula>
+	</metric>
+
+	<metric name="metric_MemLoad_per_1KI">
+		<event alias="a">MEM_UOPS_RETIRED.ALL_LOADS</event>
+		<event alias="b">INST_RETIRED.ANY</event>
+
+		<formula>1000 * a / b</formula>
+	</metric>
+
+	<metric name="metric_Estimated_Pause_Cost(%)">
+		<event alias="a">SERIALIZATION.NON_C01_MS_SCB</event>
+		<event alias="b">CPU_CLK_UNHALTED.THREAD</event>
+
+		<formula>100 * a / b</formula>
+	</metric>
+
+	<metric name="metric_Cycles_per_Demand_Load_L2_Hit">
+		<event alias="a">MEM_BOUND_STALLS.LOAD_L2_HIT</event>
+		<event alias="b">MEM_LOAD_UOPS_RETIRED.L2_HIT</event>
+
+		<formula>a / b</formula>
+	</metric>
+
+	<metric name="metric_Cycles_per_Demand_Load_LLC_Hit">
+		<event alias="a">MEM_BOUND_STALLS.LOAD_LLC_HIT</event>
+		<event alias="b">MEM_LOAD_UOPS_RETIRED.L3_HIT</event>
+
+		<formula>a / b</formula>
+	</metric>
+
+	<metric name="metric_Cycles_per_Demand_Load_DRAM_Hit">
+		<event alias="a">MEM_BOUND_STALLS.LOAD_DRAM_HIT</event>
+		<event alias="b">MEM_LOAD_UOPS_RETIRED.DRAM_HIT</event>
+
+		<formula>a / b</formula>
+	</metric>
+
+	<metric name="metric_Inst_Miss_Cost_L2Hit(%)">
+		<event alias="a">MEM_BOUND_STALLS.IFETCH_L2_HIT</event>
+		<event alias="b">MEM_BOUND_STALLS.IFETCH_LLC_HIT</event>
+		<event alias="c">MEM_BOUND_STALLS.IFETCH_DRAM_HIT</event>
+
+		<formula>100 * a / (a + b + c)</formula>
+	</metric>
+
+	<metric name="metric_Inst_Miss_Cost_LLCHit(%)">
+		<event alias="a">MEM_BOUND_STALLS.IFETCH_LLC_HIT</event>
+		<event alias="b">MEM_BOUND_STALLS.IFETCH_L2_HIT</event>
+		<event alias="c">MEM_BOUND_STALLS.IFETCH_DRAM_HIT</event>
+
+		<formula>100 * a / (b + a + c)</formula>
+	</metric>
+
+	<metric name="metric_Inst_Miss_Cost_DRAMHit(%)">
+		<event alias="a">MEM_BOUND_STALLS.IFETCH_DRAM_HIT</event>
+		<event alias="b">MEM_BOUND_STALLS.IFETCH_L2_HIT</event>
+		<event alias="c">MEM_BOUND_STALLS.IFETCH_LLC_HIT</event>
+
+		<formula>100 * a / (b + c + a)</formula>
+	</metric>
+
+	<metric name="metric_EDP GRT Client XML version">
+		<constant alias="version">4.25</constant>
+		<formula>version</formula>
+	</metric>
+
+	<metric name="metric_TMA_ATOM_Metrics_Version">
+		<formula>7.2</formula>
+	</metric>
+
+</root>

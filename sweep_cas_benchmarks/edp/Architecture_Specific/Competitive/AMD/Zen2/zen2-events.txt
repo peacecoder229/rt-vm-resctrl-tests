@@ -1,0 +1,292 @@
+#AMD Zen2 (EPYC2, Matisse) event list ver  4.12
+# Can be used on all Zen2 arch parts (client and server)
+# but appropriate EDP XML file need to be used to post process the data to
+# get proper L3 cache and memory b/w statistics
+#
+-q -c -v -t0.1 -l100000
+-C (
+# group #1
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+LsDispatch.Loads
+LsDispatch.Stores
+Store2LoadForwards
+Store2LoadConflicts
+L3Lookup.Misses
+L3MissLatency
+DramBw.total.ch0
+DramBw.total.ch1
+DramBw.total.ch2
+DramBw.total.ch3
+# MPERF counter ; equivalent to cpu_clk_unhalted.ref_tsc
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+;
+
+# group #2
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+L2ReqG1.RdBlkL
+L2ReqG1.RdBlkX
+L2ReqG1.RdBlkCS
+L2ReqG1.IcRead
+L3Lookup.Misses
+L3MissLatency
+DramBw.total.ch4:umask_ext=1
+DramBw.total.ch5:umask_ext=1
+DramBw.total.ch6:umask_ext=1
+DramBw.total.ch7:umask_ext=1
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+;
+
+# group #3
+INST_RETIRED.ANY:SUP
+CPU_CLK_UNHALTED.THREAD:SUP
+L2ReqG1.ChangeToX
+L2ReqG1.PrefetchL2
+InstDispatch.PrefNTA
+Uops.Retired
+L3RequestG1
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+;
+
+# group #4
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+L2ReqStatus.HitCS
+L2ReqStatus.HitX
+L2ReqStatus.HitShared
+L2ReqStatus.ChgToXHitX
+L3RequestG1
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+;
+
+# group #5
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+L2ReqStatus.RdMiss
+L2ReqStatus.CodeMiss
+L2ReqStatus.CodeHitX
+L2ReqStatus.CodeHitS
+L3Lookup.Misses
+L3MissLatency
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+MSR_EVENT:msr=0xc001029B:type=FREERUN:scope=PACKAGE
+;
+
+# group #6
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+BpL1ITLBMissL2ITLBHit
+BpL1ITLBMissL2ITLBMiss.4K
+BpL1ITLBMissL2ITLBMiss.2M
+BpL1ITLBMissL2ITLBMiss.1G
+L3Lookup.Misses
+L3MissLatency
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+;
+
+# group #7
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+L2ReqG1.L2HwPf
+L2Prefetch.HitL2
+L2Prefetch.HitL3
+L2Prefetch.MissL3
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+;
+
+# group #8
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+DcFillSys.LocalDram
+DcFillSys.RemoteDram
+HwPf.DcFill.LocalDram
+HwPf.DcFill.RemoteDram
+L3Lookup.Misses
+L3MissLatency
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+;
+
+# group #9
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+DcFillSys.LocalL2Hit
+DcFillSys.LocalCache
+HwPf.DcFill.LocalL2Hit
+HwPf.DcFill.LocalCache
+L3Lookup.Misses
+L3MissLatency
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+DramBw.total.ch0
+DramBw.total.ch1
+DramBw.total.ch2
+DramBw.total.ch3
+;
+
+# group #10
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+DcFillSys.RemoteCache
+HwPf.DcFill.RemoteCache
+InstDispatch.LoadPrefW
+InstDispatch.StorePrefW
+L3Lookup.Misses
+L3MissLatency
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+MSR_EVENT:msr=0xc001029B:type=FREERUN:scope=PACKAGE
+DramBw.total.ch4:umask_ext=1
+DramBw.total.ch5:umask_ext=1
+DramBw.total.ch6:umask_ext=1
+DramBw.total.ch7:umask_ext=1
+;
+
+# group #11
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+L2DtlbHit.4K
+L2DtlbHit.2M
+L2DtlbHit.1G
+L2DtlbHit.Coalesced
+L3Lookup.Misses
+L3MissLatency
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+;
+
+# group #12
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+L2DtlbMiss.4K
+L2DtlbMiss.2M
+L2DtlbMiss.1G
+L2DtlbMiss.Coalesced
+L3RequestG1
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+;
+
+
+# group #13
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+TlbWalks.LocalCache
+TlbWalks.LocalDram
+TlbWalks.LocalL2Hit
+TlbWalks.RemoteDram
+L3Lookup.Misses
+L3MissLatency
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+;
+
+# group #14
+INST_RETIRED.ANY:SUP
+CPU_CLK_UNHALTED.THREAD:SUP
+TlbWalks.RemoteCache
+TlbFlushes.All
+DispatchResourceStall.LoadQ
+DispatchResourceStall.StoreQ
+L3Lookup.Misses
+L3MissLatency
+LinkDataXmitRemote.node0:umask_ext=8
+LinkDataXmitRemote.node1:umask_ext=7
+LinkDataXmitRemote.node2:umask_ext=8
+LinkDataXmitRemote.node3:umask_ext=8
+
+;
+
+# group #15
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+IcCacheFillL2
+IcCacheFillSystem
+Branches.Retired
+Branches.Mispred
+L3Lookup.Misses
+L3MissLatency
+DramBw.total.ch0
+DramBw.total.ch1
+DramBw.total.ch2
+DramBw.total.ch3
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+;
+
+# group #16
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+Branches.Taken
+Branches.Taken.Mispred
+Branches.NearRet
+Branches.NearRet.Mispred
+L3Misses:u0x1
+L3Misses:u0x2
+DramBw.total.ch4:umask_ext=1
+DramBw.total.ch5:umask_ext=1
+DramBw.total.ch6:umask_ext=1
+DramBw.total.ch7:umask_ext=1
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+;
+
+# group #17
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+Branches.Cond
+# following event removed as it is broken on zen2
+#Branches.Cond.Mispred
+Branches.FarXfer
+UopsDispatched.OpCache
+UopsDispatched.Decoder
+L3Misses:u0x4
+L3Misses:u0x8
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+MSR_EVENT:msr=0xc001029B:type=FREERUN:scope=PACKAGE
+;
+
+# group #18
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+IcFetchStall.IcStallAny	
+IcFetchStall.IcStallBackPressure
+IcFetchStall.IcStallDqEmpty
+Branches.Indirect.Mispred
+L3Misses:u0x10
+L3Misses:u0x20
+MSR_EVENT:msr=0xC00000E7:type=FREERUN:scope=THREAD
+LinkDataXmitRemote.node0:umask_ext=8
+LinkDataXmitRemote.node1:umask_ext=7
+LinkDataXmitRemote.node2:umask_ext=8
+LinkDataXmitRemote.node3:umask_ext=8
+
+;
+
+# group #19
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+Locks:u0xe
+Locks:u0x2
+Locks:u0x8
+Interrupts.Taken
+L3Misses:u0x40
+L3Misses:u0x80
+DramBw.read.ch0
+DramBw.read.ch1
+DramBw.read.ch2
+DramBw.read.ch3
+;
+# group #20
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+UopQueue.Empty
+Retired.SseAvxInstr
+MisalignedLoads
+L1dMiss.FillBufAlloc.HwPf
+L3Misses:u0xff
+DramBw.read.ch4:umask_ext=1
+DramBw.read.ch5:umask_ext=1
+DramBw.read.ch6:umask_ext=1
+DramBw.read.ch7:umask_ext=1
+
+# group #21
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+TSC.Reads
+L3Lookup.Misses
+L3MissLatency
+)

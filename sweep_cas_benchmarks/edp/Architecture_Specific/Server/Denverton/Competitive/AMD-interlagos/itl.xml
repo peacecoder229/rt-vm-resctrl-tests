@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<root>
+	<metric name="metric_CPU utilization %">
+		<event alias="a">cpu_clk_unhalted</event>
+		<event alias="b">TSC</event>
+		<formula>100*a/b</formula>
+	</metric>
+
+	<metric name="metric_CPU utilization% in kernel mode">
+		<event alias="a">cpu_clk_unhalted:SUP</event>
+		<event alias="b">TSC</event>
+		<formula>100*a/b</formula>
+	</metric>
+
+    <metric name="metric_CPI">
+        <throughput-metric-name>metric_cycles per txn</throughput-metric-name>
+        <event alias="a">cpu_clk_unhalted</event>
+        <event alias="b">instr_retired</event>
+        <formula>a/b</formula>
+    </metric>
+
+	<metric name="metric_branch mispredict ratio">
+		<event alias="a">misp_branches_retired</event>
+		<event alias="b">branches_retired</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_Lock instructions executed per inst">
+        <throughput-metric-name>metric_Lock instructions executed per txn</throughput-metric-name>
+		<event alias="a">lock_instr_exec</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_L1D demand loads and stores MPI">
+        <throughput-metric-name>metric_L1D demand loads and stores per txn</throughput-metric-name>
+		<event alias="a">dc_miss_first_any</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_L1D prefetches per inst">
+        <throughput-metric-name>metric_L1D prefetches per txn</throughput-metric-name>
+		<event alias="a">data_prefetcher:u0x2</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_L1I code MPI">
+        <throughput-metric-name>metric_L1I code misses per txn</throughput-metric-name>
+		<event alias="a">ic_miss</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_L2 demand code read MPI">
+        <throughput-metric-name>metric_L2 demand code read misses per txn</throughput-metric-name>
+		<event alias="a">l2_ic_fill_miss</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>	
+
+	<metric name="metric_L2 demand data read MPI">
+        <throughput-metric-name>metric_L2 demand data read misses per txn</throughput-metric-name>
+		<event alias="a">l2_dc_fill_miss</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>	
+
+	<metric name="metric_DC prefetcher requests that miss L2 per instr">
+        <throughput-metric-name>metric_DC prefetcher requests that miss L2 per txn</throughput-metric-name>
+		<event alias="a">l2_DC_prefetch_miss</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>	
+
+	<metric name="metric_L2 MPI (includes demand+pref)">
+        <throughput-metric-name>metric_L2 misses (includes demand+pref) per txn</throughput-metric-name>
+		<event alias="a">l2_ic_fill_miss</event>
+		<event alias="b">l2_dc_fill_miss</event>
+		<event alias="c">l2_DC_prefetch_miss</event>
+		<event alias="d">instr_retired</event>
+		<formula>(a+b+c)/d</formula>
+	</metric>	
+
+	<metric name="metric_L2 TLB page walks MPI">
+        <throughput-metric-name>metric_L2 TLB page misses per txn</throughput-metric-name>
+		<event alias="a">l2_tlb_reload_miss</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>	
+
+	<metric name="metric_L3 data read references per instr">
+        <throughput-metric-name>metric_L3 data read references per txn</throughput-metric-name>
+		<event alias="a">UNC_Non_cancelled_L3_accesses:u0xf1</event>
+		<event alias="b">instr_retired</event>
+    <!-- Since all the 8 cores in a socket count the same thing, result is divided by 8 -->
+		<formula>(a/b)/8</formula>
+	</metric>	
+
+	<metric name="metric_L3 code read references per instr">
+        <throughput-metric-name>metric_L3 code read references per txn</throughput-metric-name>
+		<event alias="a">UNC_Non_cancelled_L3_accesses:u0xf2</event>
+		<event alias="b">instr_retired</event>
+    <!-- Since all the 8 cores in a socket count the same thing, result is divided by 8 -->
+		<formula>(a/b)/8</formula>
+	</metric>	
+
+	<metric name="metric_L3 data store references per instr">
+        <throughput-metric-name>metric_L3 data store references per txn</throughput-metric-name>
+		<event alias="a">UNC_Non_cancelled_L3_accesses:u0xf4</event>
+		<event alias="b">instr_retired</event>
+    <!-- Since all the 8 cores in a socket count the same thing, result is divided by 8 -->
+		<formula>(a/b)/8</formula>
+	</metric>	
+
+	<metric name="metric_L3 data read MPI">
+        <throughput-metric-name>metric_L3 data read misses per txn</throughput-metric-name>
+		<event alias="a">UNC_l3_misses:u0xf1</event>
+		<event alias="b">instr_retired</event>
+    <!-- Since all the 8 cores in a socket count the same thing, result is divided by 8 -->
+		<formula>(a/b)/8</formula>
+	</metric>	
+
+	<metric name="metric_L3 code read MPI">
+        <throughput-metric-name>metric_L3 code read misses per txn</throughput-metric-name>
+		<event alias="a">UNC_l3_misses:u0xf2</event>
+		<event alias="b">instr_retired</event>
+		<formula>(a/b)/8</formula>
+	</metric>	
+
+	<metric name="metric_L3 data store MPI">
+        <throughput-metric-name>metric_L3 data store misses per txn</throughput-metric-name>
+		<event alias="a">UNC_l3_misses:u0xf4</event>
+		<event alias="b">instr_retired</event>
+		<formula>(a/b)/8</formula>
+	</metric>	
+
+	<metric name="metric_L3 (includes demand+pref) MPI">
+        <throughput-metric-name>metric_L3 misses(includes demand+pref) per txn</throughput-metric-name>
+		<event alias="a">UNC_l3_misses:u0xf1</event>
+		<event alias="b">UNC_l3_misses:u0xf2</event>
+		<event alias="c">UNC_l3_misses:u0xf4</event>
+		<event alias="d">instr_retired</event>
+		<formula>(a+b+c)/d/8</formula>
+	</metric>	
+
+	<metric name="metric_L3 writebacks per instr">
+        <throughput-metric-name>metric_L3 writebacks per txn</throughput-metric-name>
+		<event alias="a">UNC_l3_evictions_modified</event>
+		<event alias="b">instr_retired</event>
+		<formula>(a/b)/8</formula>
+	</metric>	
+
+	<metric name="metric_2nd level ITLB MPI">
+        <throughput-metric-name>metric_2nd level ITLB misses per txn</throughput-metric-name>
+    <!-- the following events counts all 4k/2M/1G ITLB 2nd level misses -->
+		<event alias="a">tlb_uni_4KB_miss_instr:u0x70</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_2nd level DTLB 4K page MPI">
+        <throughput-metric-name>metric_2nd level DTLB 4K page misses per txn</throughput-metric-name>
+		<event alias="a">tlb_uni_4KB_miss_data</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_2nd level DTLB 2M page MPI">
+        <throughput-metric-name>metric_2nd level DTLB 2M page misses per txn</throughput-metric-name>
+		<event alias="a">tlb_uni_2MB_miss_data</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_2nd level DTLB 1G page MPI">
+        <throughput-metric-name>metric_2nd level DTLB 1G page misses per txn</throughput-metric-name>
+		<event alias="a">tlb_uni_1GB_miss_data</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_s/w prefetches (T0/T1/T2) per inst">
+        <throughput-metric-name>metric_s/w prefetches (T0/T1/T2) per txn</throughput-metric-name>
+		<event alias="a">prefetch_load</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_s/w prefetch NTA per inst">
+        <throughput-metric-name>metric_s/w prefetch NTA per txn</throughput-metric-name>
+		<event alias="a">prefetch_nta</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_s/w store prefetch (prefetchW) per inst">
+        <throughput-metric-name>metric_s/w store prefetch (prefetchW) per txn</throughput-metric-name>
+		<event alias="a">prefetch_store</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_s/w prefetch hit in L1 per inst">
+        <throughput-metric-name>metric_s/w prefetch hit in L1 per txn</throughput-metric-name>
+		<event alias="a">ineffective_sw_prefetch.l1</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_s/w prefetch hit in L2 per inst">
+        <throughput-metric-name>metric_s/w prefetch hit in L2 per txn</throughput-metric-name>
+		<event alias="a">ineffective_sw_prefetch.l2</event>
+		<event alias="b">instr_retired</event>
+		<formula>a/b</formula>
+	</metric>
+
+    <metric name="metric_memory bandwidth read (MB/sec)">
+        <event alias="a">UNC_DCT_read_requests</event>
+    <!-- Since all the 8 cores in a socket count the same thing, result is divided by 8 -->
+        <formula>a*64/1000000/8</formula>
+    </metric>
+
+    <metric name="metric_dram prefetcher read bandwidth (MB/sec)">
+        <event alias="a">UNC_DCT_prefetch_requests</event>
+        <formula>a*64/1000000/8</formula>
+    </metric>
+
+    <metric name="metric_memory bandwidth write (MB/sec)">
+        <event alias="a">UNC_DCT_write_requests</event>
+        <formula>a*64/1000000/8</formula>
+    </metric>
+
+    <metric name="metric_memory bandwidth total (MB/sec)">
+        <event alias="a">UNC_DCT_read_requests</event>
+        <event alias="b">UNC_DCT_write_requests</event>
+        <formula>(a+b)*64/1000000/8</formula>
+    </metric>
+
+    <metric name="metric_HT0 data sent (MB/sec)">
+        <event alias="a">UNC_ht0_data_sent</event>
+    <!-- Each unit of transfer is 4 bytes long -->
+        <formula>a*4/1000000/8</formula>
+    </metric>
+
+    <metric name="metric_HT0 NOP sent (MB/sec)">
+        <event alias="a">UNC_ht0_nop_sent</event>
+        <formula>a*4/1000000/8</formula>
+    </metric>
+
+    <metric name="metric_HT1 data sent (MB/sec)">
+        <event alias="a">UNC_ht1_data_sent</event>
+        <formula>a*4/1000000/8</formula>
+    </metric>
+
+    <metric name="metric_HT1 NOP sent (MB/sec)">
+        <event alias="a">UNC_ht1_nop_sent</event>
+        <formula>a*4/1000000/8</formula>
+    </metric>
+
+    <metric name="metric_HT2 data sent (MB/sec)">
+        <event alias="a">UNC_ht2_data_sent</event>
+        <formula>a*4/1000000/8</formula>
+    </metric>
+
+    <metric name="metric_HT2 NOP sent (MB/sec)">
+        <event alias="a">UNC_ht2_nop_sent</event>
+        <formula>a*4/1000000/8</formula>
+    </metric>
+
+    <metric name="metric_HT3 data sent (MB/sec)">
+        <event alias="a">UNC_ht3_data_sent</event>
+        <formula>a*4/1000000/8</formula>
+    </metric>
+
+    <metric name="metric_HT3 NOP sent (MB/sec)">
+        <event alias="a">UNC_ht3_nop_sent</event>
+        <formula>a*4/1000000/8</formula>
+    </metric>
+
+</root>

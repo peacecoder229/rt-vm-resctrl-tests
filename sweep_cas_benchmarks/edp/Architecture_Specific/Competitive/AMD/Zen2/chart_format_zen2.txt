@@ -1,0 +1,18 @@
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+
+metric_CPU utilization %
+metric_CPU utilization% in kernel mode
+metric_CPU operating frequency (in GHz)
+
+metric_CPI
+metric_kernel_CPI
+
+metric_NUMA %_Reads addressed to local DRAM/Die
+metric_NUMA %_Reads addressed to remote DRAM/Die
+
+
+metric_L3 miss B/W (MB/sec)
+metric_memory bandwidth total (MB/sec)
+
+

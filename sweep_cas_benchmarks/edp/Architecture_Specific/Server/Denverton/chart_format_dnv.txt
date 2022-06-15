@@ -1,0 +1,16 @@
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.CORE
+CPU_CLK_UNHALTED.REF_TSC
+
+metric_CPU utilization %
+metric_CPU operating frequency (in GHz)
+
+metric_CPI
+metric_% cycles uops retired
+
+metric_L2 MPI (includes code+data+rfo w/ prefetches)
+metric_L2 demand data read MPI
+
+metric_memory bandwidth read (MB/sec)
+metric_memory bandwidth write (MB/sec)
+metric_memory bandwidth total (MB/sec)

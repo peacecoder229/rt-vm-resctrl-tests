@@ -1,0 +1,140 @@
+EDP Change Log
+Version 4.28 07/20/2021
+- Ruby
+	- Updated edp.rb with improved emon -v parsing to properly calculate core count with non-contiguous APIC IDs .
+- Zen3 Milan updated to work with EMON 11.27 and will not work with older EMON versions.  Removed redundent 1 socket and client files.
+- SPR
+	- Added support for HBM metrics. Please note that event file must edited to enable HBM.  All "UNC_MCHBM*" events must be uncommented. 
+	- Added events
+		UNC_MCHBM_CLOCKTICKS
+		UNC_MCHBM_CAS_COUNT.RD
+		UNC_MCHBM_CAS_COUNT.WR
+		UNC_MCHBM_RPQ_INSERTS.PCH0
+		UNC_MCHBM_RPQ_OCCUPANCY_PCH0
+		UNC_MCHBM_RPQ_INSERTS.PCH1
+		UNC_MCHBM_RPQ_OCCUPANCY_PCH1
+		UNC_MCHBM_CAS_COUNT.ALL
+		UNC_MCHBM_ACT_COUNT.ALL
+		UNC_MCHBM_PRE_COUNT.ALL
+		UNC_MCHBM_PRE_COUNT.PGT
+		UNC_I_CLOCKTICKS
+		UNC_I_SNOOP_RESP.ALL_HIT_ES
+		UNC_I_SNOOP_RESP.ALL_HIT_M
+		UNC_I_COHERENT_OPS.PCITOM
+		UNC_CHA_TOR_OCCUPANCY.IO_PCIRDCUR
+		UNC_CHA_TOR_OCCUPANCY.IO_ITOM
+	- Added metrics:
+		metric_HBM data rate (MT/sec)
+		metric_HBM bandwidth read (MB/sec)
+		metric_HBM bandwidth write (MB/sec)
+		metric_HBM bandwidth total (MB/sec)
+		metric_HBM RPQ PCH0 read latency (ns)
+		metric_HBM RPQ PCH1 read latency (ns)
+		metric_HBM Page Empty vs. all requests
+		metric_HBM Page Misses vs. all requests
+		metric_HBM Page Hits vs. all requests
+	- Modified metric_CHA % cyles Fast asserted for dynamic prefetch throttle. UNC_CHA_DISTRESS_ASSERTED.DPT_LOCAL removed from metric since DPT_NONLOCAL is counting all DPT.
+	- Removed AVX license metrics (Please use individual license levels instead):
+		metric_core % cycles in non AVX license
+		metric_core % cycles in AVX2 license
+		metric_core % cycles in AVX-512 license
+		metric_core % cycles in AMX license
+	
+
+Version 4.27 06/07/2021
+- Ruby 
+	- Updated edp.rb with an "is sane" value of 4096 to accommodate events that can increment up to 4096 times per cycle.
+- SPR
+	- Added 4 socket support
+	- Added TOPDOWN.SLOTS:perf_metrics to every group
+	- Added events 
+		FP_ARITH_INST_RETIRED2.128B_PACKED_HALF
+		FP_ARITH_INST_RETIRED2.256B_PACKED_HALF
+		FP_ARITH_INST_RETIRED2.SCALAR (replacing FP_ARITH_INST_RETIRED2.ANY_SCALAR_HALF)
+		FP_ARITH_INST_RETIRED2.VECTOR (replacing FP_ARITH_INST_RETIRED2.ANY_PACKED_HALF)
+		MEM_UOP_RETIRED.LOAD
+		MEM_UOP_RETIRED.STA
+		UNC_I_SNOOP_RESP.ALL_HIT
+		UNC_M_DRAM_REFRESH.OPPORTUNISTIC
+		UNC_M_DRAM_REFRESH.HIGH
+		UNC_M_DRAM_REFRESH.PANIC
+	- Added TMA metrics (from Ahmad Yasin)
+		metric_TMA_Info_System_GFLOPs
+		metric_TMA_....FP_Arith(%)
+		metric_TMA_......FP_Scalar(%)
+		metric_TMA_......FP_Vector(%)
+		metric_TMA_....Other_Light_Ops(%) 
+		metric_TMA_Info_Core_FP_Arith_Utilization 
+		metric_TMA_Info_Bottleneck_Mispredictions 
+		metric_TMA_....Memory_Operations(%)
+		metric_TMA_....Other_Light_Ops(%)
+	- Updated metrics
+		metric_core % cycles in AVX-512 license, removed level 6 from numerator
+		metric_core % cycles in AMX license, added level 6 to numerator
+		metric_IO inbound round trip read latency (ns), adjusted formula to account for COMP_BUF_OCCUPANCY event that double counts. Added socket breakdown.
+	- Updated UPI links_per_socket from 2 to 4
+	- Removed metric
+		metric_IO inbound write latency (ns), commented out due to unreliable UNC_I_CACHE_TOTAL_OCCUPANCY.MEM counts.
+- ICX
+	- Removed event EXE_ACTIVITY.EXE_BOUND_0_PORTS which is no longer available
+	- Added TOPDOWN.SLOTS:perf_metrics to every group 
+
+Version 4.25 05/06/2021
+- An error in EDP’s aggregation methodology impacting several TMA formulas has been detected and resolved.
+    - Inplace PERF_METRICs handling fix for TMA calculation accuracy.
+- SPR
+    - Added useful MDF events
+- ICX 
+    - Updated to TMA v4.2
+- ADL
+    - Additional useful events added to GRT and GLC event lists
+    - Additional instruction mix and ICache miss cost breakdown for GRT
+- Added files for Zen 3
+
+Version 4.24 04/02/2021
+- SPR
+    - Added TMA 4.2 which requires SPR C-step
+    - Added TMUL/AMX and license level metrics
+    - Added DCPMEM metrics
+    - Corrected IO latency metrics
+- SNR
+    - Updated to TMA 7.1 
+
+Version 4.23 02/16/2021
+- Restoring AMD support previously released in EDP 4.12
+- SPR Support
+    - Requires SPR B-step or later
+    - Added home agent and IO metrics
+- Client Changes
+    - Rocketlake added
+    - Alderlake added
+        - Collect with merged event list for alderlake, or use core type specific event lists
+        - Modify and invoke HybridProcess.cmd, instead of process.cmd
+        - Produces separate summary files per core type
+        - Each core type has a metric xml in Architecture Specific used for HybridProcess.cmd
+    - Client SKL, KBLR, ICL, TGL, RKL, GLC TMA 4.152 support
+    - Client GRT TMA 7 support
+- Removed unsupported process.sh
+- Correct/Remove warnings in edp.rb
+- Simplify manual specification of TSC_FREQ, emon-m,emon-v in process/jprocess.cmd
+
+Version 4.22 01/27/2021
+- SNR Changes
+    - Corrected grouping in event file
+    - Removed bugged event MEM_LOAD_UOPS_RETIRED.WCB_HIT
+
+Version 4.2 11/18/2020
+- Ruby script adds support for number of samples and sampling frequency.
+    - See new metrics "metric_EDP EMON Sampling time (seconds)" 
+      and "metric_EDP EMON total number of samples".
+- Skylake/Kabylake client updated with TMA 4.1
+- Icelake client updated with TMA 4.11
+- Added support for Tigerlake with TMA 4.11
+- Added support for KabylakeR/Coffeelake with TMA 4.1
+- Added support for Sapphire rapids (TMA support pending)
+- "Architecture Specific" directory renamed to "Architecture_Specific".
+- Architecture Specific folders reorganized into server, client and competitive
+- Added amd_clx_comp_template-v6.xlsx for competitive analysis
+- Support for generating EDP spreadsheet in Linux.
+    - Invoke process.sh to generate EDP spreadsheet
+    - See readme for details

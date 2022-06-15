@@ -1,0 +1,35 @@
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.THREAD
+CPU_CLK_UNHALTED.REF
+
+metric_CPI
+metric_CPU_utilization_%
+metric_CPU operating frequency (in GHz)
+
+metric_% cycles uops retired
+metric_branch mispredict ratio
+
+metric_loads per instr
+metric_stores per instr
+metric_locks retited per instr
+
+metric_L1D MPI (includes data+rfo w/ prefetches)
+metric_L1D demand data read hits per instr
+
+metric_L2 demand data read hits per instr
+metric_L2 MPI (includes code+data+rfo w/ prefetches)
+metric_L2 read miss latency (in core clocks)
+
+metric_L2 Any local request that HITM in a sibling core (per instr)
+metric_L2 Any local request that HIT in a sibling core (per instr)
+
+metric_LLC MPI (includes code+data+rfo w/ prefetches)
+metric_LLC average data read miss latency (in core clks) (includes prefetches)
+
+metric_% of data read LLC prefetchers that are not not used
+metric_% of LLC data reads that hit already prefetched lines by LLC prefetchers
+
+metric_memory bandwidth write (MB/sec)
+metric_memory bandwidth total (MB/sec)
+metric_memory reads vs. all requests
+

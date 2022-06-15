@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<root>
+	<metric name="metric_CPU_utilization%">
+		<event alias="a">CPU_CLOCK.CYCLES</event>
+		<event alias="b">TSC</event>
+		<formula>100*a/b</formula>
+	</metric>
+
+	<metric name="metric_CPI">
+  <throughput-metric-name>metric_cycles per txn</throughput-metric-name>
+		<event alias="a">CPU_CLOCK.CYCLES</event>
+		<event alias="b">INSTRUCTIONS_OUT_OF_CORE_RENAMING</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_Main exec instructions">
+  <throughput-metric-name>metric_Main exec instructions per txn</throughput-metric-name>
+		<event alias="a">MAIN_EXEC_INSTRUCTIONS</event>
+		<event alias="b">INSTRUCTIONS_OUT_OF_CORE_RENAMING</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_Second exec pipeline instructions">
+  <throughput-metric-name>metric_Second exec pipeline instructions per txn</throughput-metric-name>
+		<event alias="a">SECOND_EXEC_INSTRUCTIONS</event>
+		<event alias="b">INSTRUCTIONS_OUT_OF_CORE_RENAMING</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_Load store instructions">
+  <throughput-metric-name>metric_Load store instructions per txn</throughput-metric-name>
+		<event alias="a">LOAD_STORE_INSTRUCTIONS</event>
+		<event alias="b">INSTRUCTIONS_OUT_OF_CORE_RENAMING</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_sum of all instructions">
+  <throughput-metric-name>metric_sum of all instructions per txn</throughput-metric-name>
+		<event alias="a">MAIN_EXEC_INSTRUCTIONS</event>
+		<event alias="b">SECOND_EXEC_INSTRUCTIONS</event>
+		<event alias="c">LOAD_STORE_INSTRUCTIONS</event>
+		<event alias="d">IMMEDIATE_BRANCH</event>
+		<event alias="e">FLOATING_POINT_INSTRUCTIONS</event>
+		<event alias="f">INSTRUCTIONS_OUT_OF_CORE_RENAMING</event>
+		<formula>(a+b+c+d+e)/f</formula>
+	</metric>
+
+	<metric name="metric_floating point instructions">
+  <throughput-metric-name>metric_floating point instructions per txn</throughput-metric-name>
+		<event alias="a">FLOATING_POINT_INSTRUCTIONS</event>
+		<event alias="b">INSTRUCTIONS_OUT_OF_CORE_RENAMING</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_number of branches per inst">
+  <throughput-metric-name>metric_branches per txn</throughput-metric-name>
+		<event alias="a">IMMEDIATE_BRANCH</event>
+		<event alias="b">INSTRUCTIONS_OUT_OF_CORE_RENAMING</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_mispredict_ratio">
+		<event alias="a">BRANCH_MISPREDICTED</event>
+		<event alias="b">IMMEDIATE_BRANCH</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_L1D_MPI">
+  <throughput-metric-name>metric_L1D cache misses per txn</throughput-metric-name>
+		<event alias="a">DATA_CACHE_MISS</event>
+		<event alias="b">INSTRUCTIONS_OUT_OF_CORE_RENAMING</event>
+		<formula>a/b</formula>
+	</metric>
+	
+	<metric name="metric_DTLB_MPI">
+  <throughput-metric-name>metric_DTLB misses per txn</throughput-metric-name>
+		<event alias="a">DATA_MICRO_TLB_MISS</event>
+		<event alias="b">INSTRUCTIONS_OUT_OF_CORE_RENAMING</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_DTLB_walk_cycles_per_inst">
+  <throughput-metric-name>metric_DTLB walk cycles per txn</throughput-metric-name>
+		<event alias="a">DATA_MICRO_TLB_MISS_STALL</event>
+		<event alias="b">INSTRUCTIONS_OUT_OF_CORE_RENAMING</event>
+		<formula>a/b</formula>
+	</metric>
+
+	<metric name="metric_uops_issued_stall_cycles_per_inst">
+		<event alias="a">ISSUE_NO_DISPATCH_INSTRUCTIONS</event>
+		<event alias="b">INSTRUCTIONS_OUT_OF_CORE_RENAMING</event>
+		<formula>a/b</formula>
+	</metric>
+
+</root>

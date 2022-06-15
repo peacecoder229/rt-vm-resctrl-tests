@@ -1,0 +1,51 @@
+INST_RETIRED.ANY
+CPU_CLK_UNHALTED.CORE
+CPU_CLK_UNHALTED.REF_TSC
+
+metric_CPU utilization %
+metric_CPU utilization% in kernel mode
+metric_CPU operating frequency (in GHz)
+
+metric_CPI
+metric_kernel_CPI
+
+metric_L2 MPI (includes code+data+rfo w/ prefetches)
+metric_LLC MPI (includes code+data+rfo w/ prefetches)
+
+metric_streaming stores per instr
+metric_full streaming stores per instr
+metric_partial streaming stores per instr
+
+metric_memory bandwidth read (MB/sec)
+metric_memory bandwidth write (MB/sec)
+metric_memory bandwidth total (MB/sec)
+
+metric_IA bandwidth_reads (MB/sec)
+metric_IA read cache miss bandwidth (MB/sec)
+metric_IA bandwidth_RFO (MB/sec)
+metric_IA RFO cache miss bandwidth (MB/sec)
+metric_IA bandwidth Streaming Store (MB/sec)
+
+metric_IO_bandwidth_disk_or_network_writes (MB/sec)
+metric_IO_bandwidth_disk_or_network_reads (MB/sec)
+metric_IO_number of partial PCI writes per sec
+
+metric_IO inbound read requests per sec
+metric_IO % of inbound reads that miss L3
+
+metric_IO inbound round trip read latency (ns)
+
+metric_IO inbound write requests per sec
+metric_IO % of inbound partial writes
+metric_IO % of inbound partial writes that miss L3
+metric_IO % of inbound full writes
+metric_IO % of inbound full writes that miss L3
+
+metric_IO % of allocating writes
+metric_IO % of non-allocating writes
+
+metric_IO % of inbound writes with lost ownership
+metric_IO % of inbound writes with data snooped
+
+metric_IO inbound write latency (ns)
+
