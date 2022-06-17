@@ -14,7 +14,7 @@ cores0=$((cores / 2))
 #do
 #for pattern in {2..12..1}
 #do
-   for casValue in {125..255..225}
+   for casValue in {125..255..5}
    do
       cd $PWD/hwdrc_postsi/scripts
       ./hwdrc_icx_2S_xcc_init_to_default_pqos_CAS.sh $casValue 0-$cores 56-57
@@ -24,38 +24,56 @@ cores0=$((cores / 2))
       pqos -m "all:[$cores0-$((cores-1))]"  >> ${cores}_mlc_monitor_pattern1.csv &
       
       echo $cores0
-      mlc --loaded_latency -W$pattern0 -t60 -c0 -k1-$((cores0 -1)) -d0  | tail -1 | awk '{print $2,$3}' > temp_mlc_pattern0 &
-      mlc --loaded_latency -W$pattern1 -t60 -c$cores0 -k$((cores0+1))-$((cores -1)) -d0  | tail -1 | awk '{print $2,$3}' > temp_mlc_pattern1
-
-
+      mlc --loaded_latency -W$pattern0 -t120 -c0 -k1-$((cores0 -1)) -d0  | tail -1 | awk '{print $2,$3}' > temp_mlc_pattern0 &
+      mlc --loaded_latency -W$pattern1 -t120 -c$cores0 -k$((cores0+1))-$((cores -1)) -d0  | tail -1 | awk '{print $2,$3}' > temp_mlc_pattern1 
+ 
       
       killall -SIGINT pqos
-
-    done
-      "
-      entries=$(grep -irn "CORE" ${cores}_mlc_monitor_temp.csv | cut -d : -f 1)
+    
+      entries=$(grep -irn "CORE" ${cores}_mlc_monitor_pattern0.csv | cut -d : -f 1)
       for entry in $entries
       do
 	      line=''"$((entry+1))"'!d'
 	echo $line
-	sed $line ${cores}_mlc_monitor_temp.csv | awk '{print $3}' >> ${cores}_mlc_MISSES_monitor.csv
-        sed $line ${cores}_mlc_monitor_temp.csv | awk '{print $4}' >> ${cores}_mlc_LLC_monitor.csv
-	sed $line ${cores}_mlc_monitor_temp.csv | awk '{print $5}' >> ${cores}_mlc_MBL_monitor.csv
+	sed $line ${cores}_mlc_monitor_pattern0.csv | awk '{print $3}' >> ${cores}_mlc_MISSES_monitor_pattern0.csv
+        sed $line ${cores}_mlc_monitor_pattern0.csv | awk '{print $4}' >> ${cores}_mlc_LLC_monitor_pattern0.csv
+	sed $line ${cores}_mlc_monitor_pattern0.csv | awk '{print $5}' >> ${cores}_mlc_MBL_monitor_pattern0.csv
       done	      
-      mlcBwScore=$(cat temp_mlc | awk '{print $1}')
-      mlcLaScore=$(cat temp_mlc | awk '{print $2}')
-      MISSES=$(cat ${cores}_mlc_MISSES_monitor.csv | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }') 
-      LLC=$(cat ${cores}_mlc_LLC_monitor.csv | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }') 
-      MBL=$(cat ${cores}_mlc_MBL_monitor.csv | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }') 
+      mlcBwScore_pattern0=$(cat temp_mlc_pattern0 | awk '{print $1}')
+      mlcLaScore_pattern0=$(cat temp_mlc_pattern0 | awk '{print $2}')
+      MISSES_pattern0=$(cat ${cores}_mlc_MISSES_monitor_pattern0.csv | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }') 
+      LLC_pattern0=$(cat ${cores}_mlc_LLC_monitor_pattern0.csv | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }') 
+      MBL_pattern0=$(cat ${cores}_mlc_MBL_monitor_pattern0.csv | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }') 
       
-      rm -rf ${cores}_mlc_monitor_temp.csv
-      rm -rf ${cores}_mlc_MISSES_monitor.csv
-      rm -rf ${cores}_mlc_MBL_monitor.csv
-      rm -rf ${cores}_mlc_monitor_temp.csv	
-      rm -rf ${cores}_mlc_LLC_monitor.csv
-      rm -rf temp_mlc
+      entries=$(grep -irn "CORE" ${cores}_mlc_monitor_pattern1.csv | cut -d : -f 1)
+      for entry in $entries
+      do
+	      line=''"$((entry+1))"'!d'
+	echo $line
+	sed $line ${cores}_mlc_monitor_pattern1.csv | awk '{print $3}' >> ${cores}_mlc_MISSES_monitor_pattern1.csv
+        sed $line ${cores}_mlc_monitor_pattern1.csv | awk '{print $4}' >> ${cores}_mlc_LLC_monitor_pattern1.csv
+	sed $line ${cores}_mlc_monitor_pattern1.csv | awk '{print $5}' >> ${cores}_mlc_MBL_monitor_pattern1.csv
+      done	      
+      mlcBwScore_pattern1=$(cat temp_mlc_pattern1 | awk '{print $1}')
+      mlcLaScore_pattern1=$(cat temp_mlc_pattern1 | awk '{print $2}')
+      MISSES_pattern1=$(cat ${cores}_mlc_MISSES_monitor_pattern1.csv | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }') 
+      LLC_pattern1=$(cat ${cores}_mlc_LLC_monitor_pattern1.csv | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }') 
+      MBL_pattern1=$(cat ${cores}_mlc_MBL_monitor_pattern1.csv | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }') 
+      
 
-      echo $cores,$casValue,$mlcBwScore,$mlcLaScore,$MISSES,$LLC,$MBL >> ${cores}_W_nutanix_mlc_monitoring.csv
+
+
+      rm -rf ${cores}_mlc_monitor_pattern*.csv
+      rm -rf ${cores}_mlc_MISSES_pattern*.csv
+      rm -rf ${cores}_mlc_MBL_pattern*.csv
+      rm -rf ${cores}_mlc_monitor_pattern*.csv	
+      rm -rf ${cores}_mlc_LLC_monitor_pattern*.csv
+      rm -rf temp_mlc_pattern*
+      rm -rf *.csv
+
+      echo $cores,$casValue,$pattern0,$mlcBwScore_pattern0,$mlcLaScore_pattern0,$MISSES_pattern0,$LLC_pattern0,$MBL_pattern0 >> ${cores}_results_pattern0
+      echo $cores,$casValue,$pattern1,$mlcBwScore_pattern1,$mlcLaScore_pattern1,$MISSES_pattern1,$LLC_pattern1,$MBL_pattern1 >> ${cores}results_pattern1
+      
 
    #done
 #echo $cores
