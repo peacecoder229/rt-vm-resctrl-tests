@@ -8,10 +8,11 @@ export PATH=$PATH:/opt/intel/sep_private_5.31_linux_121516364bb91f7/bin64/
 umount resctrl
 pqos -R
 #cores=12
+cpupower frequency-set -u 2300000 -d 2300000
 
-for cores in {7..55..2}
+for cores in {11..55..2}
 do
-for pattern in {2..12..15}
+for pattern in {2..12..1}
 do
    for casValue in {15..255..30}
    do
@@ -28,8 +29,16 @@ do
       mlcBwScore=$(cat temp_mlc | awk '{print $1}')
       mlcLaScore=$(cat temp_mlc | awk '{print $2}')
       rm -rf temp_mlc
+      
+      #disable HWDRC to speed up the processing of emon
+      cd $PWD/hwdrc_postsi/scripts
+      ./hwdrc_icx_2S_xcc_disable.sh
+      cd -
+ 
+      
       #Process EMON Data
  
+
       cd edp
 
       rm -rf *.dat

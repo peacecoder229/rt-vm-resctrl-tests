@@ -14,10 +14,10 @@ cores0=$((cores / 2))
 #do
 #for pattern in {2..12..1}
 #do
-   for casValue in {125..255..5}
+   for casValue in {1..255..255}
    do
       cd $PWD/hwdrc_postsi/scripts
-      ./hwdrc_icx_2S_xcc_init_to_default_pqos_CAS.sh $casValue 0-$cores 56-57
+      #./hwdrc_icx_2S_xcc_init_to_default_pqos_CAS.sh $casValue 0-$cores 56-57
       cd -
       echo "pqos"
       pqos -m "all:[0-$((cores0-1))]"  >> ${cores}_mlc_monitor_pattern0.csv &
