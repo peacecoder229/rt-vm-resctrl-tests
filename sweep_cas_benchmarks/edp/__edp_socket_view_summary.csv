@@ -1,101 +1,101 @@
-(EDP 4.28) name (sample #1 - #662) all events/metrics are normalized per second unless stated otherwise,socket 0,socket 1
-metric_CPU operating frequency (in GHz),1.5891667952992348,2.1341182905792566
-metric_CPU utilization %,97.2532872537898,0.0978484721810287
-metric_CPU utilization% in kernel mode,1.9991876113200915,0.08168584933655244
-metric_CPI,3.825530525316654,1.5207229317986268
-metric_kernel_CPI,3.810648606057298,3.6872663013760043
-metric_EMON event mux reliability% (>95% good),97.47579302781088,98.34129452061465
-metric_branch mispredict ratio,9.483824454123691e-05,0.01738436039209999
-metric_loads per instr,0.5309443326850732,0.22031651960892176
-metric_stores per instr,0.10984383809061557,0.1516828131756276
-metric_locks retired per instr,5.227902254787623e-05,0.0015405206912602139
+(EDP 4.28) name (sample #1 - #652) all events/metrics are normalized per second unless stated otherwise,socket 0,socket 1
+metric_CPU operating frequency (in GHz),1.9777818403566787,2.1489055944845945
+metric_CPU utilization %,97.19973189692925,0.1019030440409268
+metric_CPU utilization% in kernel mode,1.04130484693429,0.08354247730619782
+metric_CPI,5.213899571380013,1.4868480556848866
+metric_kernel_CPI,2.9314968980121803,3.7391125661912685
+metric_EMON event mux reliability% (>95% good),97.32699237978076,97.1640345235734
+metric_branch mispredict ratio,0.00011803520995594417,0.01604164341172074
+metric_loads per instr,0.21220830417789122,0.21479850475042395
+metric_stores per instr,0.20990956743599642,0.1432283000083838
+metric_locks retired per instr,8.568105881952923e-05,0.0014644571814347107
 metric_streaming stores per instr,0.0,0.0
-metric_L1D MPI (includes data+rfo w/ prefetches),0.1073760303107569,0.013451696807340324
-metric_L1D demand data read hits per instr,0.027569995757796083,0.23158481040737106
-metric_L1-I code read misses (w/ prefetches) per instr,3.630290759237807e-05,0.0199845527708046
-metric_L2 demand data read hits per instr,0.02521438102137968,0.0042124547820149415
-metric_L2 MPI (includes code+data+rfo w/ prefetches),0.10851480754784677,0.03265321688158981
-metric_L2 demand data read MPI,0.05973028783888872,0.0044899909648777004
-metric_L2 demand code MPI,3.0258331145498007e-05,0.01356904491393076
-metric_L2 Any local request that HITM in a sibling core (per instr),0.0003387054795324955,0.0006504485913317651
-metric_L2 Any local request that HIT in a sibling core and forwarded(per instr),1.2355918363959551e-05,0.00018604861578652278
-metric_L2 all L2 prefetches(per instr),0.0929704982854467,0.014974803641010977
-metric_L2 % of all lines evicted that are unused prefetches,0.2977399558356073,4.729918293068551
-metric_L2 % of L2 evictions that are allocated into L3,3.2667423626665917,96.69279619683448
-metric_L2 % of L2 evictions that are NOT allocated into L3,96.73325763733341,3.3072038031655047
-metric_Load_L2_Miss_Latency_using_ORO_events(ns),332.40223460457423,54.36870379729755
-metric_LLC code references hit in LLC per instr (prefetches included),2.5595565974246532e-05,0.011224218345307143
-metric_LLC data read references hit in LLC per instr (prefetches included),0.0014819787459248953,0.014441571762060063
-metric_LLC RFO references hit in LLC per instr (prefetches included),0.0005390384368216051,0.0011579693491689247
-metric_LLC MPI (includes code+data+rfo w/ prefetches),0.09746320988998465,0.0006655264615312981
-metric_LLC data read MPI (demand+prefetch),0.07996216535314002,0.0004328634595683889
-metric_LLC RFO read MPI (demand+prefetch),0.017499884061574343,0.00023262707079106703
-metric_LLC code read MPI (demand+prefetch),1.1604752703069874e-06,3.593117184218008e-08
+metric_L1D MPI (includes data+rfo w/ prefetches),0.10394383749214155,0.01399819924343766
+metric_L1D demand data read hits per instr,0.0235997095171733,0.21060779267812635
+metric_L1-I code read misses (w/ prefetches) per instr,6.259456543517965e-05,0.01878077904221703
+metric_L2 demand data read hits per instr,0.02530338711736083,0.003938120519224086
+metric_L2 MPI (includes code+data+rfo w/ prefetches),0.10503686064242591,0.034596603643942264
+metric_L2 demand data read MPI,0.026419443570303014,0.005143249282695716
+metric_L2 demand code MPI,3.7265177771779864e-05,0.01281366294583582
+metric_L2 Any local request that HITM in a sibling core (per instr),0.0002961707820344421,0.0006919857107153599
+metric_L2 Any local request that HIT in a sibling core and forwarded(per instr),1.9815348605175996e-05,0.0001962281520303885
+metric_L2 all L2 prefetches(per instr),0.0691549535663924,0.017449430057411085
+metric_L2 % of all lines evicted that are unused prefetches,0.2717063706744671,5.68464505547367
+metric_L2 % of L2 evictions that are allocated into L3,2.2167148297011496,97.16950109034158
+metric_L2 % of L2 evictions that are NOT allocated into L3,97.78328517029884,2.8304989096584054
+metric_Load_L2_Miss_Latency_using_ORO_events(ns),391.0720683668705,55.948973581869446
+metric_LLC code references hit in LLC per instr (prefetches included),2.723522125854656e-05,0.011177135328282987
+metric_LLC data read references hit in LLC per instr (prefetches included),0.0010907115934953723,0.01633650149480891
+metric_LLC RFO references hit in LLC per instr (prefetches included),0.0005203616131544775,0.0012268361336027205
+metric_LLC MPI (includes code+data+rfo w/ prefetches),0.07953531968765679,0.0011341891299899594
+metric_LLC data read MPI (demand+prefetch),0.0517772078808943,0.0008151834403270199
+metric_LLC RFO read MPI (demand+prefetch),0.02775463701949938,0.00030136947603655556
+metric_LLC code read MPI (demand+prefetch),3.474787263106004e-06,1.7636213626383885e-05
 metric_LLC all LLC prefetches (per instr),0.0,0.0
-metric_LLC total HITM (per instr) (excludes LLC prefetches),6.097450192778753e-07,0.00026704329114696565
-metric_LLC total HIT clean line forwards (per instr) (excludes LLC prefetches),1.4137595686885404e-06,0.0002775979927557824
-metric_Load_L3_Miss_Latency_using_ORO_events(ns),284.3421241844076,185.6059041947247
-metric_Average LLC demand data read miss latency (in ns),358.0781456409966,223.4563090627882
-metric_Average LLC demand RFO miss latency (in ns),353.9569927581853,392.7968798940847
-metric_Average LLC demand data read miss latency for LOCAL requests (in ns),357.7757091752592,150.0661203767945
-metric_Average LLC demand data read miss latency for REMOTE requests (in ns),211.81388874735484,226.47117919765074
-metric_Average LLC demand data read miss to DCPMEM latency (in ns),NaN,NaN
-metric_Average LLC demand data read miss to DRAM latency (in ns),358.12328916086875,229.2015263138193
-metric_LLC % SpecI2M  vs total Ownership req,0.373252889506667,0.0
-metric_TOR DRD miss avg entries (demand+prefetch),11.673652420054168,0.000171443877558667
-metric_TOR RFO miss avg entries (demand+prefetch,2.5651708247879905,0.0001062656939329988
-metric_SF snoop filter capacity evictions (per instr),0.0012549922723670516,8.264474881226731e-07
-metric_SF % of L3 accesses that result in SF capacity evictions,1.1565170696300553,0.002530983367181296
-metric_ITLB (2nd level) MPI,1.8001037306286633e-08,0.00017713271188104355
-metric_ITLB (2nd level) large page MPI,8.58586061221258e-09,5.8422290946140096e-05
-metric_STLB data page hits per instr,0.005602420524017508,0.0010756152291982136
-metric_DTLB (2nd level) load MPI,0.0013095889793705922,0.0005435422469163211
-metric_DTLB (2nd level) 4KB page load MPI,0.0013091575557147264,0.00042878133437521614
-metric_DTLB (2nd level) 2MB large page load MPI,3.764464218913701e-07,8.02716148340379e-05
-metric_DTLB (2nd level) 1GB large page load MPI,5.4977233974282516e-08,3.4489297707067136e-05
-metric_DTLB (2nd level) store MPI,0.00047671768605315605,5.471458577876066e-05
-metric_DTLB load miss latency (in core clks),47.25413915064194,84.26920943500888
-metric_DTLB store miss latency (in core clks),67.53541544225526,90.2868013644713
-metric_ITLB miss latency (in core clks),71.73712737127364,70.2938054531459
-metric_NUMA %_Reads addressed to local DRAM,99.99903217382627,2.662529984038334
-metric_NUMA %_Reads addressed to remote DRAM,0.0009678261737284467,97.33747001596169
-metric_NUMA %_RFOs addressed to local DRAM,99.99884797400102,56.96150566836138
-metric_NUMA %_RFOs addressed to remote DRAM,0.0011520259989613985,43.038494331638624
-metric_uncore frequency GHz,2.400914178934723,2.400610169801854
-metric_UPI speed - GT/s,16.02115735502058,16.014222689563397
-metric_UPI Data transmit BW (MB/sec) (only data),3.261679166605941,3.296843104800396
-metric_UPI Transmit utilization_% (includes control),4.629681339563124,4.614234687110177
+metric_LLC total HITM (per instr) (excludes LLC prefetches),5.917742279923625e-07,0.00046649612016588056
+metric_LLC total HIT clean line forwards (per instr) (excludes LLC prefetches),2.811430575471832e-06,0.00036887224575551063
+metric_Load_L3_Miss_Latency_using_ORO_events(ns),351.07793955095855,182.85099344945542
+metric_Average LLC demand data read miss latency (in ns),447.913368903081,225.3544277119937
+metric_Average LLC demand RFO miss latency (in ns),441.31986588321473,367.61628702829745
+metric_Average LLC demand data read miss latency for LOCAL requests (in ns),461.0607988091288,18.46875121380714
+metric_Average LLC demand data read miss latency for REMOTE requests (in ns),168.49870358696427,202.27734248832638
+metric_Average LLC demand data read miss to DCPMEM latency (in ns),Infinity,NaN
+metric_Average LLC demand data read miss to DRAM latency (in ns),447.8692408379788,221.02409825783437
+metric_LLC % SpecI2M  vs total Ownership req,0.45392222966413964,0.0
+metric_TOR DRD miss avg entries (demand+prefetch),9.077903221962664,0.00025534026608213826
+metric_TOR RFO miss avg entries (demand+prefetch,4.335009985807437,0.00012810537369602957
+metric_SF snoop filter capacity evictions (per instr),0.001136598000001699,1.3407118623882528e-06
+metric_SF % of L3 accesses that result in SF capacity evictions,1.0820944124282124,0.003875270174455423
+metric_ITLB (2nd level) MPI,7.433799952292136e-07,0.00017435167453157428
+metric_ITLB (2nd level) large page MPI,1.6119174983754014e-08,5.678324793307521e-05
+metric_STLB data page hits per instr,0.003145272848843923,0.001088394335152967
+metric_DTLB (2nd level) load MPI,0.0008029970760413963,0.0005599188760165161
+metric_DTLB (2nd level) 4KB page load MPI,0.0008024624878246072,0.00045275888550449107
+metric_DTLB (2nd level) 2MB large page load MPI,4.491933038418264e-07,8.71018384418255e-05
+metric_DTLB (2nd level) 1GB large page load MPI,8.539491294728405e-08,2.0058152070199576e-05
+metric_DTLB (2nd level) store MPI,0.0008592385858856047,5.664186523417435e-05
+metric_DTLB load miss latency (in core clks),89.58160232443231,81.14281953087597
+metric_DTLB store miss latency (in core clks),98.81528568888439,92.3125517567728
+metric_ITLB miss latency (in core clks),307.54022079182994,69.63482132575902
+metric_NUMA %_Reads addressed to local DRAM,99.99539872910385,38.22515328314339
+metric_NUMA %_Reads addressed to remote DRAM,0.004601270896154331,61.7748467168566
+metric_NUMA %_RFOs addressed to local DRAM,99.99859271061861,68.2036787040162
+metric_NUMA %_RFOs addressed to remote DRAM,0.0014072893813826446,31.796321295983805
+metric_uncore frequency GHz,2.400797874917079,2.4011700631548707
+metric_UPI speed - GT/s,16.017751840507287,16.01748290713355
+metric_UPI Data transmit BW (MB/sec) (only data),5.442645293778539,6.055405775493384
+metric_UPI Transmit utilization_% (includes control),9.135338669347783,9.101368733689286
 metric_UPI % cycles transmit link is half-width (L0p),0.0,0.0
 metric_UPI % cycles receive link is half-width (L0p),0.0,0.0
-metric_HA - Reads vs. all requests,0.7837164957457181,0.546084334646482
-metric_HA - Writes vs. all requests,0.2162835042542821,0.453915665353518
-metric_HA % of all reads that are local,99.99956022315186,58.43658592697274
-metric_HA % of all writes that are local,99.9938744984528,2.388154122926676
-metric_HA conflict responses per instr,9.880957380745105e-09,5.742402739440748e-08
-metric_HA directory lookups that spawned a snoop (per instr),2.466213947907339e-06,4.158861953946105e-05
-metric_HA directory lookups that did not spawn a snoop (per instr),0.10347214679087459,0.00012194300413150789
-metric_M2M directory updates (per instr),3.888844806065906e-06,0.0003681069955306485
-metric_M2M XPT prefetches (per instr),0.002280794169082598,3.0176065410014038e-05
-metric_M3UPI UPI prefetches (per instr),2.762337001963979e-07,0.0004115486903779817
-metric_M2M extra reads from XPT-UPI prefetches (per instr),0.00020437174885745382,0.0002832426299294634
-metric_DDR data rate (MT/sec),4802.40947011632,4801.067195072991
-metric_memory bandwidth read (MB/sec),148857.63224548267,8.585622966448161
-metric_memory bandwidth write (MB/sec),41121.46454295325,7.492312864753063
-metric_memory bandwidth total (MB/sec),189979.0967884359,16.077935831201227
-metric_memory extra write b/w due to directory updates (MB/sec),5.630807924565651,1.811609184514908
-metric_memory extra read b/w due to XPT/UPI prefetches (MB/sec),295.91771346310435,1.3939559857771038
+metric_HA - Reads vs. all requests,0.6068711129674101,0.5025089648506257
+metric_HA - Writes vs. all requests,0.3931288870325899,0.4974910351493742
+metric_HA % of all reads that are local,99.99936266265917,54.428876751365465
+metric_HA % of all writes that are local,99.9935246854859,14.02751292291825
+metric_HA conflict responses per instr,1.260809314537817e-08,2.5465662777983065e-07
+metric_HA directory lookups that spawned a snoop (per instr),1.29873742272107e-05,7.063792287588133e-05
+metric_HA directory lookups that did not spawn a snoop (per instr),0.07547938952907925,0.00020990434544702907
+metric_M2M directory updates (per instr),8.391864472225942e-06,0.0006002892956254185
+metric_M2M XPT prefetches (per instr),0.001467072901100101,0.0001276835164814689
+metric_M3UPI UPI prefetches (per instr),3.1412008533174914e-07,0.0006311980118361316
+metric_M2M extra reads from XPT-UPI prefetches (per instr),9.228551085421708e-05,0.0004702390052247596
+metric_DDR data rate (MT/sec),4801.694724502652,4802.263302451285
+metric_memory bandwidth read (MB/sec),101952.44930404847,11.761119244415545
+metric_memory bandwidth write (MB/sec),65803.74226440766,8.742387796820747
+metric_memory bandwidth total (MB/sec),167756.19156845612,20.50350704123629
+metric_memory extra write b/w due to directory updates (MB/sec),11.089379669061731,3.1685933378080264
+metric_memory extra read b/w due to XPT/UPI prefetches (MB/sec),121.95014245079624,2.4821301828816997
 metric_DCPMEM_memory_mode near memory cache read miss rate%,NaN,NaN
-metric_memory RPQ PCH0 read latency (ns),143.16642081006026,36.85814079508232
-metric_memory RPQ PCH1 read latency (ns),133.6640289662378,35.9280986167263
-metric_memory avg entries in RPQ,38.91523001774719,0.00019335811682701584
-metric_memory avg entries in RPQ when not empty,41.544517280900266,2.7346572528829007
-metric_memory % cycles when RPQ PCH0 is empty,6.222731605718257,99.99224424988321
-metric_memory % cycles when RPQ PCH0 has 1 or more entries,93.77726839428175,0.007755750116791361
-metric_memory % cycles when RPQ PCH0 has 10 or more entries,84.11133040519621,0.0
-metric_memory % cycles when RPQ PCH0 has 20 or more entries,57.94186134286327,0.0
-metric_memory % cycles when RPQ PCH0 has 30 or more entries,21.33196267633783,0.0
-metric_memory % cycles when RPQ is full,16.659085906448357,0.0
-metric_memory avg entries in WPQ,39.89140002544115,0.0015129794943269375
+metric_memory RPQ PCH0 read latency (ns),205.95122785010756,36.39776554634651
+metric_memory RPQ PCH1 read latency (ns),201.60572232617326,36.02313009125988
+metric_memory avg entries in RPQ,41.31942064672414,0.00034085066350699963
+metric_memory avg entries in RPQ when not empty,44.09832825756833,2.3126648900203883
+metric_memory % cycles when RPQ PCH0 is empty,6.232692606263591,99.98428770674306
+metric_memory % cycles when RPQ PCH0 has 1 or more entries,93.7673073937364,0.015712293256944624
+metric_memory % cycles when RPQ PCH0 has 10 or more entries,84.19588465491339,0.0
+metric_memory % cycles when RPQ PCH0 has 20 or more entries,58.78523256578736,0.0
+metric_memory % cycles when RPQ PCH0 has 30 or more entries,26.20956625042636,0.0
+metric_memory % cycles when RPQ is full,21.070407099177842,0.0
+metric_memory avg entries in WPQ,48.92638038991181,0.0018254051709577803
 metric_DCPMEM_memory bandwidth read (MB/sec),0.0,0.0
 metric_DCPMEM_memory bandwidth write (MB/sec),0.0,0.0
 metric_DCPMEM_memory bandwidth total (MB/sec),0.0,0.0
@@ -123,63 +123,63 @@ metric_DCPMEM avg time (dclk) WPQ not empty,NaN,NaN
 metric_DCPMEM avg time (dclk) WPQ empty,Infinity,Infinity
 metric_DCPMEM avg time (dclk) with 30 or more entries in WPQ,NaN,NaN
 metric_DCPMEM avg time (dclk) with less than 30 entries in WPQ,Infinity,Infinity
-metric_CHA % OSB Loc InvItoE,93.65078046884064,0.0
+metric_CHA % OSB Loc InvItoE,99.25539339357351,0.0
 metric_CHA % OSB Rem InvItoE,NaN,0.0
-metric_CHA % OSB Loc Read,0.009503302087692218,75.87673909308702
+metric_CHA % OSB Loc Read,0.0004855370546843941,72.97005623746183
 metric_CHA % OSB Rem Read,0.0,0.0
-metric_CHA % cyles Fast asserted,31.05970027527089,0.0006396943183333325
-metric_CHA % cyles Fast asserted for dynamic prefetch throttle,52.787941552457795,0.0008369697634011486
-metric_CHA RxC IRQ latency (ns),29.29769019659158,0.9181481846321528
-metric_CHA RxC IRQ avg entries,2.7013472162014716,5.316068131115515e-05
-metric_CHA RxC IRQ % cycles when Q has 18 or more entries,4.554785351081608,0.00013382416929658605
-metric_M2M Rd Trk avg entries,101.51730381306463,0.00022486213689021364
-metric_M2M Rd Trk CH0 Latency (ns),175.35223812030216,43.59622974187323
-metric_M2M Rd Trk CH1 Latency (ns),175.55202572454957,41.71133282452015
+metric_CHA % cyles Fast asserted,33.93912881155985,0.0
+metric_CHA % cyles Fast asserted for dynamic prefetch throttle,53.59298351383702,7.996557558774972e-05
+metric_CHA RxC IRQ latency (ns),31.529218587577912,0.36740131133704723
+metric_CHA RxC IRQ avg entries,2.4325399062371136,2.354832337240578e-05
+metric_CHA RxC IRQ % cycles when Q has 18 or more entries,3.9489702521686856,4.950966218068985e-06
+metric_M2M Rd Trk avg entries,92.93372331491906,0.00023908803362007999
+metric_M2M Rd Trk CH0 Latency (ns),241.34725072387178,29.535949249457445
+metric_M2M Rd Trk CH1 Latency (ns),241.57520859706338,28.875979405456626
 metric_M2M TxC AD latency (ns),NaN,NaN
-metric_M2M TxC BL latency (ns),1.310280562923437,6.180084323531143
+metric_M2M TxC BL latency (ns),1.2942775199676813,4.910131066787658
 metric_M2M TxC AD avg entries,0.0,0.0
-metric_M2M TxC BL avg entries,0.7589764287436417,6.336441515159756e-05
-metric_M2M RxC AD latency (ns),51.647549967334065,0.9418365166010768
-metric_M2M RxC BL latency (ns),13.492534748705703,8.48218775035147
-metric_M2M RxC AD avg entries,51.787859716810566,1.1539639473116938e-05
-metric_M2M RxC BL avg entries,4.305341458534991,0.00014841294671945793
-metric_IO_bandwidth_disk_or_network_writes (MB/sec),0.10012471838265699,0.0
-metric_IO_bandwidth_disk_or_network_reads (MB/sec),0.0019791788179447287,0.0
-metric_IO_number of partial PCI writes per sec,29.82021656501544,0.0
-metric_IO read cache miss(disk/network writes) bandwidth (MB/sec),0.09061428432724221,0.0
-metric_IO_write cache miss(disk/network reads) bandwidth (MB/sec),0.0011313962927302214,0.0
-metric_IO inbound read requests per sec,19.337793849433936,0.0
-metric_IO % of inbound reads that miss L3,90.50141242937855,NaN
-metric_IO inbound round trip read latency (ns),6554.810362499626,NaN
-metric_IO inbound write requests per sec,30.924669030386383,0.0
-metric_IO % of inbound partial writes,96.42857142857142,NaN
-metric_IO % of inbound partial writes that miss L3,59.28215522971524,NaN
-metric_IO % of inbound full writes,3.571428571428571,NaN
+metric_M2M TxC BL avg entries,0.5339728978612074,6.281434772949781e-05
+metric_M2M RxC AD latency (ns),70.90622220158899,0.90944264798695
+metric_M2M RxC BL latency (ns),47.40270521641772,11.451102242603511
+metric_M2M RxC AD avg entries,48.88995141749374,2.414694161937978e-05
+metric_M2M RxC BL avg entries,25.231551761508705,0.00033072757418118747
+metric_IO_bandwidth_disk_or_network_writes (MB/sec),0.004702726437327673,0.0
+metric_IO_bandwidth_disk_or_network_reads (MB/sec),0.002844546045936417,0.0
+metric_IO_number of partial PCI writes per sec,42.69158333745033,0.0
+metric_IO read cache miss(disk/network writes) bandwidth (MB/sec),0.0003535884539344115,0.0
+metric_IO_write cache miss(disk/network reads) bandwidth (MB/sec),0.0014852521296714845,0.0
+metric_IO inbound read requests per sec,6378.23982566697,0.0
+metric_IO % of inbound reads that miss L3,7.518796992481203,NaN
+metric_IO inbound round trip read latency (ns),15561.874684951112,NaN
+metric_IO inbound write requests per sec,44.44603196775651,0.0
+metric_IO % of inbound partial writes,96.05263157894737,NaN
+metric_IO % of inbound partial writes that miss L3,54.35981219689038,NaN
+metric_IO % of inbound full writes,3.9473684210526314,NaN
 metric_IO % of inbound full writes that miss L3,0.0,NaN
-metric_memory reads vs. all requests,0.783547425805762,0.5340003254513989
+metric_memory reads vs. all requests,0.6077417968948396,0.5736150025828162
 metric_memory Page Empty vs. all requests,0.0,0.0
-metric_memory Page Misses vs. all requests,1.0574325575897088,1.0025230690097064
-metric_memory Page Hits vs. all requests,-0.05743255758970864,-0.00252306900970667
-metric_ItoM operations (fast strings) that reference LLC per instr,0.010421878589711943,0.0
-metric_% Uops delivered from decoded Icache (DSB),98.50184736457845,65.72268120029133
-metric_% Uops delivered from legacy decode pipeline (MITE),0.8824704014517348,21.671584729355203
-metric_% Uops delivered from microcode sequencer (MS),0.6156822339697977,12.605734070353458
+metric_memory Page Misses vs. all requests,1.0746034297761478,1.0029211822749093
+metric_memory Page Hits vs. all requests,-0.07460342977614783,-0.0029211822749093505
+metric_ItoM operations (fast strings) that reference LLC per instr,0.023070792117506383,0.0
+metric_% Uops delivered from decoded Icache (DSB),97.97569440837705,67.58362824820311
+metric_% Uops delivered from legacy decode pipeline (MITE),1.2709398080810863,20.909939561969694
+metric_% Uops delivered from microcode sequencer (MS),0.7533657835418477,11.5064321898272
 metric_% Uops delivered from loop stream detector (LSD),0.0,0.0
 metric_FP scalar single-precision FP instructions retired per instr,0.0,0.0
-metric_FP scalar double-precision FP instructions retired per instr,2.4401790490138717e-10,3.6757952593710228e-06
+metric_FP scalar double-precision FP instructions retired per instr,1.2126613029818082e-08,3.7060334429737255e-06
 metric_FP 128-bit packed single-precision FP instructions retired per instr,0.0,0.0
 metric_FP 128-bit packed double-precision FP instructions retired per instr,0.0,0.0
 metric_FP 256-bit packed single-precision FP instructions retired per instr,0.0,0.0
 metric_FP 256-bit packed double-precision FP instructions retired per instr,0.0,0.0
 metric_FP 512-bit packed single-precision FP instructions retired per instr,0.0,0.0
 metric_FP 512-bit packed double-precision FP instructions retired per instr,0.0,0.0
-metric_DRAM power (watts),13.430894388648872,3.392718270664304
-metric_package power (watts),291.3883593658046,179.69308467346107
-metric_core c6 residency %,4.785301775373146,85.06584956072724
+metric_DRAM power (watts),13.734278472165004,3.4232309980955864
+metric_package power (watts),293.3993067051385,180.4032139561305
+metric_core c6 residency %,4.706546803799612,85.27110784272439
 metric_package c2 residency %,0.0,0.0
 metric_package c6 residency %,0.0,0.0
-metric_core clflush and clflushopt per instr,8.660772554954783e-06,9.166857300745712e-06
-metric_core PAUSE instr executions per instr,1.9819182594225324e-05,0.000825883689773499
+metric_core clflush and clflushopt per instr,1.6855607426440112e-09,8.231872342979043e-06
+metric_core PAUSE instr executions per instr,2.3967437744834636e-05,0.001714025931187854
 metric_core % cycles in license throttle,0.0,0.0
 metric_core % cycles in license level 0,0.0,0.0
 metric_core % cycles in license level 1,100.0,100.0
@@ -189,224 +189,224 @@ metric_core % cycles in license level 4,0.0,0.0
 metric_core % cycles in license level 5,0.0,0.0
 metric_core % cycles in license level 6,0.0,0.0
 metric_core % cycles in license level 7,0.0,0.0
-metric_core initiated local dram read bandwidth (MB/sec),142004.84962845052,0.6417588109863179
-metric_core initiated remote dram read bandwidth (MB/sec),0.8437025404541557,0.5360720773700961
+metric_core initiated local dram read bandwidth (MB/sec),104901.57447775964,1.1914154416138303
+metric_core initiated remote dram read bandwidth (MB/sec),1.4552927818186727,0.8360877380404317
 metric_TMA_Metrics_Version,4.2,4.2
-metric_TMA_Frontend_Bound(%),1.0664371414551286,30.370295304461465
-metric_TMA_..Fetch_Latency(%),0.03690104894580243,25.83320527342103
-metric_TMA_....ICache_Misses(%),0.03894028046117305,13.066706211773072
-metric_TMA_....ITLB_Misses(%),0.0005246257653625611,2.6627812323380127
-metric_TMA_......Code_STLB_Hit(%),0.0004908698536658627,1.8440040489343619
-metric_TMA_......Code_STLB_Miss(%),3.375591169669842e-05,0.8187771834036508
-metric_TMA_....Branch_Resteers(%),0.01000574432839544,17.002716459370877
-metric_TMA_......Mispredicts_Resteers(%),0.004041180786361149,6.748424763774029
-metric_TMA_......Clears_Resteers(%),0.004483308339285574,0.4433524822877696
-metric_TMA_......Unknown_Branches(%),0.0014812552027487177,9.81093921330908
-metric_TMA_....DSB_Switches(%),0.028914616789538786,0.8985951605917885
-metric_TMA_....LCP(%),6.081660394673106e-05,0.013838395709001862
-metric_TMA_....MS_Switches(%),0.04715884263254943,2.720142458833522
-metric_TMA_....Predictor_Clears(%),0.010399346330651451,1.5998701099473305
-metric_TMA_..Fetch_Bandwidth(%),1.0295360925093262,4.537090031040436
-metric_TMA_....MITE(%),0.0168470482302373,2.2604316519416408
-metric_TMA_....DSB(%),1.7450817651428574,2.5440667431141044
+metric_TMA_Frontend_Bound(%),1.0839742651438908,29.587492819457882
+metric_TMA_..Fetch_Latency(%),0.0444316828584885,25.02842068465312
+metric_TMA_....ICache_Misses(%),0.0481726334577453,11.909913477576817
+metric_TMA_....ITLB_Misses(%),0.012701307641811875,2.4491432895598826
+metric_TMA_......Code_STLB_Hit(%),0.008316504199874635,1.6325872428654822
+metric_TMA_......Code_STLB_Miss(%),0.00438480344193724,0.8165560466944003
+metric_TMA_....Branch_Resteers(%),0.035200948826091344,17.391850837392685
+metric_TMA_......Mispredicts_Resteers(%),0.013401489472160487,6.714621588087269
+metric_TMA_......Clears_Resteers(%),0.018789055190922253,0.39353301649072403
+metric_TMA_......Unknown_Branches(%),0.0030104041630086083,10.283696232814691
+metric_TMA_....DSB_Switches(%),0.02756599194984902,0.883328228321629
+metric_TMA_....LCP(%),4.1707221749043524e-05,0.011634933649699435
+metric_TMA_....MS_Switches(%),0.05871329093758767,2.6378489856261553
+metric_TMA_....Predictor_Clears(%),0.005590880979382528,1.6304849308839593
+metric_TMA_..Fetch_Bandwidth(%),1.0395425822854025,4.559072134804765
+metric_TMA_....MITE(%),0.015855230209234183,2.117280406132646
+metric_TMA_....DSB(%),0.25665437553757864,2.4569497498590263
 metric_TMA_....LSD(%),0.0,0.0
-metric_TMA_....MS(%),0.01284961152366771,0.8259068627702939
-metric_TMA_Bad_Speculation(%),0.011880568251121382,3.9868996421909553
-metric_TMA_..Branch_Mispredicts(%),0.005632187857808024,3.7411186909016876
-metric_TMA_..Machine_Clears(%),0.006248380393313358,0.2457809512892678
-metric_TMA_....Memory_Disambiguation(%),0.0016773402483223573,0.2297743542360339
-metric_TMA_....Memory_Renaming(%),5.58507035880611e-06,0.031702187527897635
-metric_TMA_....Other_Nukes(%),0.005261395198406974,0.19981769752098433
-metric_TMA_Backend_Bound(%),95.165343481881,52.93531172117669
-metric_TMA_..Memory_Bound(%),89.50001461804902,36.97451784155438
-metric_TMA_....L1_Bound(%),0,15.363608019717901
-metric_TMA_......DTLB_Load(%),2.6427822980468627,3.5070939571796114
-metric_TMA_........Load_STLB_Hit(%),1.0251373870523859,0.4951136362152605
-metric_TMA_........Load_STLB_Miss(%),1.6176449109944768,3.011980320964351
-metric_TMA_......Store_Fwd_Blk(%),0.01582198881476025,1.8177213585328102
-metric_TMA_......Store_Early_Blk(%),0.03964165261909554,11.6504368045418
-metric_TMA_......Lock_Latency(%),0.03250926989712667,0.2686238688248159
-metric_TMA_......Split_Loads(%),0.0,0.031404179534220894
-metric_TMA_......4K_Aliasing(%),8.506097717879284e-05,0.005428508487415633
-metric_TMA_......FB_Full(%),71.88061820522564,0.6413299844762299
-metric_TMA_....L2_Bound(%),0.13154283601434438,1.6469280405319728
-metric_TMA_......L2_Hit_Latency(%),12.38879231701229,5.555299396077622
-metric_TMA_....L3_Bound(%),10.816752860550313,23.225755465167307
-metric_TMA_......Contested_Accesses(%),0.0645577841742447,2.775853485284261
-metric_TMA_......Data_Sharing(%),0.036064759714907274,1.091200458686913
-metric_TMA_......L3_Hit_Latency(%),0.4814907979271077,18.82284573744088
-metric_TMA_......SQ_Full(%),20.951750807403567,1.2557744644351765
-metric_TMA_....DRAM_Bound(%),78.48143797056936,3.2201534248910035
-metric_TMA_......MEM_Bandwidth(%),88.86022584141851,16.006081518765804
+metric_TMA_....MS(%),0.0039552323818295085,0.8380613736439718
+metric_TMA_Bad_Speculation(%),0.01011516368545351,3.9944754727659015
+metric_TMA_..Branch_Mispredicts(%),0.004211120410001895,3.7733269370990827
+metric_TMA_..Machine_Clears(%),0.005904043275451615,0.22114853566681872
+metric_TMA_....Memory_Disambiguation(%),0.0010932882751215696,0.22477593728048062
+metric_TMA_....Memory_Renaming(%),3.4358457774328945e-06,0.017572379457393216
+metric_TMA_....Other_Nukes(%),0.0046592340170921245,0.17644155636071257
+metric_TMA_Backend_Bound(%),96.25813657295568,53.45023527976805
+metric_TMA_..Memory_Bound(%),96.02919321388815,35.085350234376364
+metric_TMA_....L1_Bound(%),0,15.07487264312813
+metric_TMA_......DTLB_Load(%),1.801927202266056,3.568095371397748
+metric_TMA_........Load_STLB_Hit(%),0.4222733798472461,0.5124101495738473
+metric_TMA_........Load_STLB_Miss(%),1.37965382241881,3.055685221823901
+metric_TMA_......Store_Fwd_Blk(%),0.0247673241488528,1.8292469585994793
+metric_TMA_......Store_Early_Blk(%),0.03942356628014718,12.814328141503173
+metric_TMA_......Lock_Latency(%),0.03807797819570047,0.24208946355769767
+metric_TMA_......Split_Loads(%),0.0,0.01397885182231496
+metric_TMA_......4K_Aliasing(%),7.34999834461891e-05,0.00519262402539914
+metric_TMA_......FB_Full(%),83.11448848195433,1.5510352641074576
+metric_TMA_....L2_Bound(%),0.6542698628388873,1.5734378891340675
+metric_TMA_......L2_Hit_Latency(%),11.119591665051615,5.4539449898269625
+metric_TMA_....L3_Bound(%),26.624487221793153,22.37562866881459
+metric_TMA_......Contested_Accesses(%),0.06527917624932922,3.5351280397456906
+metric_TMA_......Data_Sharing(%),0.042026906405710475,0.954228328371649
+metric_TMA_......L3_Hit_Latency(%),0.3188597454999327,20.741831910026427
+metric_TMA_......SQ_Full(%),15.09663430786064,1.4926914261579247
+metric_TMA_....DRAM_Bound(%),54.30280118602511,3.881874376956071
+metric_TMA_......MEM_Bandwidth(%),77.79044916268334,16.638784151123694
 metric_TMA_........MBA_Stalls(%),0.0,0.0
-metric_TMA_......MEM_Latency(%),8.12173726554275,15.811954139013828
-metric_TMA_........Local_DRAM(%),257.0636485221882,0.07542408206384574
-metric_TMA_........Remote_DRAM(%),0.0013246620166343182,0.26470026670663765
-metric_TMA_........Remote_Cache(%),0.004395926095023404,3.7553308800235925
-metric_TMA_....Store_Bound(%),0.0008230211852080746,2.0232857466770904
-metric_TMA_......Store_Latency(%),70.8164275966021,27.040200525997687
-metric_TMA_......False_Sharing(%),0.0006521164719560796,0.9826875632294605
-metric_TMA_......Split_Stores(%),7.06012375677914e-05,0.040436696018840645
+metric_TMA_......MEM_Latency(%),13.410124233099797,16.1785353966934
+metric_TMA_........Local_DRAM(%),101.64181307081233,0.14950096501202303
+metric_TMA_........Remote_DRAM(%),0.0026140032054318466,0.4349285923602857
+metric_TMA_........Remote_Cache(%),0.012194177357543164,7.942533915332708
+metric_TMA_....Store_Bound(%),2.9944937381698873,2.0645582912844143
+metric_TMA_......Store_Latency(%),95.42279952554323,24.285453961071834
+metric_TMA_......False_Sharing(%),0.0006631398649554772,0.40282818239404
+metric_TMA_......Split_Stores(%),6.120247885909139e-05,0.03916375893320422
 metric_TMA_......Streaming_Stores(%),0.0,0.0
-metric_TMA_......DTLB_Store(%),0.9026887625896811,1.3330807031429188
-metric_TMA_........Store_STLB_Hit(%),0.062219359805134634,0.9936448390583098
-metric_TMA_........Store_STLB_Miss(%),0.8404694027845464,0.33943586408460913
-metric_TMA_..Core_Bound(%),5.665328863831965,15.96079387962231
-metric_TMA_....Divider(%),0.008632797607615898,0.3483200116695056
-metric_TMA_......FP_Divider(%),0.0,0.0003896882791022259
-metric_TMA_......INT_Divider(%),0.008158074892260817,0.3580194855078066
-metric_TMA_....Ports_Utilization(%),1.5807474328638067,35.761005450134824
-metric_TMA_......Ports_Utilized_0(%),0.18982552349642565,29.508037648047132
-metric_TMA_........Serializing_Operation(%),2.0226719960497217,27.415929498897707
-metric_TMA_..........Memory_Fence(%),0.012906330235061774,0.6009355426900717
+metric_TMA_......DTLB_Store(%),1.8270740080606012,0.7647767819673703
+metric_TMA_........Store_STLB_Hit(%),0.17405413065437086,0.41937115483198734
+metric_TMA_........Store_STLB_Miss(%),1.6530198774062304,0.34540562713538303
+metric_TMA_..Core_Bound(%),0.22894335906752383,18.364885045391688
+metric_TMA_....Divider(%),0.007252773260525107,0.3474265260382903
+metric_TMA_......FP_Divider(%),0.0,0.00037438440718498604
+metric_TMA_......INT_Divider(%),0.007800885867887567,0.3371159675493419
+metric_TMA_....Ports_Utilization(%),0.6957953223708336,36.9418329123891
+metric_TMA_......Ports_Utilized_0(%),0.22634033936718964,30.101924581628126
+metric_TMA_........Serializing_Operation(%),1.14333180469244,28.543664350702425
+metric_TMA_..........Memory_Fence(%),0.01065729934929735,0.5660807996226613
 metric_TMA_........Mixing_Vectors(%),0.0,0.0
-metric_TMA_........Divider_Ops(%),0.0,0.000703713220495309
+metric_TMA_........Divider_Ops(%),0.0,0.0006786191524006097
 metric_TMA_........AMX_Busy(%),0.0,0.0
-metric_TMA_......Ports_Utilized_1(%),1.3570219799688141,5.767746067276648
-metric_TMA_......Ports_Utilized_2(%),0.9024726236793063,3.8183906308464537
-metric_TMA_......Ports_Utilized_3m(%),3.9647222663162647,13.562309948825899
-metric_TMA_........ALU_Op_Utilization(%),1.6665011571720147,9.571122913471426
-metric_TMA_..........Port_0(%),2.0089231947929185,7.232893748277935
-metric_TMA_..........Port_1(%),0.8400206946703449,6.771224103100472
-metric_TMA_..........Port_6(%),3.144291352407031,17.96659390573052
-metric_TMA_........Load_Op_Utilization(%),3.013156094629357,6.43576899847514
-metric_TMA_........Store_Op_Utilization(%),1.532914387307172,7.84269378493965
-metric_TMA_Retiring(%),3.7563388084127585,12.70749333217088
-metric_TMA_..Light_Operations(%),3.737195263408504,10.30765167528083
-metric_TMA_....FP_Arith(%),2.8324648264787516e-08,0.0003283168194969841
+metric_TMA_......Ports_Utilized_1(%),0.45663186207043716,6.297921904635853
+metric_TMA_......Ports_Utilized_2(%),0.48429816675636717,4.179479753048342
+metric_TMA_......Ports_Utilized_3m(%),2.8175712959623564,16.846601083493393
+metric_TMA_........ALU_Op_Utilization(%),1.2567048952272528,8.403830287456545
+metric_TMA_..........Port_0(%),1.9040582093247795,6.773284976431484
+metric_TMA_..........Port_1(%),0.6260919200013308,6.365692682761797
+metric_TMA_..........Port_6(%),2.2455678427899217,15.269949760892853
+metric_TMA_........Load_Op_Utilization(%),1.3865585984339959,6.118305858091951
+metric_TMA_........Store_Op_Utilization(%),2.0675072748166117,7.043147509734241
+metric_TMA_Retiring(%),2.6477739982149786,12.967796428008155
+metric_TMA_..Light_Operations(%),2.632456440279678,10.45889538727475
+metric_TMA_....FP_Arith(%),1.4629000727482486e-06,0.00033221098751933203
 metric_TMA_......X87_Use(%),0.0,0.0
-metric_TMA_......FP_Scalar(%),2.8324648264787516e-08,0.0003283168194969841
+metric_TMA_......FP_Scalar(%),1.4629000727482486e-06,0.00033221098751933203
 metric_TMA_......FP_Vector(%),0.0,0.0
 metric_TMA_......FP_AMX(%),0.0,0.0
-metric_TMA_....Int_Operations(%),0.0,0.4147275763958785
-metric_TMA_......Vector_128b(%),0.0,0.4147275763958785
+metric_TMA_....Int_Operations(%),0.0,0.3880468207882582
+metric_TMA_......Vector_128b(%),0.0,0.3880468207882582
 metric_TMA_......Vector_256b(%),0.0,0.0
 metric_TMA_......Vector_AMX(%),0.0,0.0
 metric_TMA_......Shuffles(%),0.0,0.0
-metric_TMA_....Fused_Instructions(%),36.03732023180697,7.919765848057958
-metric_TMA_....Memory_Operations(%),78.44594932236949,37.4975922694637
-metric_TMA_....String_Operations(%),0.00012767479496207106,0.07819912698826655
-metric_TMA_....Other_Light_Ops(%),-14.48339725729607,54.089386862274694
-metric_TMA_..Heavy_Operations(%),0.01914354500425422,2.3998416568900502
-metric_TMA_....Few_Uops_Instructions(%),-0.009995773610298731,0.7665155832668847
-metric_TMA_......Few_Uops_MITE(%),-0.0011159139191291758,0.1294958295669162
-metric_TMA_....Microcode_Sequencer(%),0.02913931861455295,1.6333260736231654
-metric_TMA_......Assists(%),0.013212501907733558,0.5076158459933733
-metric_TMA_........Page_Faults(%),0.0,0.048242922091480255
+metric_TMA_....Fused_Instructions(%),9.992541538340625,7.7008312612537475
+metric_TMA_....Memory_Operations(%),52.21553656500032,35.95653887690919
+metric_TMA_....String_Operations(%),0.0002941728484942923,0.09111682053623382
+metric_TMA_....Other_Light_Ops(%),37.79162626091049,55.86313400952505
+metric_TMA_..Heavy_Operations(%),0.015317557935300456,2.508901040733405
+metric_TMA_....Few_Uops_Instructions(%),0.004077716804377208,0.7968906446495404
+metric_TMA_......Few_Uops_MITE(%),0.00037641911233797943,0.12420505838663491
+metric_TMA_....Microcode_Sequencer(%),0.011239841130923247,1.7120103960838646
+metric_TMA_......Assists(%),0.010655379783294741,0.46949142369813796
+metric_TMA_........Page_Faults(%),0.0045912832073304165,0.05274247677399925
 metric_TMA_........FP_Assists(%),0.0,0.0
 metric_TMA_........AVX_Assists(%),0.0,0.0
-metric_TMA_........HW_Assists(%),101.24538121063043,101.5346308067839
-metric_TMA_......CISC(%),0.015926816706819395,1.1257102276297921
-metric_TMA_Info_Thread_IPC,0.2614016522367773,0.6575819822860535
-metric_TMA_Info_Thread_UPI,0.8615037426775184,1.119587861810652
-metric_TMA_Info_Thread_SLOTS,518874751745.20984,677499157.9792864
-metric_TMA_Info_Thread_IpTB,3.7375660521460246,8.695013380566728
-metric_TMA_Info_Core_CoreIPC,0.2610532278190597,0.687116446943721
-metric_TMA_Info_Core_ILP,1.9883591050141858,3.632627297637176
-metric_TMA_Info_Core_FP_Arith_Utilization,3.185083086007574e-11,1.2628496891557953e-06
-metric_TMA_Info_System_GFLOPs,5.520670425505501e-09,2.8265832578588165e-07
+metric_TMA_........HW_Assists(%),100.00184980284817,98.66200943959221
+metric_TMA_......CISC(%),0.0005844613476285065,1.2425189723857266
+metric_TMA_Info_Thread_IPC,0.19179502526078007,0.6725636800455512
+metric_TMA_Info_Thread_UPI,0.8289433609116348,1.115566186009445
+metric_TMA_Info_Thread_SLOTS,646416988989.3501,709504393.8625478
+metric_TMA_Info_Thread_IpTB,17.922437142065007,10.723197299277048
+metric_TMA_Info_Core_CoreIPC,0.19468844379358213,0.6605886477193549
+metric_TMA_Info_Core_ILP,4.374459933156955,3.5117585303033145
+metric_TMA_Info_Core_FP_Arith_Utilization,1.1804557096311291e-09,1.224081810248359e-06
+metric_TMA_Info_System_GFLOPs,2.503850165547854e-07,3.0565764714083075e-07
 metric_TMA_Info_System_SMT_2T_Utilization,0,0
 metric_TMA_Info_System_Time,1,1
-metric_TMA_Info_Memory_Load_Miss_Real_Latency,103.2868305018216,37.212847280659666
-metric_TMA_Info_Memory_MLP,8.95730322353934,1.956055487712895
-metric_TMA_Info_Bottleneck_Mispredictions,0.006728652011498676,8.333112613238608
-metric_EDP EMON Sampling time (seconds),0.10035494555555556,0.10035494555555556
-metric_EDP EMON total number of samples,662,662
+metric_TMA_Info_Memory_Load_Miss_Real_Latency,112.91442012548033,39.77636632049718
+metric_TMA_Info_Memory_MLP,4.782385585789018,2.141145031197828
+metric_TMA_Info_Bottleneck_Mispredictions,0.007378634584116398,8.325947677218862
+metric_EDP EMON Sampling time (seconds),0.10036221777777778,0.10036221777777778
+metric_EDP EMON total number of samples,652,652
 metric_EDP SPR XML version,4.28,4.28
 AMX_OPS_RETIRED.BF16,0.0,0.0
 AMX_OPS_RETIRED.BF16:c1,0.0,0.0
 AMX_OPS_RETIRED.INT8,0.0,0.0
-ARITH.DIVIDER_ACTIVE,7471595.608094637,407323.05287723837
-ARITH.DIVIDER_INST,0.0,56.96235293574013
-ARITH.FP_DIVIDER_ACTIVE,0.0,455.698823485921
-ARITH.INT_DIVIDER_ACTIVE,7060728.0867733145,418665.551621951
-ASSISTS.ANY,114260.56078847269,5731.8218039575595
+ARITH.DIVIDER_ACTIVE,7807924.038987812,426045.02146527276
+ARITH.DIVIDER_INST,0.0,57.38789385709268
+ARITH.FP_DIVIDER_ACTIVE,0.0,459.1031508567414
+ARITH.INT_DIVIDER_ACTIVE,8397990.962269485,413401.30607936456
+ASSISTS.ANY,114796.97526758966,5551.770466576866
 ASSISTS.FP,0.0,0.0
-ASSISTS.OTHER,115683.54034369328,5819.784107151048
-ASSISTS.PAGE_FAULT,0.0,2.7651983273057237
+ASSISTS.OTHER,114799.09878530777,5477.48830179856
+ASSISTS.PAGE_FAULT,5.270654247984096,2.9281412488800536
 ASSISTS.SSE_AVX_MIX,0.0,0.0
-BACLEARS.ANY,455167.6872934276,319751.4535538629
-BPU.BTCLEAR_CYCLES,27001574.89013876,5612631.679707545
-BR_INST_RETIRED.ALL_BRANCHES,2001315359.8245375,14074519.506039511
-BR_INST_RETIRED.ALL_BRANCHES:SUP,82338466.46071112,5197687.286174526
-BR_INST_RETIRED.ALL_BRANCHES:USER,1968472526.309481,11418055.238187686
-BR_INST_RETIRED.COND:SUP,65555695.717159376,4389623.387683955
-BR_INST_RETIRED.COND_NTAKEN,672586737.8007715,5914444.527931575
-BR_INST_RETIRED.COND_TAKEN,1297609588.6751132,3704267.83906134
-BR_INST_RETIRED.FAR_BRANCH,275047.44733759883,4869.542628030764
-BR_INST_RETIRED.INDIRECT,470991.8589763772,753654.9003047906
-BR_INST_RETIRED.INDIRECT:SUP,445421.9135731855,44508.861529932634
-BR_INST_RETIRED.NEAR_CALL,14054323.733926838,1579028.5511126397
-BR_INST_RETIRED.NEAR_RETURN,15093235.15985321,1384977.4261487331
-BR_INST_RETIRED.NEAR_TAKEN,6053147417.541316,8843826.50729571
-BR_MISP_RETIRED.ALL_BRANCHES,189801.23549917302,244676.51943863198
-BR_MISP_RETIRED.ALL_BRANCHES:SUP,184358.01804507125,213864.63990311703
-BR_MISP_RETIRED.ALL_BRANCHES:USER,64937.67777863339,66978.6424702681
-BR_MISP_RETIRED.COND_NTAKEN,121387.70141451331,55265.648841720984
-BR_MISP_RETIRED.COND_NTAKEN:SUP,96285.61527044677,48693.053790492544
-BR_MISP_RETIRED.COND_TAKEN,61808.44738472642,166272.18358149604
-BR_MISP_RETIRED.COND_TAKEN:SUP,120770.04916292022,152269.77607666532
-BR_MISP_RETIRED.INDIRECT,1090.680785440154,15569.399181728755
-BR_MISP_RETIRED.INDIRECT:SUP,1673.1241707681586,9345.064537554426
-BR_MISP_RETIRED.INDIRECT_CALL,1830.9949105702055,9757.755315504044
-BR_MISP_RETIRED.INDIRECT_CALL:SUP,1621.167225921047,8922.77617730769
-BR_MISP_RETIRED.RET,2549.6086004814124,4882.240981822679
-BR_MISP_RETIRED.RET:SUP,1035.8224962073105,4390.914573036754
+BACLEARS.ANY,644118.0550361177,353902.8618687398
+BPU.BTCLEAR_CYCLES,18056475.40464268,5998332.901910035
+BR_INST_RETIRED.ALL_BRANCHES,1681507458.7383893,17291528.14427822
+BR_INST_RETIRED.ALL_BRANCHES:SUP,93008691.25073813,6353098.090230353
+BR_INST_RETIRED.ALL_BRANCHES:USER,1689273563.68824,9248005.739044528
+BR_INST_RETIRED.COND:SUP,23814177.232881323,3823652.748739463
+BR_INST_RETIRED.COND_NTAKEN,565903548.4306433,6342089.140547129
+BR_INST_RETIRED.COND_TAKEN,1083093577.2112153,4045478.954648012
+BR_INST_RETIRED.FAR_BRANCH,454783.0637617078,4726.393726292061
+BR_INST_RETIRED.INDIRECT,476620.6979335029,700502.1097023422
+BR_INST_RETIRED.INDIRECT:SUP,473191.693782698,35834.30571010739
+BR_INST_RETIRED.NEAR_CALL,29383642.987712223,1378519.609055492
+BR_INST_RETIRED.NEAR_RETURN,29764102.027648255,1686923.076692145
+BR_INST_RETIRED.NEAR_TAKEN,1152051122.549735,7691333.356903648
+BR_MISP_RETIRED.ALL_BRANCHES,198477.0859346719,277384.52853424445
+BR_MISP_RETIRED.ALL_BRANCHES:SUP,230049.8083479009,224277.64449928695
+BR_MISP_RETIRED.ALL_BRANCHES:USER,56931.297626530664,40100.776549939445
+BR_MISP_RETIRED.COND_NTAKEN,115042.22718123531,58938.921570909726
+BR_MISP_RETIRED.COND_NTAKEN:SUP,70114.72046262522,48864.164236968434
+BR_MISP_RETIRED.COND_TAKEN,52702.33491817303,179283.21453383364
+BR_MISP_RETIRED.COND_TAKEN:SUP,63347.83260889632,155911.1562991316
+BR_MISP_RETIRED.INDIRECT,8910.966843880673,14852.716437078387
+BR_MISP_RETIRED.INDIRECT:SUP,8182.069900979981,9068.753441751416
+BR_MISP_RETIRED.INDIRECT_CALL,5863.897560675434,11042.64005813485
+BR_MISP_RETIRED.INDIRECT_CALL:SUP,5236.407682694414,8645.018205105529
+BR_MISP_RETIRED.RET,10721.410318561044,5071.176247358962
+BR_MISP_RETIRED.RET:SUP,5337.074064881004,4054.1629616658324
 CORE_POWER.LICENSE_0,0.0,0.0
-CORE_POWER.LICENSE_1,84238407787.7577,113712079.23378493
+CORE_POWER.LICENSE_1,110667890990.27461,116385531.01987334
 CORE_POWER.LICENSE_2,0.0,0.0
 CORE_POWER.LICENSE_3,0.0,0.0
 CORE_POWER.LICENSE_4,0.0,0.0
 CORE_POWER.LICENSE_5,0.0,0.0
 CORE_POWER.LICENSE_6,0.0,0.0
 CORE_POWER.LICENSE_7,0.0,0.0
-CORE_POWER.LVL0_TURBO_LICENSE,89030542401.0259,118801735.16636635
+CORE_POWER.LVL0_TURBO_LICENSE,102222923235.61916,126827049.67455336
 CORE_POWER.LVL1_TURBO_LICENSE,0.0,0.0
 CORE_POWER.LVL2_TURBO_LICENSE,0.0,0.0
-CORE_SNOOP_RESPONSE.I_FWD_FE,24347734.33695729,3459.744112278461
-CORE_SNOOP_RESPONSE.I_FWD_M,13417622.807807552,20956.19589847851
-CORE_SNOOP_RESPONSE.I_HIT_FSE,1160111.188821296,20272.42143950649
-CORE_SNOOP_RESPONSE.MISS,4311592.321624489,24257.423637796568
-CPU_CLK_UNHALTED.DISTRIBUTED,86664464888.81912,111912893.59814326
-CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE,1365719737.6050758,1218656.7522690867
-CPU_CLK_UNHALTED.REF_DISTRIBUTED,1365721406.7746086,1277458.373670497
-CPU_CLK_UNHALTED.REF_TSC,98031313551.82011,98631259.95847692
-CPU_CLK_UNHALTED.REF_TSC:SUP,2015181112.210652,82339336.13124487
-CPU_CLK_UNHALTED.THREAD,86548949108.9558,116939319.94459057
-CPU_CLK_UNHALTED.THREAD:SUP,1640772070.8821213,96079937.91657674
-CPU_CLK_UNHALTED.THREAD_P,84364274501.19112,114999641.03711368
-CYCLE_ACTIVITY.CYCLES_L1D_MISS,77870139420.2442,39054280.665106446
-CYCLE_ACTIVITY.CYCLES_MEM_ANY,84027060495.4591,77167255.56153563
-CYCLE_ACTIVITY.STALLS_L1D_MISS,77427809545.36899,31518646.772125036
-CYCLE_ACTIVITY.STALLS_L2_MISS,77264366379.48558,20547003.475982215
-CYCLE_ACTIVITY.STALLS_L3_MISS,71525001495.93434,4000679.6148222676
-CYCLE_ACTIVITY.STALLS_MEM_ANY,78741520014.97627,52194235.66172381
-CYCLE_ACTIVITY.STALLS_TOTAL,78905812010.703,86700734.21634388
-DECODE.LCP,52636.13159965147,16182.525833348182
-DSB2MITE_SWITCHES.PENALTY_CYCLES,25025296.97022751,1050811.069851039
-DSB_MISC.FLUSH,7425.844621466821,55247.775780406504
-DTLB_LOAD_MISSES.STLB_HIT,126749376.48812123,82711.78844900851
-DTLB_LOAD_MISSES.WALK_ACTIVE,1400054670.780223,3522189.3042006083
-DTLB_LOAD_MISSES.WALK_COMPLETED,29628191.22187317,41796.87133432804
-DTLB_LOAD_MISSES.WALK_COMPLETED_1G,1243.807046866389,2652.1300724128396
-DTLB_LOAD_MISSES.WALK_COMPLETED_2M_4M,8516.738265427339,6172.661602757699
-DTLB_LOAD_MISSES.WALK_COMPLETED_4K,29615203.677062906,33838.949373135976
-DTLB_STORE_MISSES.STLB_HIT,7703153.60462414,158859.52735410974
-DTLB_STORE_MISSES.WALK_ACTIVE,728388310.477481,379872.49740694684
-DTLB_STORE_MISSES.WALK_COMPLETED,10785279.185855815,4207.397888352153
+CORE_SNOOP_RESPONSE.I_FWD_FE,15865018.846977422,3783.3917984635837
+CORE_SNOOP_RESPONSE.I_FWD_M,12405539.317928592,19889.12924108825
+CORE_SNOOP_RESPONSE.I_HIT_FSE,808398.1678912867,18185.784015805944
+CORE_SNOOP_RESPONSE.MISS,5569460.990708492,33639.3133793819
+CPU_CLK_UNHALTED.DISTRIBUTED,106054388365.41617,124851805.07617158
+CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE,1300723168.6729305,1475722.1614849104
+CPU_CLK_UNHALTED.REF_DISTRIBUTED,1300729392.308398,1536155.652973829
+CPU_CLK_UNHALTED.REF_TSC,97977329752.10469,102718268.39325422
+CPU_CLK_UNHALTED.REF_TSC:SUP,1049635285.7097644,84210817.12464741
+CPU_CLK_UNHALTED.THREAD,107654324194.63933,122628812.00335227
+CPU_CLK_UNHALTED.THREAD:SUP,1224082065.7900617,99239092.44191322
+CPU_CLK_UNHALTED.THREAD_P,104776715905.4211,119151101.23078513
+CYCLE_ACTIVITY.CYCLES_L1D_MISS,91854373829.53809,39776244.65832655
+CYCLE_ACTIVITY.CYCLES_MEM_ANY,110575900531.33298,74356368.02228017
+CYCLE_ACTIVITY.STALLS_L1D_MISS,82921759286.48517,33442644.041292574
+CYCLE_ACTIVITY.STALLS_L2_MISS,82130263510.8538,22633933.1775867
+CYCLE_ACTIVITY.STALLS_L3_MISS,84678140057.20676,4748473.686898644
+CYCLE_ACTIVITY.STALLS_MEM_ANY,100208462376.89029,53986838.13625923
+CYCLE_ACTIVITY.STALLS_TOTAL,100452127539.61589,90900470.64085487
+DECODE.LCP,44899.62771429244,14267.780912004693
+DSB2MITE_SWITCHES.PENALTY_CYCLES,29675982.34115864,1083214.9124810728
+DSB_MISC.FLUSH,8590.89343141277,50742.917535249784
+DTLB_LOAD_MISSES.STLB_HIT,64942221.9040593,89766.06842957277
+DTLB_LOAD_MISSES.WALK_ACTIVE,1485256998.7504792,3747150.4860846493
+DTLB_LOAD_MISSES.WALK_COMPLETED,16579933.381537573,46179.69288901536
+DTLB_LOAD_MISSES.WALK_COMPLETED_1G,1763.1969156948462,1654.3098334403378
+DTLB_LOAD_MISSES.WALK_COMPLETED_2M_4M,9274.747412338407,7183.783797268312
+DTLB_LOAD_MISSES.WALK_COMPLETED_4K,16577800.70279051,36583.29600598583
+DTLB_STORE_MISSES.STLB_HIT,26370291.955747902,74798.92239664607
+DTLB_STORE_MISSES.WALK_ACTIVE,1753100120.5419297,431245.1603131964
+DTLB_STORE_MISSES.WALK_COMPLETED,17741183.54584825,4671.576639430908
 EXE.AMX_BUSY,0.0,0.0
-EXE_ACTIVITY.1_PORTS_UTIL,1174488262.8405533,6744763.027204179
-EXE_ACTIVITY.2_PORTS_UTIL,781080571.790461,4465200.036539804
-EXE_ACTIVITY.BOUND_ON_LOADS,6569601761.819004,50817671.19698576
-EXE_ACTIVITY.BOUND_ON_STORES,712316.1867416614,2366016.592700021
-EXE_ACTIVITY.BOUND_ON_STORES:c1,3238221208.5754886,2394405.8018430145
+EXE_ACTIVITY.1_PORTS_UTIL,491583945.16932666,7723066.8125538435
+EXE_ACTIVITY.2_PORTS_UTIL,521367918.5085945,5125246.369083823
+EXE_ACTIVITY.BOUND_ON_LOADS,4922570152.219424,52614889.4711147
+EXE_ACTIVITY.BOUND_ON_STORES,3223701996.8775845,2531743.3057187865
+EXE_ACTIVITY.BOUND_ON_STORES:c1,4768639283.415371,2428941.551814826
 FP_ARITH_INST_RETIRED.128B_PACKED_DOUBLE,0.0,0.0
 FP_ARITH_INST_RETIRED.128B_PACKED_SINGLE,0.0,0.0
 FP_ARITH_INST_RETIRED.256B_PACKED_DOUBLE,0.0,0.0
 FP_ARITH_INST_RETIRED.256B_PACKED_SINGLE,0.0,0.0
 FP_ARITH_INST_RETIRED.512B_PACKED_DOUBLE,0.0,0.0
 FP_ARITH_INST_RETIRED.512B_PACKED_SINGLE,0.0,0.0
-FP_ARITH_INST_RETIRED.SCALAR_DOUBLE,5.520670425505501,282.65832578588163
+FP_ARITH_INST_RETIRED.SCALAR_DOUBLE,250.3850165547854,305.65764714083076
 FP_ARITH_INST_RETIRED.SCALAR_SINGLE,0.0,0.0
 FP_ARITH_INST_RETIRED2.128B_PACKED_HALF,0.0,0.0
 FP_ARITH_INST_RETIRED2.256B_PACKED_HALF,0.0,0.0
@@ -414,38 +414,38 @@ FP_ARITH_INST_RETIRED2.COMPLEX_SCALAR_HALF,0.0,0.0
 FP_ARITH_INST_RETIRED2.SCALAR,0.0,0.0
 FP_ARITH_INST_RETIRED2.SCALAR_HALF,0.0,0.0
 FP_ARITH_INST_RETIRED2.VECTOR,0.0,0.0
-FRONTEND_RETIRED.LATENCY_GE_1,6754739.706354642,1180164.5061390945
-FRONTEND_RETIRED.LATENCY_GE_2,3086470.3418137254,648662.4450044067
-ICACHE_64B.IFTAG_HIT,1616535900.4080777,21827713.95725582
-ICACHE_64B.IFTAG_MISS,1712329.4557543627,1586465.9098889031
-ICACHE_64B.IFTAG_STALL,1130969.3717620273,3014349.6407667752
-ICACHE_DATA.STALL,33702403.51922532,15280117.383205002
-ICACHE_TAG.STALL,454058.0866761129,3113838.2647082605
-IDI_MISC.WB_DOWNGRADE,2471531570.4448824,48415.853212252405
-IDI_MISC.WB_UPGRADE,23822062.625207514,328099.842451151
-IDQ.DSB_CYCLES_ANY,5093418390.742329,11465083.657307109
-IDQ.DSB_CYCLES_OK,2122044752.6792958,6266333.238556061
-IDQ.DSB_CYCLES_OK:c6,2068686843.475495,5770806.242733036
-IDQ.DSB_UOPS,16975241815.70335,65661213.541462384
-IDQ.MITE_CYCLES_ANY,38792475.7437224,6019095.080552065
-IDQ.MITE_CYCLES_OK,9591667.347129548,959666.1415596632
-IDQ.MITE_UOPS,152079873.22713822,21651316.2078631
-IDQ.MS_CYCLES_ANY,66673389.893654704,5595512.040961882
-IDQ.MS_SWITCHES,13605160.903472586,1060305.3642946617
-IDQ.MS_UOPS,106103134.94514318,12593944.457590042
-IDQ_UOPS_NOT_DELIVERED.CORE,1166100424.9988167,203027073.57269624
-IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE,104386489.94976644,29067334.586498503
-INST_RETIRED.ANY,22624038296.4378,76897189.8163469
-INST_RETIRED.ANY:SUP,430575537.2652301,26057227.784367483
-INST_RETIRED.MACRO_FUSED,7023923692.127102,6818376.7089910805
-INST_RETIRED.REP_ITERATION,258812.91856536563,111830.64607825407
-INT_MISC.ALL_RECOVERY_CYCLES,9085352.155479545,1852357.9906706456
-INT_MISC.CLEAR_RESTEER_CYCLES,7377855.755154452,8410015.40347447
+FRONTEND_RETIRED.LATENCY_GE_1,4351361.476051107,3068099.092653165
+FRONTEND_RETIRED.LATENCY_GE_2,4625369.573753454,658113.6099875184
+ICACHE_64B.IFTAG_HIT,1286218482.644542,22187540.678786255
+ICACHE_64B.IFTAG_MISS,961938.493892485,1666565.6975192656
+ICACHE_64B.IFTAG_STALL,13265481.894396402,3039758.5023271907
+ICACHE_DATA.STALL,51859922.99569642,14604985.408179589
+ICACHE_TAG.STALL,13673506.905674657,3003355.320247106
+IDI_MISC.WB_DOWNGRADE,1955422998.1420774,44886.673909377256
+IDI_MISC.WB_UPGRADE,13154242.694542458,351632.9027926524
+IDQ.DSB_CYCLES_ANY,2238591170.112177,12354329.68141351
+IDQ.DSB_CYCLES_OK,1611448608.73133,6865949.101519073
+IDQ.DSB_CYCLES_OK:c6,1694204713.7332623,6219237.456386558
+IDQ.DSB_UOPS,14154524664.432816,72557395.7969761
+IDQ.MITE_CYCLES_ANY,45887723.79544695,6284381.315996424
+IDQ.MITE_CYCLES_OK,12257388.950782934,997455.7048350142
+IDQ.MITE_UOPS,183612363.95539254,22448791.22672764
+IDQ.MS_CYCLES_ANY,25567294.070154063,5946082.269268804
+IDQ.MS_SWITCHES,21069132.190430805,1078254.2911719442
+IDQ.MS_UOPS,108838570.92184171,12353239.62694406
+IDQ_UOPS_NOT_DELIVERED.CORE,1665056210.918908,203128447.92201227
+IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE,163658812.7256844,30658208.74786891
+INST_RETIRED.ANY,20647563828.343056,82475685.08058867
+INST_RETIRED.ANY:SUP,417562122.1431617,26540814.347025678
+INST_RETIRED.MACRO_FUSED,1710289530.440379,7085310.398429863
+INST_RETIRED.REP_ITERATION,252701.67153854005,133903.6306448122
+INT_MISC.ALL_RECOVERY_CYCLES,12054137.06604319,1889750.7665737404
+INT_MISC.CLEAR_RESTEER_CYCLES,34654513.31161526,8716645.546955574
 INT_MISC.MBA_STALL,0.0,0.0
-INT_MISC.RECOVERY_CYCLES,8948027.430335328,1780244.3293693708
-INT_MISC.UNKNOWN_BRANCH_CYCLES,1282010.8116007475,11472845.5962208
-INT_MISC.UOP_DROPPING,1786690.197663483,477303.3914787937
-INT_VEC_RETIRED.ADD_128,0.0,357052.077261525
+INT_MISC.RECOVERY_CYCLES,9361330.591916066,1946461.3442507377
+INT_MISC.UNKNOWN_BRANCH_CYCLES,3240830.257214206,12610774.520334147
+INT_MISC.UOP_DROPPING,1873674.8466858126,515953.27227351646
+INT_VEC_RETIRED.ADD_128,0.0,357030.56996486755
 INT_VEC_RETIRED.ADD_256,0.0,0.0
 INT_VEC_RETIRED.HADD_128,0.0,0.0
 INT_VEC_RETIRED.HADD_256,0.0,0.0
@@ -453,214 +453,214 @@ INT_VEC_RETIRED.MUL_256,0.0,0.0
 INT_VEC_RETIRED.SHUFFLES,0.0,0.0
 INT_VEC_RETIRED.VNNI_128,0.0,0.0
 INT_VEC_RETIRED.VNNI_256,0.0,0.0
-ITLB_MISSES.STLB_HIT,783.0575709223797,16729.50903458973
-ITLB_MISSES.WALK_ACTIVE,29215.386835639572,957472.4701337023
-ITLB_MISSES.WALK_COMPLETED,407.25615739303436,13621.00776820089
-ITLB_MISSES.WALK_COMPLETED_2M_4M,194.24683929857434,4492.50999639118
-L1D.REPLACEMENT,2429279421.8700304,1034397.6827459964
-L1D_PEND_MISS.FB_FULL,62211919669.643555,749966.9224472515
-L1D_PEND_MISS.FB_FULL_PERIODS,537320230.1870545,36062.04760948426
-L1D_PEND_MISS.L2_STALL,104075126.16763063,52928.17117819475
-L1D_PEND_MISS.PENDING,740872471631.1578,75950437.32240508
-L1D_PEND_MISS.PENDING_CYCLES,82711554263.80817,38828365.45256169
-L2_LINES_IN.ALL,2455043161.6930633,2510940.616657954
-L2_LINES_OUT.NON_SILENT,2554996731.021922,1463951.3042985424
-L2_LINES_OUT.SILENT,53455733.55154944,8075070.016967343
-L2_LINES_OUT.USELESS_HWPF,7766405.216013865,451187.91445426457
-L2_RQSTS.ALL_CODE_RD,821318.371642004,1536755.9478113628
-L2_RQSTS.ALL_HWPF,2103368113.6488512,1151520.3180453437
-L2_RQSTS.CODE_RD_HIT,136752.7290199602,493334.5254382924
-L2_RQSTS.CODE_RD_MISS,684565.6426220436,1043421.4223730701
-L2_RQSTS.RFO_HIT,207973140.8129975,105693.66601053344
-L2_RQSTS.RFO_MISS,263297182.54746324,36561.7688098578
-LD_BLOCKS.ADDRESS_ALIAS,73619.38185005392,6348.060908318222
-LD_BLOCKS.NO_SR,0.0,986.8590195349653
-LD_BLOCKS.STORE_EARLY,3119039.4319318216,1238540.142709588
-LD_BLOCKS.STORE_FORWARD,1053366.5421008868,163510.07655044933
-LONGEST_LAT_CACHE.MISS,2315971350.281054,59869.030802546506
-LONGEST_LAT_CACHE.REFERENCE,2362587062.831101,2389462.5162359085
+ITLB_MISSES.STLB_HIT,5564.138475313829,16501.995053559458
+ITLB_MISSES.WALK_ACTIVE,4720430.51268082,1001332.9794028816
+ITLB_MISSES.WALK_COMPLETED,15348.985900208543,14379.773801939413
+ITLB_MISSES.WALK_COMPLETED_2M_4M,332.8216943372916,4683.237274381298
+L1D.REPLACEMENT,2146187019.1819105,1154511.072497099
+L1D_PEND_MISS.FB_FULL,89476340883.07927,1902016.1181280327
+L1D_PEND_MISS.FB_FULL_PERIODS,430950633.6620836,70176.82110918
+L1D_PEND_MISS.L2_STALL,123442882.88636377,129367.25614961305
+L1D_PEND_MISS.PENDING,414808595848.7639,85897084.77159822
+L1D_PEND_MISS.PENDING_CYCLES,86736752695.42848,40117359.41284861
+L2_LINES_IN.ALL,2168755284.4432635,2853378.586995729
+L2_LINES_OUT.NON_SILENT,1999751792.6878026,1585821.9819909537
+L2_LINES_OUT.SILENT,40773341.18045736,8030892.959336398
+L2_LINES_OUT.USELESS_HWPF,5544236.7839337615,546676.110411163
+L2_RQSTS.ALL_CODE_RD,1292425.285130268,1548957.6178540115
+L2_RQSTS.ALL_HWPF,1427881317.8081872,1439153.698250795
+L2_RQSTS.CODE_RD_HIT,522990.14851289225,492141.98800444935
+L2_RQSTS.CODE_RD_MISS,769435.1366173755,1056815.6298495631
+L2_RQSTS.RFO_HIT,220442152.0313444,105365.1591981238
+L2_RQSTS.RFO_MISS,545815821.4575757,37745.11857652922
+LD_BLOCKS.ADDRESS_ALIAS,79125.91046216666,6367.653154147614
+LD_BLOCKS.NO_SR,0.0,430.9619381341098
+LD_BLOCKS.STORE_EARLY,3858288.5320289237,1428550.760557872
+LD_BLOCKS.STORE_FORWARD,2051007.3410417833,172552.60107215343
+LONGEST_LAT_CACHE.MISS,1647448818.174837,93359.68788584687
+LONGEST_LAT_CACHE.REFERENCE,1679602434.0721464,2844690.082781079
 LSD.CYCLES_ACTIVE,0.0,0.0
 LSD.CYCLES_OK,0.0,0.0
 LSD.CYCLES_OK:c6,0.0,0.0
 LSD.UOPS,0.0,0.0
-MACHINE_CLEARS.COUNT,472386.21967374167,10477.964585070195
-MACHINE_CLEARS.MEMORY_ORDERING,74617.44896240922,1959.4738431614883
-MACHINE_CLEARS.NUKE_ASSERTED,2634531.641010687,782739.9177827778
-MACHINE_CLEARS.SMC,51514.21930499263,0.5524313062197601
-MEMORY_ACTIVITY.STALLS_L1D_MISS,77400494679.84253,32851572.459775068
-MEMORY_ACTIVITY.STALLS_L2_MISS,77286645737.644,30925666.009200208
-MEMORY_ACTIVITY.STALLS_L3_MISS,67924859809.12479,3765625.5162399816
-MEMORY_ORDERING.MD_DONE,24672413.544890348,1520697.5441581581
-MEMORY_ORDERING.MD_NUKE,20030.606732222284,1831.8622114247244
-MEMORY_ORDERING.MD_WATCHDOG,123744280.58201124,739849.7035991821
-MEMORY_ORDERING.MRN_NUKE,66.69627586944827,252.74378224211992
-MEM_INST_RETIRED.ALL_LOADS,12012104915.943708,16941721.22804417
-MEM_INST_RETIRED.ALL_STORES,2485111199.5898,11663982.07664372
-MEM_INST_RETIRED.LOCK_LOADS,1182762.6082234872,118461.7120118466
-MEM_INST_RETIRED.SPLIT_STORES,61186.18474301036,45253.87659016976
-MEM_INST_RETIRED.STLB_MISS_STORES,9920141.697040709,3295.49886017184
-MEM_LOAD_L3_HIT_RETIRED.XSNP_FWD,398887.3038330221,15268.017006721633
-MEM_LOAD_L3_HIT_RETIRED.XSNP_MISS,349.737814476905,5091.917374753809
-MEM_LOAD_L3_HIT_RETIRED.XSNP_NO_FWD,77079.89377544797,2887.9613843140346
-MEM_LOAD_L3_MISS_RETIRED.LOCAL_DRAM,1345077973.9022746,499.76474058035143
-MEM_LOAD_L3_MISS_RETIRED.REMOTE_DRAM,2810.831524369046,711.2673876988869
-MEM_LOAD_L3_MISS_RETIRED.REMOTE_FWD,7054.129823874388,2724.9943972103592
-MEM_LOAD_L3_MISS_RETIRED.REMOTE_HITM,3326.0585994645926,8504.283983356258
-MEM_LOAD_RETIRED.FB_HIT,5250486574.788121,1301202.6100372241
-MEM_LOAD_RETIRED.L1_HIT,623744639.8570063,17808221.12447832
-MEM_LOAD_RETIRED.L1_MISS,1922475050.9255424,739770.9480887136
-MEM_LOAD_RETIRED.L2_HIT,570451121.8486683,323925.93496538117
-MEM_LOAD_RETIRED.L2_MISS,1351340319.5242715,345267.6874998831
-MEM_LOAD_RETIRED.L3_HIT,6334457.301843617,313585.1512220501
-MEM_LOAD_RETIRED.L3_MISS,1345035671.675867,13019.926517362102
-MEM_STORE_RETIRED.L2_HIT,220239581.32299632,101548.84760953131
-MEM_UOP_RETIRED.LOAD,12805394213.904928,17957495.685826484
-MEM_UOP_RETIRED.STA,2484265462.5788755,14325366.545012068
-MISC2_RETIRED.LFENCE,112831.24431290293,7098.282191182873
-MISC_RETIRED.PAUSE_INST,448389.9460158472,63508.13485873771
+MACHINE_CLEARS.COUNT,896489.2812442248,9834.463200792183
+MACHINE_CLEARS.MEMORY_ORDERING,189015.91760902078,1988.1169073933277
+MACHINE_CLEARS.NUKE_ASSERTED,26658753.57283687,768543.4290271405
+MACHINE_CLEARS.SMC,48557.1438833246,0.0
+MEMORY_ACTIVITY.STALLS_L1D_MISS,87826075223.73184,34128752.23782833
+MEMORY_ACTIVITY.STALLS_L2_MISS,87121725424.48344,32199264.0467726
+MEMORY_ACTIVITY.STALLS_L3_MISS,58459313635.57392,4760296.431923763
+MEMORY_ORDERING.MD_DONE,48653841.42376065,1621594.2627125809
+MEMORY_ORDERING.MD_NUKE,35001.24861762297,2020.7271096552693
+MEMORY_ORDERING.MD_WATCHDOG,396458715.2901791,1216918.234100655
+MEMORY_ORDERING.MRN_NUKE,109.997422458744,157.97502161628128
+MEM_INST_RETIRED.ALL_LOADS,4381584505.417447,17715653.833577294
+MEM_INST_RETIRED.ALL_STORES,4334121191.814617,11812852.166119536
+MEM_INST_RETIRED.LOCK_LOADS,1769105.1308562453,120782.1093100157
+MEM_INST_RETIRED.SPLIT_STORES,64907.914618482515,48896.65996378587
+MEM_INST_RETIRED.STLB_MISS_STORES,16524761.53381841,3690.3885548170097
+MEM_LOAD_L3_HIT_RETIRED.XSNP_FWD,444205.7520448477,14660.060713399494
+MEM_LOAD_L3_HIT_RETIRED.XSNP_MISS,1904.6861889520962,9813.526752477292
+MEM_LOAD_L3_HIT_RETIRED.XSNP_NO_FWD,72592.46979616844,3128.6142157954077
+MEM_LOAD_L3_MISS_RETIRED.LOCAL_DRAM,542685688.909889,1011.7320434765633
+MEM_LOAD_L3_MISS_RETIRED.REMOTE_DRAM,5659.85128136773,1193.6098848183028
+MEM_LOAD_L3_MISS_RETIRED.REMOTE_FWD,25547.03397494935,2427.093908060995
+MEM_LOAD_L3_MISS_RETIRED.REMOTE_HITM,3834.6398896392025,21829.43467447958
+MEM_LOAD_RETIRED.FB_HIT,2662737905.3552485,1397215.6219562395
+MEM_LOAD_RETIRED.L1_HIT,487276508.5861908,17370021.984439056
+MEM_LOAD_RETIRED.L1_MISS,1010916844.7448053,762284.923656308
+MEM_LOAD_RETIRED.L2_HIT,522453300.5789811,324799.18775293004
+MEM_LOAD_RETIRED.L2_MISS,545497147.427139,424193.0081305754
+MEM_LOAD_RETIRED.L3_HIT,4280458.478185634,352925.66963392193
+MEM_LOAD_RETIRED.L3_MISS,544610546.8284178,28248.62195203858
+MEM_STORE_RETIRED.L2_HIT,234119109.8790533,105369.31245270399
+MEM_UOP_RETIRED.LOAD,4572676037.756698,18271148.91043862
+MEM_UOP_RETIRED.STA,4364358166.283922,14811414.536696974
+MISC2_RETIRED.LFENCE,115889.32921096723,7011.900601579259
+MISC_RETIRED.PAUSE_INST,494869.2006383117,141365.4629206122
 MSR_EVENT:msr=0x3F9:type=FREERUN:scope=PACKAGE,0.0,0.0
-MSR_EVENT:msr=0x3FD:type=FREERUN:scope=THREAD,4823584189.576131,85746376357.21306
+MSR_EVENT:msr=0x3FD:type=FREERUN:scope=THREAD,4744199178.230009,85953276705.46619
 MSR_EVENT:msr=0x60D:type=FREERUN:scope=PACKAGE,0.0,0.0
-MSR_EVENT:msr=0x611:type=FREERUN:scope=PACKAGE,4776858.350259092,2945788.2733354275
-MSR_EVENT:msr=0x619:type=FREERUN:scope=PACKAGE,877836.2345522138,221746.29220028128
-OCR.DEMAND_DATA_RD.L3_HIT.SNOOP_HITM,71759.22397282916,15117.590356689809
-OCR.DEMAND_DATA_RD.L3_HIT.SNOOP_HIT_WITH_FWD,22713.566176719127,4904.331570844487
-OCR.DEMAND_RFO.L3_HIT.SNOOP_HITM,6576.937688748268,9971.575360786743
+MSR_EVENT:msr=0x611:type=FREERUN:scope=PACKAGE,4809824.700084237,2957429.7369857454
+MSR_EVENT:msr=0x619:type=FREERUN:scope=PACKAGE,897665.2596186276,223740.58811082263
+OCR.DEMAND_DATA_RD.L3_HIT.SNOOP_HITM,71356.4691387473,16510.440303994194
+OCR.DEMAND_DATA_RD.L3_HIT.SNOOP_HIT_WITH_FWD,30527.79943694328,3882.225765294321
+OCR.DEMAND_RFO.L3_HIT.SNOOP_HITM,6684.431401286931,4256.976682666436
 OCR.HWPF_L3.L3_MISS_LOCAL,0.0,0.0
 OCR.HWPF_L3.REMOTE,0.0,0.0
-OCR.READS_TO_CORE.L3_HIT.SNOOP_HITM,7662885.740156508,50017.668793414196
-OCR.READS_TO_CORE.L3_HIT.SNOOP_HIT_NO_FWD,253433.73719257597,10169.24607490295
-OCR.READS_TO_CORE.L3_HIT.SNOOP_HIT_WITH_FWD,279540.77025388,14306.615723204837
-OCR.READS_TO_CORE.LOCAL_DRAM,2218825775.4445395,10027.481421661218
-OCR.READS_TO_CORE.REMOTE_CACHE.SNOOP_HITM,13794.894667204857,20534.878648510206
-OCR.READS_TO_CORE.REMOTE_CACHE.SNOOP_HIT_WITH_FWD,31984.950623964924,21346.50554157829
-OCR.READS_TO_CORE.REMOTE_DRAM,13182.852194596184,8376.126208907752
+OCR.READS_TO_CORE.L3_HIT.SNOOP_HITM,6115205.126146422,57071.995557227354
+OCR.READS_TO_CORE.L3_HIT.SNOOP_HIT_NO_FWD,145197.58382792913,11945.455907544663
+OCR.READS_TO_CORE.L3_HIT.SNOOP_HIT_WITH_FWD,409138.6751062399,16184.051270804197
+OCR.READS_TO_CORE.LOCAL_DRAM,1639087101.2149944,18615.8662752161
+OCR.READS_TO_CORE.REMOTE_CACHE.SNOOP_HITM,12218.69614444074,38474.58709811761
+OCR.READS_TO_CORE.REMOTE_CACHE.SNOOP_HIT_WITH_FWD,58049.1922560099,30422.991175901006
+OCR.READS_TO_CORE.REMOTE_DRAM,22738.949715916762,13063.870906881744
 OCR.STREAMING_WR.ANY_RESPONSE,0.0,0.0
-OFFCORE_REQUESTS.DEMAND_DATA_RD,1355863584.5545545,456651.6473477725
-OFFCORE_REQUESTS.L3_MISS_DEMAND_DATA_RD,1347604718.4277124,18762.300787096894
-OFFCORE_REQUESTS_OUTSTANDING.ALL_DATA_RD:c4,76907591641.5925,18717402.877821524
-OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DATA_RD,83936869894.3102,37207794.51793484
-OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_RFO,59117662706.77827,30929578.5581524
-OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD,716224896902.5038,52984945.96516217
-OFFCORE_REQUESTS_OUTSTANDING.L3_MISS_DEMAND_DATA_RD,608938185201.9094,7431840.308621686
-PERF_METRICS.BACKEND_BOUND,493788939739.0862,358636291.1846827
-PERF_METRICS.BAD_SPECULATION,59858578.82127785,26533908.11384416
-PERF_METRICS.BRANCH_MISPREDICTS,29224000.765025232,25346047.629864644
-PERF_METRICS.FETCH_LATENCY,191470226.10891068,175019748.20648816
-PERF_METRICS.FRONTEND_BOUND,5535259760.441673,206235798.35502806
-PERF_METRICS.HEAVY_OPERATIONS,99331021.6160566,16258907.018266251
-PERF_METRICS.MEMORY_BOUND,464392978661.32837,250502047.04343206
-PERF_METRICS.RETIRING,19490693666.860672,86093160.32573171
+OFFCORE_REQUESTS.DEMAND_DATA_RD,552475974.4150102,545769.616280201
+OFFCORE_REQUESTS.L3_MISS_DEMAND_DATA_RD,546056458.0077295,32739.73789302161
+OFFCORE_REQUESTS_OUTSTANDING.ALL_DATA_RD:c4,83744782334.06122,20403943.33632505
+OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DATA_RD,98181360950.86636,40243489.092832
+OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_RFO,100427527077.42853,29034915.618980933
+OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD,427315434670.92755,65617369.216710664
+OFFCORE_REQUESTS_OUTSTANDING.L3_MISS_DEMAND_DATA_RD,379157345005.30383,12864409.58626693
+PERF_METRICS.BACKEND_BOUND,622228948092.1567,379231767.83982396
+PERF_METRICS.BAD_SPECULATION,63512461.68011955,27825025.718762413
+PERF_METRICS.BRANCH_MISPREDICTS,27221397.75705023,26771920.41351708
+PERF_METRICS.FETCH_LATENCY,287213946.4911387,177577744.4720166
+PERF_METRICS.FRONTEND_BOUND,7008867481.009262,210440514.860093
+PERF_METRICS.HEAVY_OPERATIONS,99015296.79206851,17800763.121666696
+PERF_METRICS.MEMORY_BOUND,620749019323.9813,248932101.51496398
+PERF_METRICS.RETIRING,17115660954.504198,92007085.44386835
 QPI,0.0,0.0
-RESOURCE_STALLS.SCOREBOARD,1750601356.5021741,32060001.512499377
+RESOURCE_STALLS.SCOREBOARD,1230846127.6440198,35002756.49549076
 SQ_MISC.ICCP_THROTTLE,0.0,0.0
-TOPDOWN.SLOTS:perf_metrics,518874751745.20984,677499157.9792864
+TOPDOWN.SLOTS:perf_metrics,646416988989.3501,709504393.8625478
 TSC,100800000000.0,100800000000.0
-UNC_CHA_CLOCKTICKS,134451194020.34448,134434169508.90381
-UNC_CHA_DEBUG_PIPE.VALID,8517062361.443976,247618412.59103826
-UNC_CHA_DIR_LOOKUP.NO_SNP,2340957811.6113806,9377.074335476136
-UNC_CHA_DIR_LOOKUP.SNP,55795.71880466469,3198.0479709257697
-UNC_CHA_DIR_UPDATE.HA,16627.740168534692,3681.3634405365233
-UNC_CHA_DIR_UPDATE.TOR,30917.26480647498,13699.998179730392
-UNC_CHA_DISTRESS_ASSERTED.DPT_LOCAL,26224944552.274055,144417.83308233594
-UNC_CHA_DISTRESS_ASSERTED.DPT_NONLOCAL,70974017716.04108,1125173.3504689713
-UNC_CHA_DISTRESS_ASSERTED.VERT,41760137879.241936,859967.7442470589
-UNC_CHA_HITME_HIT.EX_RDS,16144.024488236682,6841.652182149344
+UNC_CHA_CLOCKTICKS,134444680995.35643,134465523536.67274
+UNC_CHA_DEBUG_PIPE.VALID,6902920492.66839,470271028.9000534
+UNC_CHA_DIR_LOOKUP.NO_SNP,1558465513.0260322,17312.004692136266
+UNC_CHA_DIR_LOOKUP.SNP,268157.6383189105,5825.911081858098
+UNC_CHA_DIR_UPDATE.HA,37767.158784069296,5696.929100114913
+UNC_CHA_DIR_UPDATE.TOR,69992.65879558255,32722.80711045638
+UNC_CHA_DISTRESS_ASSERTED.DPT_LOCAL,23943676974.731316,7406.638393671786
+UNC_CHA_DISTRESS_ASSERTED.DPT_NONLOCAL,72052915721.07214,107526.12986318143
+UNC_CHA_DISTRESS_ASSERTED.VERT,45629353463.30474,0.0
+UNC_CHA_HITME_HIT.EX_RDS,40336.79228436981,9680.984858354363
 UNC_CHA_IODC_ALLOC.OSBGATED,0.0,0.0
-UNC_CHA_LLC_VICTIMS.TOTAL_E,100477455.02243339,538.0680922580465
+UNC_CHA_LLC_VICTIMS.TOTAL_E,55662740.036183454,1348.6253138837144
 UNC_CHA_LLC_VICTIMS.TOTAL_F,0.0,0.0
-UNC_CHA_LLC_VICTIMS.TOTAL_M,31652003.578669645,619.827925578571
-UNC_CHA_LLC_VICTIMS.TOTAL_S,113831.78523441892,606.5695742292966
-UNC_CHA_MISC.RFO_HIT_S,25544.14530611324,9931.838682938518
-UNC_CHA_OSB.LOCAL_INVITOE,227755511.28241098,0.0
-UNC_CHA_OSB.LOCAL_READ,220175.29205801705,14905.01036965119
+UNC_CHA_LLC_VICTIMS.TOTAL_M,48289965.179900765,5050.159628260448
+UNC_CHA_LLC_VICTIMS.TOTAL_S,198096.47715074028,4482.521022785622
+UNC_CHA_MISC.RFO_HIT_S,55100.094132106184,10533.337620251275
+UNC_CHA_OSB.LOCAL_INVITOE,489368838.75651056,0.0
+UNC_CHA_OSB.LOCAL_READ,8012.341698456076,18485.742333508777
 UNC_CHA_OSB.REMOTE_READ,0.0,0.0
 UNC_CHA_OSB.REMOTE_READINVITOE,0.0,0.0
-UNC_CHA_REQUESTS.INVITOE_LOCAL,243196597.12626684,670.251668582205
-UNC_CHA_REQUESTS.INVITOE_REMOTE,0.0,1.6563056060515764
-UNC_CHA_REQUESTS.READS_LOCAL,2316829350.7492237,19643.71498802214
-UNC_CHA_REQUESTS.READS_REMOTE,10188.923904110357,13971.724169512789
-UNC_CHA_REQUESTS.WRITES_LOCAL,639342775.893985,667.2930374716894
-UNC_CHA_REQUESTS.WRITES_REMOTE,39165.35070346047,27274.498116858158
-UNC_CHA_RxC_INSERTS.IPQ,14817.525782870223,243278071.35353795
-UNC_CHA_RxC_INSERTS.IRQ,5163391485.54726,3242393.9874339504
-UNC_CHA_RxC_INSERTS.PRQ,177.19426950420393,0.0
-UNC_CHA_RxC_INSERTS.RRQ,39952.56011187557,29005.21636421087
-UNC_CHA_RxC_INSERTS.WBQ,197.08531103965137,5705.536945643691
-UNC_CHA_RxC_IPQ0_REJECT.AD_RSP_VN0,0.0,2891.546629146659
-UNC_CHA_RxC_IRQ1_REJECT.PA_MATCH,70923770.08943777,257146.80000062837
-UNC_CHA_RxC_OCCUPANCY.IRQ,363199358681.82153,7146612.042592647
-UNC_CHA_RxC_OCCUPANCY.IRQ:t=18,6123963289.592961,179905.4105960549
-UNC_CHA_SF_EVICTION.E_STATE,22974589.94822189,34.26947426086086
-UNC_CHA_SF_EVICTION.M_STATE,5400726.502865217,13.259428381585833
-UNC_CHA_SF_EVICTION.S_STATE,17676.780678570663,16.022586724965592
-UNC_CHA_SNOOP_RESP.RSPCNFLCTS,223.54715818744702,4.415746334566856
-UNC_CHA_SNOOP_RESP.RSPI,242881308.52284825,9869.854586718737
-UNC_CHA_SNOOP_RESP.RSPIFWD,4004.529957160318,1344.042790583787
-UNC_CHA_SNOOP_RESP.RSPS,1134.4977724413807,18.770279446718703
-UNC_CHA_SNOOP_RESP.RSPSFWD,15127.243005642413,2933.159502736034
-UNC_CHA_SNOOP_RESP.RSP_FWD_WB,3976.379574277454,882.0453303297295
-UNC_CHA_TOR_INSERTS.IA_CLFLUSH,195941.64996003447,704.9055658748083
+UNC_CHA_REQUESTS.INVITOE_LOCAL,493040047.5226928,712.4741150295976
+UNC_CHA_REQUESTS.INVITOE_REMOTE,0.0,1.1054679829784289
+UNC_CHA_REQUESTS.READS_LOCAL,1650201899.351268,25333.326143194678
+UNC_CHA_REQUESTS.READS_REMOTE,10517.419935234244,21210.581530885953
+UNC_CHA_REQUESTS.WRITES_LOCAL,1068932345.8579321,6463.756164284578
+UNC_CHA_REQUESTS.WRITES_REMOTE,69221.21362870216,39615.37560913227
+UNC_CHA_RxC_INSERTS.IPQ,20798.54669920061,494663525.8654224
+UNC_CHA_RxC_INSERTS.IRQ,4320507797.26422,3589279.8097417974
+UNC_CHA_RxC_INSERTS.PRQ,119.37306922004923,0.0
+UNC_CHA_RxC_INSERTS.RRQ,73917.11954121738,57686.247608162135
+UNC_CHA_RxC_INSERTS.WBQ,55.26720216921555,6989.643058340693
+UNC_CHA_RxC_IPQ0_REJECT.AD_RSP_VN0,1.1050306106002816,54733.823688947836
+UNC_CHA_RxC_IRQ1_REJECT.PA_MATCH,69138559.82362957,146768.03385730577
+UNC_CHA_RxC_OCCUPANCY.IRQ,327042051702.52295,3166437.6306814104
+UNC_CHA_RxC_OCCUPANCY.IRQ:t=18,5309180458.129712,6657.342645250267
+UNC_CHA_SF_EVICTION.E_STATE,15862770.300209979,18.728629244017117
+UNC_CHA_SF_EVICTION.M_STATE,7583278.638943943,90.09219251062463
+UNC_CHA_SF_EVICTION.S_STATE,21930.813048217587,1.7553075915013274
+UNC_CHA_SNOOP_RESP.RSPCNFLCTS,260.3264079728903,21.002979836454
+UNC_CHA_SNOOP_RESP.RSPI,492520164.07899016,13276.485866768091
+UNC_CHA_SNOOP_RESP.RSPIFWD,7799.2907492684835,1841.0769956639017
+UNC_CHA_SNOOP_RESP.RSPS,875.5184684829584,43.66537816297581
+UNC_CHA_SNOOP_RESP.RSPSFWD,31917.344121466038,4507.902724897862
+UNC_CHA_SNOOP_RESP.RSP_FWD_WB,3745.1629308371666,1346.954259511537
+UNC_CHA_TOR_INSERTS.IA_CLFLUSH,34.802723020291545,678.9293109831472
 UNC_CHA_TOR_INSERTS.IA_CLFLUSHOPT,0.0,0.0
-UNC_CHA_TOR_INSERTS.IA_HIT_CRD,579075.0648203539,863110.8486392065
+UNC_CHA_TOR_INSERTS.IA_HIT_CRD,562340.9693148858,921841.8934385896
 UNC_CHA_TOR_INSERTS.IA_HIT_CRD_PREF,0.0,0.0
-UNC_CHA_TOR_INSERTS.IA_HIT_DRD,6331003.926597138,283614.45195141766
-UNC_CHA_TOR_INSERTS.IA_HIT_DRD_PREF,27197339.97571456,826901.8330821103
+UNC_CHA_TOR_INSERTS.IA_HIT_DRD,4960550.973872774,331772.225202676
+UNC_CHA_TOR_INSERTS.IA_HIT_DRD_PREF,17559986.27113669,1015591.9274017495
 UNC_CHA_TOR_INSERTS.IA_HIT_LLCPREFCODE,0.0,0.0
 UNC_CHA_TOR_INSERTS.IA_HIT_LLCPREFDATA,0.0,0.0
 UNC_CHA_TOR_INSERTS.IA_HIT_LLCPREFRFO,0.0,0.0
-UNC_CHA_TOR_INSERTS.IA_HIT_RFO,303772.4053572229,19765.217982236278
-UNC_CHA_TOR_INSERTS.IA_HIT_RFO_PREF,11891453.832546739,69279.3708623182
+UNC_CHA_TOR_INSERTS.IA_HIT_RFO,258579.6919283332,22979.04057515441
+UNC_CHA_TOR_INSERTS.IA_HIT_RFO_PREF,10485619.929498298,78205.11002535056
 UNC_CHA_TOR_INSERTS.IA_ITOM,0.0,0.0
 UNC_CHA_TOR_INSERTS.IA_LLCPREFRFO,0.0,0.0
-UNC_CHA_TOR_INSERTS.IA_MISS_CRD,26254.636957494295,2.7630061414719007
+UNC_CHA_TOR_INSERTS.IA_MISS_CRD,71745.8918048947,1454.5588010636238
 UNC_CHA_TOR_INSERTS.IA_MISS_CRD_PREF,0.0,0.0
-UNC_CHA_TOR_INSERTS.IA_MISS_DRD,211774043.9490817,12478.58262400586
-UNC_CHA_TOR_INSERTS.IA_MISS_DRD_DDR,224428487.7200735,12627.182294845179
-UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL,224275231.6322957,214.27235395212767
+UNC_CHA_TOR_INSERTS.IA_MISS_DRD,106530973.65281688,20030.02874056296
+UNC_CHA_TOR_INSERTS.IA_MISS_DRD_DDR,106095116.9798558,19748.158705616737
+UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL,103376638.47195613,3226.9467456070747
 UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PMM,0.0,0.0
-UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF,1597293047.26645,20807.400990985145
-UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_LOCAL,1693271682.8242738,730.312124758642
-UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_REMOTE,11603.786823415488,21503.880308891752
-UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE,6954.913724178824,13028.486997860258
+UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF,962542230.9213353,47202.78396675918
+UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_LOCAL,905887853.0154427,45575.76740667988
+UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_REMOTE,28766.346816219782,57984.07560852518
+UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE,17674.783378017375,20884.939351149544
 UNC_CHA_TOR_INSERTS.IA_MISS_LLCPREFCODE,0.0,0.0
 UNC_CHA_TOR_INSERTS.IA_MISS_LLCPREFDATA,0.0,0.0
 UNC_CHA_TOR_INSERTS.IA_MISS_LLCPREFRFO,0.0,0.0
-UNC_CHA_TOR_INSERTS.IA_MISS_RFO,36946038.549334966,7224.658011639026
-UNC_CHA_TOR_INSERTS.IA_MISS_RFO_LOCAL,34895101.49472654,4054.0517166027084
-UNC_CHA_TOR_INSERTS.IA_MISS_RFO_PREF,358972008.6429445,10663.710007402424
-UNC_CHA_TOR_INSERTS.IA_MISS_RFO_PREF_LOCAL,365408059.3431825,5914.185042404878
-UNC_CHA_TOR_INSERTS.IA_MISS_RFO_PREF_REMOTE,3404.7181878393244,4326.495486543431
-UNC_CHA_TOR_INSERTS.IA_MISS_RFO_REMOTE,1206.931427080196,3205.220822832022
-UNC_CHA_TOR_INSERTS.IA_RFO,35082722.17910753,26014.098249944473
-UNC_CHA_TOR_INSERTS.IA_RFO_PREF,349216418.806489,75560.83768553566
-UNC_CHA_TOR_INSERTS.IA_SPECITOM,235784980.3344682,0.0
+UNC_CHA_TOR_INSERTS.IA_MISS_RFO,56031778.529221736,8348.139513849983
+UNC_CHA_TOR_INSERTS.IA_MISS_RFO_LOCAL,52594749.13308406,5677.276781014261
+UNC_CHA_TOR_INSERTS.IA_MISS_RFO_PREF,517033860.8633847,16507.514484642987
+UNC_CHA_TOR_INSERTS.IA_MISS_RFO_PREF_LOCAL,486847745.7133917,12191.804055870305
+UNC_CHA_TOR_INSERTS.IA_MISS_RFO_PREF_REMOTE,5748.014776533571,5322.481522237747
+UNC_CHA_TOR_INSERTS.IA_MISS_RFO_REMOTE,1843.6090082219005,3008.0227313404694
+UNC_CHA_TOR_INSERTS.IA_RFO,56116716.28712212,28835.65989092814
+UNC_CHA_TOR_INSERTS.IA_RFO_PREF,525805366.916224,82797.26224845093
+UNC_CHA_TOR_INSERTS.IA_SPECITOM,476355652.8166469,0.0
 UNC_CHA_TOR_INSERTS.IO_HIT_ITOM,0.0,0.0
-UNC_CHA_TOR_INSERTS.IO_HIT_ITOMCACHENEAR,64.0693354125641,0.0
-UNC_CHA_TOR_INSERTS.IO_HIT_PCIRDCUR,148.60053211585634,0.0
-UNC_CHA_TOR_INSERTS.IO_ITOM,1.1044524653709422,0.0
-UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR,29.82021656501544,0.0
+UNC_CHA_TOR_INSERTS.IO_HIT_ITOMCACHENEAR,67.26809783910205,0.0
+UNC_CHA_TOR_INSERTS.IO_HIT_PCIRDCUR,67.95528099051973,0.0
+UNC_CHA_TOR_INSERTS.IO_ITOM,1.754448630306178,0.0
+UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR,42.69158333745033,0.0
 UNC_CHA_TOR_INSERTS.IO_MISS_ITOM,0.0,0.0
-UNC_CHA_TOR_INSERTS.IO_MISS_ITOMCACHENEAR,17.67806707390971,0.0
-UNC_CHA_TOR_INSERTS.IO_MISS_PCIRDCUR,1415.8481926131594,0.0
+UNC_CHA_TOR_INSERTS.IO_MISS_ITOMCACHENEAR,23.207064526116945,0.0
+UNC_CHA_TOR_INSERTS.IO_MISS_PCIRDCUR,5.52481959272518,0.0
 UNC_CHA_TOR_INSERTS.IO_MISS_RFO,0.0,0.0
-UNC_CHA_TOR_INSERTS.IO_PCIRDCUR,1564.4487247290156,0.0
+UNC_CHA_TOR_INSERTS.IO_PCIRDCUR,73.48010058324489,0.0
 UNC_CHA_TOR_INSERTS.IO_RFO,0.0,0.0
-UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD,182065300388.60782,6693904.64565694
-UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_DDR,192968839054.78055,6947772.626854142
-UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_LOCAL,192649906042.48322,77191.67009054557
-UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_PMM,0.0,0.0
-UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_PREF,1387471206066.159,16354010.651328651
-UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_REMOTE,3536900.292618947,7083184.705429704
+UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD,114558025439.26942,10838535.089521158
+UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_DDR,114078087210.71011,10480672.642242365
+UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_LOCAL,114429026273.76021,143104.15694510654
+UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_PMM,1.1696324202041186,0.0
+UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_PREF,1105917777344.2192,23495927.46920689
+UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_REMOTE,7150003.618496162,10143863.06228895
 UNC_CHA_TOR_OCCUPANCY.IA_MISS_LLCPREFDATA,0.0,0.0
-UNC_CHA_TOR_OCCUPANCY.IA_MISS_LLCPREFRFO,0.5523565837645267,0.0
-UNC_CHA_TOR_OCCUPANCY.IA_MISS_RFO,31397495878.337143,6812507.054630711
-UNC_CHA_TOR_OCCUPANCY.IA_MISS_RFO_PREF,313492784380.0077,7473233.256539342
-UNC_CHA_TOR_OCCUPANCY.IO_ITOM,555.6602985591475,0.0
-UNC_CHA_TOR_OCCUPANCY.IO_PCIRDCUR,1792967.1778161477,0.5855774110656063
-UNC_IIO_CLOCKTICKS,230074579.53675073,228417655.3618895
-UNC_IIO_COMP_BUF_INSERTS.CMPD.ALL_PARTS,11.60256280083715,0.0
-UNC_IIO_COMP_BUF_OCCUPANCY.CMPD.ALL_PARTS,3499.5539419286906,0.0
+UNC_CHA_TOR_OCCUPANCY.IA_MISS_LLCPREFRFO,0.0,1.7548893547526496
+UNC_CHA_TOR_OCCUPANCY.IA_MISS_RFO,59366778566.38592,7368979.744938996
+UNC_CHA_TOR_OCCUPANCY.IA_MISS_RFO_PREF,523452256087.17957,9856774.642069371
+UNC_CHA_TOR_OCCUPANCY.IO_ITOM,691.0584406467487,0.585642746310804
+UNC_CHA_TOR_OCCUPANCY.IO_PCIRDCUR,24623.955938877403,0.0
+UNC_IIO_CLOCKTICKS,229498607.57343528,228456604.65499678
+UNC_IIO_COMP_BUF_INSERTS.CMPD.ALL_PARTS,16.38287085401239,0.0
+UNC_IIO_COMP_BUF_OCCUPANCY.CMPD.ALL_PARTS,11702.05061000885,0.0
 UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.PART0,0.0,0.0
 UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.PART1,0.0,0.0
 UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.PART2,0.0,0.0
@@ -669,71 +669,71 @@ UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.PART0,0.0,0.0
 UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.PART1,0.0,0.0
 UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.PART2,0.0,0.0
 UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.PART3,0.0,0.0
-UNC_I_CACHE_TOTAL_OCCUPANCY.MEM,922499402.172878,916282822.1010998
-UNC_I_CLOCKTICKS,230985951.83310723,229254126.52062687
+UNC_I_CACHE_TOTAL_OCCUPANCY.MEM,920722150.237097,916354959.9056844
+UNC_I_CLOCKTICKS,230292956.9033529,229224896.37490332
 UNC_I_COHERENT_OPS.CLFLUSH,0.0,0.0
-UNC_I_COHERENT_OPS.PCITOM,32.574037987960885,0.0
-UNC_I_COHERENT_OPS.WBMTOI,40.32081206866688,0.0
-UNC_I_FAF_INSERTS,19.337793849433936,0.0
-UNC_I_FAF_OCCUPANCY,19.337793849433936,0.0
+UNC_I_COHERENT_OPS.PCITOM,24.864124115401307,0.0
+UNC_I_COHERENT_OPS.WBMTOI,14.9155698094224,0.0
+UNC_I_FAF_INSERTS,6378.23982566697,0.0
+UNC_I_FAF_OCCUPANCY,6378.23982566697,0.0
 UNC_I_MISC1.LOST_FWD,0.0,0.0
-UNC_I_SNOOP_RESP.ALL_HIT,3.3146375763580704,0.0
+UNC_I_SNOOP_RESP.ALL_HIT,1.6576474661512102,0.0
 UNC_I_SNOOP_RESP.ALL_HIT_ES,0.0,0.0
 UNC_I_SNOOP_RESP.ALL_HIT_M,0.0,0.0
-UNC_I_TRANSACTIONS.WR_PREF,86.7296785954998,0.0
-UNC_M2M_DIRECT2CORE_NOT_TAKEN_DIRSTATE,22348.29492199164,6689.014879717775
-UNC_M2M_DIRECT2CORE_TAKEN,2315742162.335462,1845.3577475448415
-UNC_M2M_DIRECT2CORE_TXN_OVERRIDE,20402.490114367196,6689.014879717775
+UNC_I_TRANSACTIONS.WR_PREF,29.83402580071597,0.0
+UNC_M2M_DIRECT2CORE_NOT_TAKEN_DIRSTATE,37954.059905196285,4727.539220506291
+UNC_M2M_DIRECT2CORE_TAKEN,1645347173.6691914,5619.039117122073
+UNC_M2M_DIRECT2CORE_TXN_OVERRIDE,35838.99179707406,4727.539220506291
 UNC_M2M_DIRECT2UPI_NOT_TAKEN_CREDITS,0.0,0.0
-UNC_M2M_DIRECT2UPI_NOT_TAKEN_DIRSTATE,4.420018556993632,0.0
-UNC_M2M_DIRECT2UPI_TAKEN,3106.168040927275,6115.648175920314
-UNC_M2M_DIRECT2UPI_TXN_OVERRIDE,19.893827770959327,0.0
-UNC_M2M_DIRECTORY_LOOKUP.ANY,2185045560.476754,22590.213548338685
-UNC_M2M_DIRECTORY_LOOKUP.STATE_A,21313.618071746412,10819.561143170358
-UNC_M2M_DIRECTORY_LOOKUP.STATE_I,2184946708.328406,5670.62605424819
-UNC_M2M_DIRECTORY_LOOKUP.STATE_S,77538.53027651754,6100.026350920136
-UNC_M2M_DIRECTORY_UPDATE.A2I,12611.576785388814,5347.887662839808
-UNC_M2M_DIRECTORY_UPDATE.A2S,0.5525819035792321,0.0
-UNC_M2M_DIRECTORY_UPDATE.ANY,40436.36884632861,10925.031887778523
-UNC_M2M_DIRECTORY_UPDATE.I2A,4339.425688807709,2389.9167329801785
+UNC_M2M_DIRECT2UPI_NOT_TAKEN_DIRSTATE,6.631438769223532,0.0
+UNC_M2M_DIRECT2UPI_TAKEN,5173.627479789226,15001.419735778501
+UNC_M2M_DIRECT2UPI_TXN_OVERRIDE,10.500540449921557,0.0
+UNC_M2M_DIRECTORY_LOOKUP.ANY,1645802637.155408,36445.31288209096
+UNC_M2M_DIRECTORY_LOOKUP.STATE_A,40806.106282333276,16378.810644580086
+UNC_M2M_DIRECTORY_LOOKUP.STATE_I,1645670194.7038162,10133.553235362206
+UNC_M2M_DIRECTORY_LOOKUP.STATE_S,91636.34530918501,9933.50163089031
+UNC_M2M_DIRECTORY_UPDATE.A2I,30816.965386354736,3532.549814382186
+UNC_M2M_DIRECTORY_UPDATE.A2S,0.0,0.0
+UNC_M2M_DIRECTORY_UPDATE.ANY,65511.73974943769,11089.534692679126
+UNC_M2M_DIRECTORY_UPDATE.I2A,4166.993992559712,3552.9979281387787
 UNC_M2M_DIRECTORY_UPDATE.I2S,0.0,0.0
-UNC_M2M_PREFCAM_DEMAND_DROPS.XPT_ALLCH,1649231011.7175558,1.1044524653709422
-UNC_M2M_PREFCAM_DEMAND_MERGE.UPI_ALLCH,1709.4361474300508,11310.999309602588
-UNC_M2M_PREFCAM_DEMAND_MERGE.XPT_ALLCH,46981600.4404203,875.8308050391571
-UNC_M2M_PREFCAM_DEMAND_NO_MERGE.XPT_ALLCH,2273569539.6737103,8920.662562801099
-UNC_M2M_PREFCAM_INSERTS.UPI_ALLCH,6249.5218120100235,31646.93776266464
-UNC_M2M_PREFCAM_INSERTS.XPT_ALLCH,51600774.627616726,2320.4546297443494
-UNC_M2M_RxC_AD_INSERTS,4010866710.971982,49009.09773497199
-UNC_M2M_RxC_AD_OCCUPANCY,497352826763.09143,110808.7035000457
-UNC_M2M_RxC_BL_INSERTS,1276362533.421821,69988.05076593984
-UNC_M2M_RxC_BL_OCCUPANCY,41347021411.80864,1425126.5168999655
-UNC_M2M_TRACKER_INSERTS.CH0,1157289701.1216922,10787.198078096771
-UNC_M2M_TRACKER_INSERTS.CH1,1157126357.0932827,10288.987496097627
-UNC_M2M_TRACKER_OCCUPANCY.CH0,487225531572.5252,1128961.7490068013
-UNC_M2M_TRACKER_OCCUPANCY.CH1,487711804955.5184,1030263.5814812924
+UNC_M2M_PREFCAM_DEMAND_DROPS.XPT_ALLCH,1077856005.2921448,32.164891555613266
+UNC_M2M_PREFCAM_DEMAND_MERGE.UPI_ALLCH,994.9829080375007,21526.376248493863
+UNC_M2M_PREFCAM_DEMAND_MERGE.XPT_ALLCH,28391501.222106677,2279.6135869778273
+UNC_M2M_PREFCAM_DEMAND_NO_MERGE.XPT_ALLCH,1611767925.849827,11682.873429208837
+UNC_M2M_PREFCAM_INSERTS.UPI_ALLCH,6485.814511651857,52058.48844769047
+UNC_M2M_PREFCAM_INSERTS.XPT_ALLCH,30291481.366296753,10530.785495307782
+UNC_M2M_RxC_AD_INSERTS,2758006273.610111,106205.45087842098
+UNC_M2M_RxC_AD_OCCUPANCY,469499565871.67285,231923.65333281248
+UNC_M2M_RxC_BL_INSERTS,2129123360.8979657,115526.89590028275
+UNC_M2M_RxC_BL_OCCUPANCY,242303423399.56152,3176532.6007347964
+UNC_M2M_TRACKER_INSERTS.CH0,769782157.2927048,16392.21122055522
+UNC_M2M_TRACKER_INSERTS.CH1,769739937.391288,16352.436367730092
+UNC_M2M_TRACKER_OCCUPANCY.CH0,446031770603.05884,1162549.3420860008
+UNC_M2M_TRACKER_OCCUPANCY.CH1,446428571167.2991,1133814.7730624042
 UNC_M2M_TxC_AD_INSERTS,0.0,0.0
 UNC_M2M_TxC_AD_OCCUPANCY,0.0,0.0
-UNC_M2M_TxC_BL_INSERTS.ALL,2316989048.666795,41012.006849377576
-UNC_M2M_TxC_BL_OCCUPANCY.ALL,7288949076.991395,608453.037665887
-UNC_M3UPI_D2C_SENT,42346.36420101998,39230.703796208545
+UNC_M2M_TxC_BL_INSERTS.ALL,1650257814.4895568,51171.218751675944
+UNC_M2M_TxC_BL_OCCUPANCY.ALL,5127843993.794004,603311.725218681
+UNC_M3UPI_D2C_SENT,92116.74051801578,78232.61887398278
 UNC_M3UPI_D2U_SENT,0.0,0.0
-UNC_M3UPI_UPI_PREFETCH_SPAWN,36743.47684419319,21843.86086010649
-UNC_MDF_CRS_TxR_INSERTS.AD_BNC,6707732866.176717,3552046.265123557
-UNC_MDF_CRS_TxR_INSERTS.AKC,242029992.8916939,483889709.66626376
-UNC_M_ACT_COUNT.ALL,3161544433.423204,249754.84271180164
-UNC_M_CAS_COUNT.ALL,2989830803.6113124,249126.27991544348
-UNC_M_CAS_COUNT.RD,2325900503.8356667,134150.35885075253
-UNC_M_CAS_COUNT.WR,642522883.4836445,117067.3885117666
-UNC_M_CLOCKTICKS,19209637880.465282,19204268780.291965
+UNC_M3UPI_UPI_PREFETCH_SPAWN,73138.86968399385,47512.22335732161
+UNC_MDF_CRS_TxR_INSERTS.AD_BNC,5302197312.74355,4212648.372426484
+UNC_MDF_CRS_TxR_INSERTS.AKC,490610474.28324115,982547666.9107237
+UNC_M_ACT_COUNT.ALL,2764180616.8922048,306686.212422183
+UNC_M_CAS_COUNT.ALL,2572279726.9202976,305792.935519152
+UNC_M_CAS_COUNT.RD,1593007020.3757572,183767.48819399287
+UNC_M_CAS_COUNT.WR,1028183472.8813696,136599.80932532417
+UNC_M_CLOCKTICKS,19206778898.01061,19209053209.80514
 UNC_M_DRAM_REFRESH.HIGH,0.0,0.0
 UNC_M_DRAM_REFRESH.OPPORTUNISTIC,0.0,0.0
-UNC_M_DRAM_REFRESH.PANIC,4103639.65037597,4102706.08356909
-UNC_M_MAJOR_MODES.PREF_RD,2296007943.976536,257741.54689317627
-UNC_M_MAJOR_MODES.PREF_WR,658470092.6846154,0.0
-UNC_M_MAJOR_MODES.STARVED_RD,14588019.886571845,0.0
-UNC_M_MAJOR_MODES.STARVED_WR,0.0,0.0
-UNC_M_MAJOR_MODE_VOTE_MISMATCH.PCH0,521282764.6023091,0.0
-UNC_M_MAJOR_MODE_VOTE_MISMATCH.PCH1,523364387.1253625,0.0
+UNC_M_DRAM_REFRESH.PANIC,4103001.37403759,4102676.5493741385
+UNC_M_MAJOR_MODES.PREF_RD,1527207883.467503,315248.7233530551
+UNC_M_MAJOR_MODES.PREF_WR,1092776109.9098847,11.698799624191661
+UNC_M_MAJOR_MODES.STARVED_RD,83328934.1188891,0.0
+UNC_M_MAJOR_MODES.STARVED_WR,41.53073866588039,0.0
+UNC_M_MAJOR_MODE_VOTE_MISMATCH.PCH0,576067604.4090412,0.0
+UNC_M_MAJOR_MODE_VOTE_MISMATCH.PCH1,672497218.7090636,0.0
 UNC_M_PMM_RPQ_INSERTS,0.0,0.0
 UNC_M_PMM_RPQ_OCCUPANCY.ALL_SCH0,0.0,0.0
 UNC_M_PMM_RPQ_OCCUPANCY.ALL_SCH0:t=1,0.0,0.0
@@ -764,72 +764,72 @@ UNC_M_PMM_WPQ_OCCUPANCY.ALL_SCH1:t=1:e1,0.0,0.0
 UNC_M_PMM_WPQ_OCCUPANCY.ALL_SCH1:t=20,0.0,0.0
 UNC_M_PMM_WPQ_OCCUPANCY.ALL_SCH1:t=30,0.0,0.0
 UNC_M_PMM_WPQ_OCCUPANCY.ALL_SCH1:t=30:e1,0.0,0.0
-UNC_M_PRE_COUNT.ALL,148809826.65544054,17.674876523251235
+UNC_M_PRE_COUNT.ALL,165167176.13710946,29.831139618844805
 UNC_M_PRE_COUNT.PGT,0.0,0.0
-UNC_M_RDB_FULL,9603788447.36459,9601394100.330637
-UNC_M_RDB_INSERTS,2235044478.2009053,134434.2024263618
-UNC_M_RDB_NOT_EMPTY,6748327898.4166355,4598651.918767156
-UNC_M_RDB_OCCUPANCY,86794447027.12744,5083116.14539485
-UNC_M_RPQ_CYCLES_FULL_PCH0,9604992254.940733,9602614820.22769
-UNC_M_RPQ_CYCLES_NE.PCH0,9007136836.366772,744717.5491782106
-UNC_M_RPQ_CYCLES_NE.PCH1,8985475667.723633,621175.4557090938
-UNC_M_RPQ_INSERTS.PCH0,1152703362.4962196,21521.936918722597
-UNC_M_RPQ_INSERTS.PCH1,1094486127.712225,20975.403166259628
-UNC_M_RPQ_OCCUPANCY_PCH0,198133505355.5356,952121.9377721376
-UNC_M_RPQ_OCCUPANCY_PCH0:t=10,8078740993.639943,0.0
-UNC_M_RPQ_OCCUPANCY_PCH0:t=20,5565210872.582666,0.0
-UNC_M_RPQ_OCCUPANCY_PCH0:t=30,2048896391.460254,0.0
-UNC_M_RPQ_OCCUPANCY_PCH0:t=32,1600075038.4121783,0.0
-UNC_M_RPQ_OCCUPANCY_PCH1,175640232982.4324,904528.6854264159
+UNC_M_RDB_FULL,9602922683.985651,9605047044.235374
+UNC_M_RDB_INSERTS,1641980594.956082,182292.05654052272
+UNC_M_RDB_NOT_EMPTY,5317512767.200282,5860191.521682616
+UNC_M_RDB_OCCUPANCY,63658949401.442924,6900657.230631806
+UNC_M_RPQ_CYCLES_FULL_PCH0,9602865290.175941,9605822087.132387
+UNC_M_RPQ_CYCLES_NE.PCH0,9004839704.866453,1509091.386103559
+UNC_M_RPQ_CYCLES_NE.PCH1,8991681487.68832,1322656.5949069485
+UNC_M_RPQ_INSERTS.PCH0,798223889.9328163,39797.77432482387
+UNC_M_RPQ_INSERTS.PCH1,824183822.8877935,35484.29150038758
+UNC_M_RPQ_OCCUPANCY_PCH0,197343879416.3938,1739079.6976945337
+UNC_M_RPQ_OCCUPANCY_PCH0:t=10,8085658703.446629,0.0
+UNC_M_RPQ_OCCUPANCY_PCH0:t=20,5645374821.796053,0.0
+UNC_M_RPQ_OCCUPANCY_PCH0:t=30,2517006719.9235,0.0
+UNC_M_RPQ_OCCUPANCY_PCH0:t=32,2023473252.2249098,0.0
+UNC_M_RPQ_OCCUPANCY_PCH1,199462608861.3687,1534629.568257138
 UNC_M_TAGCHK.HIT,0.0,0.0
 UNC_M_TAGCHK.MISS_CLEAN,0.0,0.0
 UNC_M_TAGCHK.MISS_DIRTY,0.0,0.0
-UNC_M_WPQ_INSERTS.PCH0,321731329.3028623,58631.51580291452
-UNC_M_WPQ_INSERTS.PCH1,321561954.3383567,55669.374290789645
-UNC_M_WPQ_OCCUPANCY_PCH0,191890271555.81412,7449749.456062682
-UNC_M_WPQ_OCCUPANCY_PCH1,191259402960.93988,7078082.9779996835
-UNC_UPI_CLOCKTICKS,8010578677.510291,8007111344.781698
-UNC_UPI_DIRECT_ATTEMPTS.D2C,45818.210525913535,44260.38032350782
+UNC_M_WPQ_INSERTS.PCH0,530621541.043607,69642.83838000373
+UNC_M_WPQ_INSERTS.PCH1,530433069.98431253,65500.00034764073
+UNC_M_WPQ_OCCUPANCY_PCH0,238404125318.23828,9069317.505122324
+UNC_M_WPQ_OCCUPANCY_PCH1,231454959896.2609,8462835.024068402
+UNC_UPI_CLOCKTICKS,8008875920.253644,8008741453.566776
+UNC_UPI_DIRECT_ATTEMPTS.D2C,102436.9921776868,81054.35708772522
 UNC_UPI_DIRECT_ATTEMPTS.D2K,0.0,0.0
 UNC_UPI_L1_POWER_CYCLES,0.0,0.0
 UNC_UPI_RxL0P_POWER_CYCLES,0.0,0.0
-UNC_UPI_RxL_BYPASSED.SLOT0,232992771.27379194,232755088.36930197
-UNC_UPI_RxL_BYPASSED.SLOT1,172347.9583359589,214079.60295253643
+UNC_UPI_RxL_BYPASSED.SLOT0,489424105.2919886,488144700.8680537
+UNC_UPI_RxL_BYPASSED.SLOT1,299398.16303564,3367130.1884517577
 UNC_UPI_RxL_CRC_LLR_REQ_TRANSMIT,0.0,0.0
-UNC_UPI_RxL_FLITS.ALL_DATA,499743.7228203568,436292.56785056746
-UNC_UPI_RxL_FLITS.NON_DATA,945994493.6323619,949126480.8257226
+UNC_UPI_RxL_FLITS.ALL_DATA,927036.1973189837,808843.559154683
+UNC_UPI_RxL_FLITS.NON_DATA,1815225363.516196,1822047502.9475493
 UNC_UPI_RxL_INSERTS.SLOT0,0.0,0.0
 UNC_UPI_RxL_INSERTS.SLOT1,0.0,0.0
 UNC_UPI_RxL_OCCUPANCY.SLOT0,0.0,0.0
 UNC_UPI_RxL_OCCUPANCY.SLOT1,0.0,0.0
 UNC_UPI_TxL0P_POWER_CYCLES,0.0,0.0
-UNC_UPI_TxL_BYPASSED,228356456.7563961,228187527.77148142
+UNC_UPI_TxL_BYPASSED,489565664.746887,489563410.1020173
 UNC_UPI_TxL_CRC_LLR_REQ_RECVD,0.0,0.0
-UNC_UPI_TxL_FLITS.ALL_DATA,458673.63280396047,463618.56161255564
-UNC_UPI_TxL_FLITS.ALL_NULL,1162951862.7290928,1155442374.3950918
-UNC_UPI_TxL_FLITS.IDLE,21912980245.5736,21904661294.29139
-UNC_UPI_TxL_FLITS.NON_DATA,926701991.9264871,923203654.2045156
-UNC_UPI_TxL_FLITS.NON_DATA:u0x87,242812896.87232184,242615974.9972375
-UNC_UPI_TxL_INSERTS,450449.3009792338,450535.4872637141
-UNC_UPI_TxL_OCCUPANCY,450449.3009792338,450535.4872637141
-UOPS_DECODED.DEC0_UOPS,16977980.29146162,3657792.763459893
-UOPS_DISPATCHED.PORT_0,1741022536.7946522,8094540.684577041
-UOPS_DISPATCHED.PORT_1,727999439.9913955,7577872.825794662
-UOPS_DISPATCHED.PORT_2_3_12,7834006817.026118,21607365.93445732
-UOPS_DISPATCHED.PORT_4_9,2649454926.0267434,16299812.329923578
-UOPS_DISPATCHED.PORT_5_10,2027316299.250509,17777254.38020154
-UOPS_DISPATCHED.PORT_6,2724983275.1089673,20106935.120930687
-UOPS_DISPATCHED.PORT_7_8,2664513277.8271794,18808129.873147245
-UOPS_EXECUTED.CORE_CYCLES_GE_1,9809881691.210255,27374125.226765636
-UOPS_EXECUTED.CORE_CYCLES_GE_2,8581845060.45807,19920913.749683768
-UOPS_EXECUTED.CORE_CYCLES_GE_3,3189681964.5873756,15266764.961939387
-UOPS_EXECUTED.CORE_CYCLES_NONE,74442203677.79085,94189587.84634244
-UOPS_EXECUTED.CYCLES_GE_3,3431425456.5855026,15859673.022934554
-UOPS_EXECUTED.THREAD,19505567579.82987,99439994.5476873
+UNC_UPI_TxL_FLITS.ALL_DATA,765371.994437607,851541.437178757
+UNC_UPI_TxL_FLITS.ALL_NULL,2076294103.7470908,2067638820.110516
+UNC_UPI_TxL_FLITS.IDLE,20195406936.26145,20203845511.031837
+UNC_UPI_TxL_FLITS.NON_DATA,1828329475.313098,1821411185.1051693
+UNC_UPI_TxL_FLITS.NON_DATA:u0x87,468895078.085144,468727428.73777163
+UNC_UPI_TxL_INSERTS,1017397.6746950308,1011295.3911880286
+UNC_UPI_TxL_OCCUPANCY,1017397.6746950308,1011295.3911880286
+UOPS_DECODED.DEC0_UOPS,16949485.79562353,3498915.9977543876
+UOPS_DISPATCHED.PORT_0,2019337288.0208902,8456568.55602785
+UOPS_DISPATCHED.PORT_1,663997956.3627021,7947682.220029876
+UOPS_DISPATCHED.PORT_2_3_12,4411518722.691784,22916445.911726847
+UOPS_DISPATCHED.PORT_4_9,4354215441.008457,17146676.2610117
+UOPS_DISPATCHED.PORT_5_10,1599094965.5726209,16992610.36038058
+UOPS_DISPATCHED.PORT_6,2381523241.001322,19064807.910699274
+UOPS_DISPATCHED.PORT_7_8,4416513337.860509,18027310.93931081
+UOPS_EXECUTED.CORE_CYCLES_GE_1,4328642460.864628,29001462.863541987
+UOPS_EXECUTED.CORE_CYCLES_GE_2,3784995078.012112,20755419.1741505
+UOPS_EXECUTED.CORE_CYCLES_GE_3,3263459633.3164625,15805718.060642274
+UOPS_EXECUTED.CORE_CYCLES_NONE,100457291005.06647,98646263.50299972
+UOPS_EXECUTED.CYCLES_GE_3,3033237337.3704157,20658786.77163182
+UOPS_EXECUTED.THREAD,18935473010.014236,101846134.60231836
 UOPS_EXECUTED.X87,0.0,0.0
-UOPS_ISSUED.ANY,17607440027.48976,104260113.28700933
-UOPS_ISSUED.STALL_CYCLES,81453272347.20238,92208119.33381209
-UOPS_RETIRED.MS,151196567.12150735,11065770.395853085
-UOPS_RETIRED.SLOTS,17419977375.294834,88860383.89667302
-UOPS_RETIRED.SLOTS:c1,7614572715.111597,18172673.32901304
-XQ.FULL_CYCLES,18029445017.567318,1415565.9475701249
+UOPS_ISSUED.ANY,15199457251.393724,107335453.05140394
+UOPS_ISSUED.STALL_CYCLES,102330894984.0604,95608023.52365853
+UOPS_RETIRED.MS,72656242.60570057,12146788.983598625
+UOPS_RETIRED.SLOTS,14962073291.776781,90479971.48084219
+UOPS_RETIRED.SLOTS:c1,2274502621.944699,19057238.97030189
+XQ.FULL_CYCLES,16128736757.377073,1701102.5066237464
