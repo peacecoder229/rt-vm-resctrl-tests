@@ -3,10 +3,10 @@ Copyright(C) 1993-2020 Intel Corporation. All rights reserved.
 Application Build Date: Dec 15 2021 at 16:43:37
 SEP Driver Version: 5.31  (private)
 PAX Driver Version: 1.0
-Linux Kernel Version: 5.15.0-spr.bkc.pc.3.21.0.x86_64
+Linux Kernel Version: 5.15.0-spr.bkc.pc.5.3.0.x86_64
 Collection Mode: Driver
 total_number_of_processors  ...... 224
-number_of_online_processors ...... 112
+number_of_online_processors ...... 224
 cpu_family ................ Intel(R) Xeon(R) Processor code named Sapphirerapids
 cpu_model ................. 143 (0x8f)
 cpu_stepping .............. 4 (0x4)
@@ -170,11 +170,11 @@ UFS Freq (limit) .......... 2400.00 MHz
 
 Processor Base Freq ....... 1800.00 MHz
 
-Processor Maximum Freq .... 25500.00 MHz
+Processor Maximum Freq .... 4000.00 MHz
 
 Bus Reference Freq ........ 100.00 MHz
 
-NUMA node(s):         2
-NUMA node0 CPU(s):    0-55
-NUMA node1 CPU(s):    56-111
+NUMA node(s):        2
+NUMA node0 CPU(s):   0-55,112-167
+NUMA node1 CPU(s):   56-111,168-223
 
