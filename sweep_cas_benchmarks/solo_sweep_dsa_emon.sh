@@ -18,13 +18,9 @@ cpupower frequency-set -u 2300000 -d 2300000
 
       sleep 1
 
-      dsa_output=$(./dsa_micros/src/dsa_perf_micros -n128 -s16k -j -c -f -i1000000 -k5 -w0 -zF,F -o3)           
-      
-      
+      dsa_output=$(./dsa_micros/src/dsa_perf_micros -n128 -s16k -j -c -f -i1000000 -k5 -w0 -zF,F -o3)         
 
       emon -stop
-      
-      
       
       #Process EMON Data
  

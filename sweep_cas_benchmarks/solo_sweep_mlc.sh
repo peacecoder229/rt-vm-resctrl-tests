@@ -5,13 +5,13 @@
 
 umount resctrl
 pqos -R
-cores=12
+#cores=$1
 
-#for cores in {7..55..2}
-#do
+for cores in {5..55..2}
+do
 for pattern in {2..12..1}
 do
-   for casValue in {235..255..30}
+   for casValue in {15..255..15}
    do
       cd $PWD/hwdrc_postsi/scripts
       ./hwdrc_icx_2S_xcc_init_to_default_pqos_CAS.sh $casValue 0-$cores 56-57
@@ -44,9 +44,9 @@ do
       rm -rf ${cores}_mlc_LLC_monitor.csv
       rm -rf temp_mlc
 
-      echo $cores,$casValue,$mlcBwScore,$mlcLaScore,$MISSES,$LLC,$MBL >> ${cores}_W_nutanix_mlc_monitoring.csv
+      echo $cores,$pattern,$casValue,$mlcBwScore,$mlcLaScore,$MISSES,$LLC,$MBL >> ${cores}_W_nutanix_mlc_monitoring.csv
 
-   #done
+   done
 #echo $cores
 done
 done 
