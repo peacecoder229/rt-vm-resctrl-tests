@@ -11,13 +11,13 @@ cores=55
 #do
 iteration=1
 premlcBwScore=0
-premlcLaScore=0
+premlcLaScore=0.00
 preMBL=0
-LaThreshold=40
+LaThreshold=40.00
 
 for pattern in {2..12..1}
 do
-   for casValue in {150..200..2}
+   for casValue in {150..255..2}
    do
       cd $PWD/hwdrc_postsi/scripts
       ./hwdrc_icx_2S_xcc_init_to_default_pqos_CAS.sh $casValue 0-$cores 56-57
@@ -51,10 +51,17 @@ do
       rm -rf ${cores}_mlc_monitor_temp.csv	
       rm -rf ${cores}_mlc_LLC_monitor.csv
       rm -rf temp_mlc
-.
-      if [$iteration > 1]
+
+      #"$(echo "${val} < ${min}" | bc)"
+
+      if [ $iteration -gt 1 ]
       then
-	      if [$((mlcLaScore - premlcLaScore)) > LaThreshold ]
+	      echo "**************************"
+	      echo $iteration,$mlcLaScore,$premlcLaScore
+	      diff=$(bc <<< "$mlcLaScore-$premlcLaScore")
+	      echo $diff,$LaThreshold,$iteration
+	      if [ 1 -eq "$(echo "${diff} > ${LaThreshold}" | bc)" ]
+	      #if [ $diff -gt $LaThreshold ]
 	      then
 		      echo $pattern,$casValue,$preMBL,$premlcLaScore,$premlcBwScore >> pattern_cas_lat_bw.csv
 	      fi
