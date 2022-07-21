@@ -6,7 +6,7 @@
 
 umount resctrl
 pqos -R
-cores=55
+cores=35
 #for cores in {5..55..2}
 #do
 iteration=1
@@ -17,7 +17,7 @@ LaThreshold=40.00
 
 for pattern in {2..12..1}
 do
-   for casValue in {150..225..4}
+   for casValue in {130..225..2}
    do
       cd $PWD/hwdrc_postsi/scripts
       ./hwdrc_icx_2S_xcc_init_to_default_pqos_CAS.sh $casValue 0-$cores 56-57
@@ -63,8 +63,8 @@ do
 	      if [ 1 -eq "$(echo "${diff} > ${LaThreshold}" | bc)" ]
 	      #if [ $diff -gt $LaThreshold ]
 	      then
-		      echo $pattern,$precasValue,$preMBL,$premlcLaScore,$premlcBwScore >> pattern_cas_lat_bw.csv
-	      fi
+		      echo $cores,$pattern,$precasValue,$preMBL,$premlcLaScore,$premlcBwScore >> pattern_cas_lat_bw.csv
+  	      fi
       fi
 
       precasValue=$casValue
@@ -73,11 +73,16 @@ do
       preMBL=$MBL
       iteration=$((iteration + 1))
       echo $cores,$pattern,$casValue,$MBL,$mlcLaScore,$mlcBwScore,$MISSES,$LLC,$MBL >> ${cores}_W_${pattern}_nutanix_mlc_monitoring.csv
-
+      
    done
 #echo $cores
 done
 #done 
+
+
+
+
+
 : << 'END_COMMENT'
 for cores in {7..55..6}
 do
