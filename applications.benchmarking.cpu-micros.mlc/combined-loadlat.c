@@ -755,7 +755,24 @@ unsigned int ThruputThread(void* Parm)
 				n_lines = (linesize_powerof2bits)? (processedp - p->local_buf) >> linesize_powerof2bits : (processedp - p->local_buf)/LineSize;
 				total_read += ((n_lines * 5) / 3);
 				break;
+                        case 13: // Rohan case
+#ifdef AVX512_SUPPORT
+				if (use_avx512) {
+					processedp = do_independent_load_rwlocal_80R_20W_avx512(p->local_buf, p->write_buf, endp, delay_value);
+				} else
+#endif
+					if (use_avx256) {
+						processedp = do_independent_load_rwlocal_80R_20W_avx256(p->local_buf, p->write_buf, endp, delay_value);
+					} else
+					{
+						processedp = do_independent_load_rwlocal_80R_20W(p->local_buf, p->write_buf, endp, delay_value);
+					}
 
+				n_lines = (linesize_powerof2bits)? (processedp - p->local_buf) >> linesize_powerof2bits : (processedp - p->local_buf)/LineSize;
+				total_read += ((n_lines * 5) / 3);
+
+
+			        break;	
 //#ifdef LINUX Trying to add case 21
 			case 21: // All reads from two different address sources in a single stream
 				if (p->address_stream_mix_ratio == 50)

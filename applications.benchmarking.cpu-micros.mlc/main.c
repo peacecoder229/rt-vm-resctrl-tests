@@ -40,11 +40,13 @@
 #include "msr.h"
 #include "cpuid.h"
 #include "topology.h"
-#include "version.h"
+//#include "version.h"
 #include "exit.h"
 #include "winlp.h"
 #include "common.h"
 #define MY_ERROR -1
+
+#define INTEL_MLC_VERSION "Modified - Rohan/Ripan for Different Ratios"
 
 #if !defined(LINUX) && !defined(__APPLE__)
 void InitTopologyHelper();
