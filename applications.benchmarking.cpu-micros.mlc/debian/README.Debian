@@ -1,0 +1,24 @@
+Intel Memory Latency Checker (MLC) for Debian
+=============================================
+
+Security Issues
+---------------
+If you have information about a security issue or vulnerability with
+Intel MLC, please send an e-mail to secure@intel.com. Encrypt sensitive
+information using our PGP public key.
+
+Prerequisites
+-------------
+MSR driver (not part of the install package) should be loaded. This can
+typically be done with 'modprobe msr' command if it is not already included.
+
+Installing on Linux
+-------------------
+1. Copy the mlc binary to any directory on your system
+2. Intel MLC dynamically links to GNU C library (glibc/lpthread) and this
+   library must be present on the system
+3. Root privileges are required to run this tool as the tool modifies the H/W
+   prefetch control MSR to enable/disable prefetchers for latency and b/w
+   measurements.  However, it is still possible to run without root privileges,
+   but the prefetch control will be whatever is currently set.
+

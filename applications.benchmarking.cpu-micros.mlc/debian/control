@@ -1,0 +1,18 @@
+Source: mlc
+Section: intel
+Priority: optional
+Maintainer: Vish Viswanathan <vish.viswanathan@intel.com>
+Build-Depends: debhelper (>=10~)
+Standards-Version: 4.3.0
+Homepage: https://gitlab.devtools.intel.com/micros/mlc
+
+Package: mlc
+Architecture: amd64
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: measure memory latency in Intel systems
+ Intel Memory Latency Checker (Intel MLC) is a tool used to measure memory
+ latencies and bandwidth, and how they change with increasing load on the
+ system. It also provides several options for more fine-grained investigation
+ where bandwidth and latencies from a specific set of cores to caches or
+ memory can be measured.

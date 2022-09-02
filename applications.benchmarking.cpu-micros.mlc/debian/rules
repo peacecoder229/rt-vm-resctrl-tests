@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+export DH_VERBOSE = 1
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	@echo "++++++++++++++++++++++++++++++++++"
+	@echo Calling make for version...
+	@echo "++++++++++++++++++++++++++++++++++"
+	make version
+	@echo "++++++++++++++++++++++++++++++++++"
+	@echo Calling make for mlc_internal...
+	@echo "++++++++++++++++++++++++++++++++++"
+	B=internal make -j1
+	@echo "++++++++++++++++++++++++++++++++++"
+	@echo Renaming mlc_internal to mlc...
+	@echo "++++++++++++++++++++++++++++++++++"
+	mv mlc_internal mlc
+
+override_dh_auto_install:
+	dh_auto_install -- prefix=/usr

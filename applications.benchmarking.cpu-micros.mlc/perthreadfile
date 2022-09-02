@@ -1,0 +1,7 @@
+0-5,6-8,9-10 R rand 300000 dram 0
+6-7 W3 seq 2000 dram 04
+8 R seq 2000 dram 0
+9-13 W10 seq 50000 dram 4
+14 R rand 300000 dram 0
+15 R rand 300000 dram 0
+16 R seq 300000 dram 0

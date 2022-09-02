@@ -1,0 +1,14 @@
+diff --git a/makefile b/makefile
+index f7cc268..a501684 100644
+--- a/makefile
++++ b/makefile
+@@ -1,7 +1,7 @@
+ IDIR = include
+ MKDIR_P = mkdir -p
+ CC=gcc
+-CFLAGS=-I$(IDIR) -fstack-protector-strong -fPIE -fPIC -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security
++CFLAGS=-I$(IDIR) -fPIE -fPIC -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security
+ LDFLAGS=-z noexecstack -z relo -z now
+
+ ODIR=obj
+ 

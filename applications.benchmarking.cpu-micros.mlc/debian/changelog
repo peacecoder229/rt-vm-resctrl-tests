@@ -1,0 +1,411 @@
+mlc (3.52) osv; urgency=medium
+
+  * 6ca9988 Update to readme file for v3.9a
+
+ -- vviswana <vish.viswanathan@intel.com>  Sun, 18 Jul 2021 20:02:26 +0000
+
+mlc (3.51) osv; urgency=medium
+
+  * cb87d4c Remove older readme files that were not updated
+
+ -- vviswana <vish.viswanathan@intel.com>  Sun, 18 Jul 2021 20:02:25 +0000
+
+mlc (3.50) osv; urgency=medium
+
+  * 8f61d36 Remove readme_mlc_final.docx
+
+ -- vviswana <vish.viswanathan@intel.com>  Sun, 18 Jul 2021 20:02:25 +0000
+
+mlc (3.49) osv; urgency=medium
+
+  * 1704280 Rolled back Windows topology code since WinFE API is not yet
+    public
+
+ -- vviswana <vish.viswanathan@intel.com>  Sat, 17 Jul 2021 23:01:37 +0000
+
+mlc (3.48) osv; urgency=medium
+
+  * 707b692 Added support for -k option in peak_bandwidth
+
+ -- vviswana <vish.viswanathan@intel.com>  Sun, 04 Jul 2021 19:30:12 +0000
+
+mlc (3.47) osv; urgency=medium
+
+  * 09ac9e4 Added support for memory bandwidth scan
+
+ -- vviswana <vish.viswanathan@intel.com>  Sun, 04 Jul 2021 19:30:12 +0000
+
+mlc (3.46) osv; urgency=medium
+
+  * 41e6b00 runtime_exit api changed
+
+ -- vviswana <vish.viswanathan@intel.com>  Wed, 02 Jun 2021 21:45:14 +0000
+
+mlc (3.45) osv; urgency=medium
+
+  * a1d5053 runtime_exit api changed
+
+ -- vviswana <vish.viswanathan@intel.com>  Wed, 02 Jun 2021 21:45:14 +0000
+
+mlc (3.44) osv; urgency=medium
+
+  * 7cbfe7e runtime_exit api changed
+
+ -- vviswana <vish.viswanathan@intel.com>  Wed, 02 Jun 2021 21:45:13 +0000
+
+mlc (3.43) osv; urgency=medium
+
+  * f58ae83 to support headless nodes (HBM), re-orged the code to
+    populate numa mem size. still pkg id for HBM numa node wont be
+    populated properly... but not required for mlc functioning
+
+ -- Sridharan Sakthivelu <sridharan.sakthivelu@intel.com>  Sun, 30 May 2021 20:00:16 +0000
+
+mlc (3.42) osv; urgency=medium
+
+  * d169889 debug print cleanup
+
+ -- Sridharan Sakthivelu <sridharan.sakthivelu@intel.com>  Thu, 27 May 2021 04:30:16 +0000
+
+mlc (3.41) osv; urgency=medium
+
+  * 6accefa windows_supports_more_than64_cpus flag is enabled by
+    default.
+
+ -- Sakthivelu <sridharan.sakthivelu@intel.com>  Thu, 27 May 2021 04:30:16 +0000
+
+mlc (3.40) osv; urgency=medium
+
+  * c07468f windows_supports_more_than64_cpus flag is enabled by
+    default.
+
+ -- Sakthivelu <sridharan.sakthivelu@intel.com>  Thu, 27 May 2021 04:30:16 +0000
+
+mlc (3.39) osv; urgency=medium
+
+  * 2c8defb windows_supports_more_than64_cpus flag is enabled by
+    default.
+
+ -- Sakthivelu <sridharan.sakthivelu@intel.com>  Thu, 27 May 2021 04:30:16 +0000
+
+mlc (3.38) osv; urgency=medium
+
+  * 966463d windows_supports_more_than64_cpus flag is enabled by
+    default.
+
+ -- Sakthivelu <sridharan.sakthivelu@intel.com>  Thu, 27 May 2021 04:30:15 +0000
+
+mlc (3.37) osv; urgency=medium
+
+  * 0109127 group count fix
+
+ -- Sakthivelu <sridharan.sakthivelu@intel.com>  Thu, 27 May 2021 04:30:15 +0000
+
+mlc (3.36) osv; urgency=medium
+
+  * de4c145 group count fix
+
+ -- Sakthivelu <sridharan.sakthivelu@intel.com>  Thu, 27 May 2021 04:30:15 +0000
+
+mlc (3.35) osv; urgency=medium
+
+  * bb4a769 SPR 2S Fix for WinFE
+
+ -- Sakthivelu <sridharan.sakthivelu@intel.com>  Thu, 27 May 2021 04:30:15 +0000
+
+mlc (3.34) osv; urgency=medium
+
+  * d85715f SPR 2S Fix for WinFE
+
+ -- Sakthivelu <sridharan.sakthivelu@intel.com>  Thu, 27 May 2021 04:30:14 +0000
+
+mlc (3.33) osv; urgency=medium
+
+  * d2202f3 windows Fe specific bug fix
+
+ -- Sakthivelu <sridharan.sakthivelu@intel.com>  Tue, 04 May 2021 18:30:18 +0000
+
+mlc (3.32) osv; urgency=medium
+
+  * 0ab0a47 different stride size for latency thread
+
+ -- vviswana <vish.viswanathan@intel.com>  Tue, 04 May 2021 02:45:16 +0000
+
+mlc (3.31) osv; urgency=medium
+
+  * c353fa6 support for new SPR and Milan prefetcher control
+
+ -- vviswana <vish.viswanathan@intel.com>  Wed, 24 Mar 2021 18:00:15 +0000
+
+mlc (3.30) osv; urgency=medium
+
+  * a5bf2c7 removed a debug print
+
+ -- vviswana <vish.viswanathan@intel.com>  Mon, 15 Mar 2021 18:00:24 +0000
+
+mlc (3.29) osv; urgency=medium
+
+  * 4798014 Fixes for the new gcc compiler
+
+ -- vviswana <vish.viswanathan@intel.com>  Mon, 15 Mar 2021 17:15:19 +0000
+
+mlc (3.28) osv; urgency=medium
+
+  * 774a8d7 Support for 128B access for Crow Pass PMM
+
+ -- vviswana <vish.viswanathan@intel.com>  Thu, 04 Mar 2021 17:03:32 +0000
+
+mlc (3.27) osv; urgency=medium
+
+  * af8a440 Handling stop_load during runtime_exit
+
+ -- vviswana <vish.viswanathan@intel.com>  Fri, 22 Jan 2021 17:00:17 +0000
+
+mlc (3.26) osv; urgency=medium
+
+  * 4215ae3 formatting edits
+
+ -- vviswana <vish.viswanathan@intel.com>  Fri, 22 Jan 2021 17:00:17 +0000
+
+mlc (3.25) osv; urgency=medium
+
+  * 930b48b Update to readme file for v3.9 release
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Tue, 23 Jun 2020 17:01:48 +0000
+
+mlc (3.24) osv; urgency=medium
+
+  * 4b06df8 update to protex scan ignore file
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Tue, 23 Jun 2020 17:01:47 +0000
+
+mlc (3.23) osv; urgency=medium
+
+  * bf4e77b Fixed windows k-group related issues
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Fri, 19 Jun 2020 17:46:27 +0000
+
+mlc (3.22) osv; urgency=medium
+
+  * 552e50e Minor formatting fixes
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Tue, 16 Jun 2020 22:45:27 +0000
+
+mlc (3.21) osv; urgency=medium
+
+  * 2c952dd check for data integrity with -o option
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Tue, 16 Jun 2020 03:45:19 +0000
+
+mlc (3.20) osv; urgency=medium
+
+  * f20bf4a Fixed a few places where ymm was used instead of zmm in
+    avx512 code
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Tue, 16 Jun 2020 03:45:19 +0000
+
+mlc (3.19) osv; urgency=medium
+
+  * 44712f2 minor fixes
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Sun, 07 Jun 2020 01:01:35 +0000
+
+mlc (3.18) osv; urgency=medium
+
+  * 82c536e fixed usage errors
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Sat, 06 Jun 2020 16:30:20 +0000
+
+mlc (3.17) osv; urgency=medium
+
+  * 51d3eba Bug fix for W7 sfence
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Sat, 06 Jun 2020 16:30:20 +0000
+
+mlc (3.16) osv; urgency=medium
+
+  * e672173 Fix usage
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Wed, 27 May 2020 17:00:24 +0000
+
+mlc (3.15) osv; urgency=medium
+
+  * 9ebe433 Added support to handle SPECitom in ICX/SPR processors
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Tue, 26 May 2020 20:20:47 +0000
+
+mlc (3.14) osv; urgency=medium
+
+  * 3c0ab35 Fixed sse2 version of compute_checksum
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Tue, 26 May 2020 05:00:21 +0000
+
+mlc (3.13) osv; urgency=medium
+
+  * e875020 Added data integrity check
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Mon, 25 May 2020 22:20:48 +0000
+
+mlc (3.12) osv; urgency=medium
+
+  * 9495bee Added support for data integrity checks on reads
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Sun, 24 May 2020 02:00:12 +0000
+
+mlc (3.11) osv; urgency=medium
+
+  * e08bedd MLC readme file
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Wed, 06 May 2020 19:30:29 +0000
+
+mlc (3.10) osv; urgency=medium
+
+  * a3f2d7a added MFENCE for W6 writes to get better b/w on Barlowpass
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Tue, 05 May 2020 19:00:17 +0000
+
+mlc (3.9) osv; urgency=medium
+
+  * fd1f281 support for turning off random access on AMD latency tests
+
+ -- Viswanathan <vish.viswanathan@intel.com>  Tue, 05 May 2020 19:00:17 +0000
+
+mlc (3.8) buster; urgency=medium
+
+  [ Viswanathan ]
+  * -k list parsing to exclude any cpu specified thru -c parameter
+  * Moved can_disable_prefetch_msr() check after discovering intel cpu
+  * Readme file v3.7
+  * Added 1GB page support. Also added more options to latency_matrix and c2c_latency
+  * Support for 1GB page allocation
+  * removed extra 1024 bytes in unmmap
+  * support k/m/g specification in -C parameter
+  * Windows rand() function changed to use h/w random number generator
+  * Fixed do_write to follow the pointer chain for c2c to work properly
+  * Changed 512k to 500k for AMD
+  * Support for AMD Rome specific default settings
+  * Added error exit if large pages not enabled on AMD
+  *  Fixed memory leak
+  * Fix in the support for memory only numa nodes
+  * klockwork related fixes
+  * klockwork related fixes
+  * klockwork related fixes
+  * fix bug that resulted in small vcpu VM crashing if more parameters specified
+  * fix topology detection for AMD Rome to detect HT threads
+  * Changes to allocation and munmap so there is no memory leak
+  * Cleaned up Usage() prints
+  * Changed hittest to deal with > 2G address by using 64-bit pointers
+  * Enabled -X option for AMD as topology can detect hyperthreaded ID
+  * Fixed a merge error
+  * Added check for 1GB hugepage availability
+
+ -- Vish Viswanathan <vish.viswanathan@intel.com>  Fri, 07 Feb 2020 13:34:30 -0800
+
+mlc (3.7) buster; urgency=medium
+
+  [ Viswanathan ]
+  * Klocwork fixes
+  * Fixing numa node check to support VMs in ESXi
+  * support for allocating buffer shared by all threads (to test L3 b/w)
+  * allow -r to be specified in matrix_mode
+  * Removed printfs in exit_handler
+  * Added fix to call random even when buf size < 512KB
+  * Fixed a couple of compiler warnings
+
+  [ ssakthi1 ]
+  * Update allocation.c
+  * Update .gitignore
+  * Added input param validation for the most options
+
+  [ Viswanathan ]
+  * added default code for 100% read w/ clflush option
+
+  [ ssakthi1 ]
+  * Update allocation.c
+  * Create Test_windows_mlc.cmd
+
+  [ Viswanathan ]
+  * Added model id for Icelake server
+  * Added support for running latency thread on cpu other than 0
+  * Added check for SMI counts
+  * Support for different issue rate all reads
+  * smi related header changes
+  * fix for klocwork reported issue
+  * klocwork fixes
+  * Merging all SDL code changes back in from make_ci_work branch
+  * Some more coverity flagged issue fixes
+  * Fixes for cleaning up PMEM files on windows - from Sri
+
+  [ ssakthi1 ]
+  * Lenovo Dummy node issue fix
+
+  [ Viswanathan ]
+  * Implemented strlen_s, strcat_s and strcpy_s for Linux
+  * Removed SafestrLib and related functions from Linux implementation
+  * Fixes to my_strcat_s()
+  * Added my string function for parsing integers
+  * Made all binaries to be avx512 enabled in windows build files
+  * Fixed a typo
+
+  [ Bruggeman, Otto G ]
+  * Really fix all safestrlib remnants
+
+  [ Viswanathan ]
+  * Klocwork fixes
+  * Added code to handle more cases of errors in user input
+  * code cleanup
+  * code cleanup
+  * Enabling random access for latency measurements if hw prefetcher cant be disabled
+  * coverity fix
+  * coverity fix
+  * fix to avoid duplicate CPU# in per-thread-config file
+  * Fixed a typo in error message
+  * -k list parsing to exclude any cpu specified thru -c parameter
+  * Moved can_disable_prefetch_msr() check after discovering intel cpu
+  * Readme file v3.7
+  * Added 1GB page support. Also added more options to latency_matrix and c2c_latency
+  * Support for 1GB page allocation
+  * removed extra 1024 bytes in unmmap
+  * support k/m/g specification in -C parameter
+  * Windows rand() function changed to use h/w random number generator
+  * Fixed do_write to follow the pointer chain for c2c to work properly
+  * Changed 512k to 500k for AMD
+  * Support for AMD Rome specific default settings
+  * Added error exit if large pages not enabled on AMD
+  *  Fixed memory leak
+  * Fix in the support for memory only numa nodes
+
+ -- Vish Viswanathan <vish.viswanathan@intel.com>  Mon, 04 Nov 2019 12:18:52 -0800
+
+mlc (3.6) buster; urgency=medium
+
+  Changes since v3.5:
+  * Added code to not allocate reade buffer for -W6 traffic
+  * Added AdvancedAoToI function
+  * Added code to deal with numa nodes with no memory
+  * Added LogBufferInfo to print out buffer information (with -v option)
+  * Added Dummy Node Detection and support for skipping such nodes
+  * Added support for randomly writing 256 byte blocks to AEP
+  * Added -E parameter for clean hit transfers
+  * Added -h (huge page 1GB) help
+  * Added FSCTL_SET_DAX_ALLOC_ALIGNMENT_HINT ioctl (-h option)
+  * Added support for W21
+  * Added support for one iteratio (-x0) for throughput threads
+  * Added CPU model ID for Gemini lake
+  * Corrected Sequential Pointer overflow in several places
+  * Fixed QueryWorkingSetEx Bug where valid bit was not set until buffer was
+    touched
+  * Fixed LP allocation for latency thread
+  * Fixed -E eviction to work with both being reader threads
+  * Modified GetMaxNuma to rerun actual num node with Mem & cores but ignoring
+    nodes without memory or without cores.
+  * FILE_MAP_LARGE_PAGES is set during MapViewOfFile() so file mapping is 1GB
+    aligned.
+  * Dynamically determine bandwidth thread memory span using core counts.
+    For 16+ cores, we still use 100MB/thread, but for lower core counts, per
+    thread memory span will be more to have total of 3GB per numa node.
+  * Removed the un-necssary debug message "FSCTL_SET_DAX_ALLOC_ALIGNMENT_HINT
+    Success"
+  * Various bug fixes
+
+ -- Vish Viswanathan <vish.viswanathan@intel.com>  Mon, 04 Nov 2019 12:17:33 -0800
