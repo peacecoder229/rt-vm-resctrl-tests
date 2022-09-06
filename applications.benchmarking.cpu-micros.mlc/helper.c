@@ -894,7 +894,7 @@ int check_if_valid_W_options(int rw_mix)
 {
 
 	// we will allow all option even in public release though these would remain undocumented
-        if ((rw_mix >= 2 && rw_mix <= 13) ) return 1;
+        if ((rw_mix >= 2 && rw_mix <= 20) ) return 1;
 	
 	// single Address stream coming from 2 sources (like ddr4 and ddrt) mixed in certain ratio
 	if (rw_mix == 21 || rw_mix == 23 || rw_mix == 27) return 1;

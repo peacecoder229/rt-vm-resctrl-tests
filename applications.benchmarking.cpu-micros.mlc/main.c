@@ -414,6 +414,11 @@ void Usage(const char* error)
 	fprintf(stderr, "\t11 - 3:1 read-Write ratio (stream triad-like with RFO)\n");
 	fprintf(stderr, "\t\t Same as -W3 but the 2 reads are from 2 different buffers\n");
 	fprintf(stderr, "\t12 - 4:1 read-Write ratio\n");
+	fprintf(stderr, "\t13 - 5:1 read-Write ratio\n");
+	fprintf(stderr, "\t14 - 6:1 read-Write ratio\n");
+	fprintf(stderr, "\t15 - 7:1 read-Write ratio\n");
+	fprintf(stderr, "\t16 - 8:1 read-Write ratio\n");
+	fprintf(stderr, "\t17 - 9:1 read-Write ratio\n");
 	fprintf(stderr, "\t21 - 100%% read with 2 addr streams - valid with only -o option\n");
 	fprintf(stderr, "\t23 - 3:1 read-write ratio with 2 addr streams - valid with only -o option\n");
 	fprintf(stderr, "\t27 - 2:1 read-NT write with 2 addr streams - valid with only -o option\n");
