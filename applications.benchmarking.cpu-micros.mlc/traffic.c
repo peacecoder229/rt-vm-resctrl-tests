@@ -79,6 +79,10 @@ char* do_independent_load_rwlocal_80R_20W(char* local_buf, char* write_buf , cha
 char* do_independent_load_rwlocal_80R_20W_avx256(char* local_buf, char* write_buf , char* endp, int delay_t);
 char* do_independent_load_rwlocal_80R_20W_avx512(char* local_buf, char* write_buf , char* endp, int delay_t);
 
+char* do_independent_load_rwlocal_5R_1W(char* local_buf, char* write_buf , char* endp, int delay_t);
+//char* do_independent_load_rwlocal_5R_1W_avx256(char* local_buf, char* write_buf , char* endp, int delay_t);
+//char* do_independent_load_rwlocal_5R_1W_avx512(char* local_buf, char* write_buf , char* endp, int delay_t);
+
 char* do_independent_load_rwlocal_3R_1W(char* local_buf, char* write_buf , char* endp, int delay_t);
 char* do_independent_load_rwlocal_3R_1W_avx256(char* local_buf, char* write_buf , char* endp, int delay_t);
 char* do_independent_load_rwlocal_3R_1W_avx512(char* local_buf, char* write_buf , char* endp, int delay_t);
@@ -5155,6 +5159,131 @@ char* do_independent_load_rwlocal_80R_20W_avx512(char* local_buf, char* write_bu
 }
 
 #endif
+
+char* do_independent_load_rwlocal_5R_1W(char* local_buf, char* write_buf , char* endp, int delay_t)
+{
+	__int64 lsz = (__int64) LineSize;
+#if !defined(LINUX) && !defined(__APPLE__)
+	__asm {
+		xor COUNTER, COUNTER
+		xor r11, r11
+
+		mov LocalADDRESS, local_buf
+		mov WriteADDRESS, write_buf
+		mov ENDP, endp
+		mov r10, lsz
+		movq xmm0, ENDP  ; Initialize xmm0 with any non zero value
+
+		LOOPS:
+
+		movdqa xmm1, xmmword ptr [LocalADDRESS]
+		movdqa xmm1, xmmword ptr [LocalADDRESS+10h]
+		movdqa xmm1, xmmword ptr [LocalADDRESS+20h]
+		movdqa xmm1, xmmword ptr [LocalADDRESS+30h]
+		add LocalADDRESS, r10
+
+		movdqa xmm1, xmmword ptr [LocalADDRESS]
+		movdqa xmm1, xmmword ptr [LocalADDRESS+10h]
+		movdqa xmm1, xmmword ptr [LocalADDRESS+20h]
+		movdqa xmm1, xmmword ptr [LocalADDRESS+30h]
+		add LocalADDRESS, r10
+
+		movdqa xmm1, xmmword ptr [LocalADDRESS]
+		movdqa xmm1, xmmword ptr [LocalADDRESS+10h]
+		movdqa xmm1, xmmword ptr [LocalADDRESS+20h]
+		movdqa xmm1, xmmword ptr [LocalADDRESS+30h]
+		add LocalADDRESS, r10
+
+		movdqa xmmword ptr [WriteADDRESS], xmm0
+		movdqa xmmword ptr [WriteADDRESS+10h], xmm0
+		movdqa xmmword ptr [WriteADDRESS+20h], xmm0
+		movdqa xmmword ptr [WriteADDRESS+30h], xmm0
+		add WriteADDRESS, r10
+
+		inc r11
+		cmp r11, FLAG_CHK_CNT
+		jb cont11
+		cmp stop_load, 0
+		jne exit_now
+		xor r11, r11
+    cont11:
+		xor COUNTER, COUNTER
+
+		LOOP4:
+		inc COUNTER
+		cmp COUNTER, delay_t
+		jl LOOP4
+
+		STOP_DELAY:
+		cmp LocalADDRESS, ENDP
+		jl LOOPS
+    exit_now:
+		mov rax, LocalADDRESS
+	}
+#else
+	char *ret_ptr;
+	asm(
+        "xor %1, %1\n\t"
+		"xor %%r11, %%r11\n\t"
+	    "mov %7,%%r10\n\t"
+        "movq %3, %%xmm0\n\t"				// initialize xmm0 with some non-zero value
+        
+	    "LOOPSf51:\n\t"
+	    // 3 reads and a write - No unrolling
+	     "movdqa (%2),%%xmm1\n\t"
+	    "movdqa 0x10(%2),%%xmm1\n\t"
+	    "movdqa 0x20(%2),%%xmm1\n\t"
+	    "movdqa 0x30(%2),%%xmm1\n\t"
+	    "add %%r10,%2\n\t"
+	    "movdqa (%2),%%xmm1\n\t"
+	    "movdqa 0x10(%2),%%xmm1\n\t"
+	    "movdqa 0x20(%2),%%xmm1\n\t"
+	    "movdqa 0x30(%2),%%xmm1\n\t"
+	    "add %%r10,%2\n\t"
+	    "movdqa (%2),%%xmm1\n\t"
+	    "movdqa 0x10(%2),%%xmm1\n\t"
+	    "movdqa 0x20(%2),%%xmm1\n\t"
+	    "movdqa 0x30(%2),%%xmm1\n\t"
+	    "add %%r10,%2\n\t"
+	    "movdqa (%2),%%xmm1\n\t"
+	    "movdqa 0x10(%2),%%xmm1\n\t"
+	    "movdqa 0x20(%2),%%xmm1\n\t"
+	    "movdqa 0x30(%2),%%xmm1\n\t"
+	    "add %%r10,%2\n\t"
+	    "movdqa %%xmm0,(%4)\n\t"
+	    "movdqa %%xmm0,0x10(%4)\n\t"
+	    "movdqa %%xmm0,0x20(%4)\n\t"
+	    "movdqa %%xmm0,0x30(%4)\n\t"
+	    "add %%r10,%4\n\t"
+		
+		"inc %%r11\n\t"		// increment counter to see when to check for stop_load indication
+		"cmp %8, %%r11\n\t"	// check again FLAG_CHK_CNT
+		"jb FLAG4f51\n\t"
+		"cmpl $0, %9\n\t"	// check whether stop_load is set; if so bail out
+		"jne EXIT4f51\n\t"
+		"xor %%r11, %%r11\n\t"
+	"FLAG4f51:\n\t"
+	    "xor %1,%1\n\t"
+	    "\n\t"
+        
+	    "LOOP4f51:\n\t"
+	    "inc %1            \n\t"
+	    "cmp %6,%1 \n\t"
+	    "jl LOOP4f51\n\t"
+        
+	    "STOP_DELAYf51:\n\t"
+	    "cmp %3, %2\n\t"
+	    "jl LOOPSf51\n\t"
+	"EXIT4f51:\n\t"
+		"mov %2, %0\n\t"	// set the return value
+	    :"=a"(ret_ptr)
+        :COUNTER(0), LocalADDRESS(local_buf), ENDP(endp), WriteADDRESS(write_buf), RemoteADDRESS(0), "r"(delay_t), "m"(lsz),"i"(FLAG_CHK_CNT),"m"(stop_load):"r10","r11");
+	
+    return ret_ptr;
+#endif
+}
+
+
 char* do_independent_load_rwlocal_60R_40W(char* local_buf, char* write_buf , char* endp, int delay_t)
 {
 	__int64 lsz = (__int64) LineSize;

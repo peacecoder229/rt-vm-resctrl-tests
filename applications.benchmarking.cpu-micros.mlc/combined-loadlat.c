@@ -79,6 +79,12 @@ extern char* do_independent_load_rwlocal_80R_20W(char* local_buf, char* write_bu
 extern char* do_independent_load_rwlocal_80R_20W_avx256(char* local_buf, char* write_buf , char* endp, int delay_t);
 extern char* do_independent_load_rwlocal_80R_20W_avx512(char* local_buf, char* write_buf , char* endp, int delay_t);
 
+extern char* do_independent_load_rwlocal_5R_1W(char* local_buf, char* write_buf , char* endp, int delay_t);
+//extern char* do_independent_load_rwlocal_80R_20W_avx256(char* local_buf, char* write_buf , char* endp, int delay_t);
+//extern char* do_independent_load_rwlocal_80R_20W_avx512(char* local_buf, char* write_buf , char* endp, int delay_t);
+
+
+
 extern char* do_independent_load_rwlocal_3R_1W(char* local_buf, char* write_buf , char* endp, int delay_t);
 extern char* do_independent_load_rwlocal_3R_1W_avx256(char* local_buf, char* write_buf , char* endp, int delay_t);
 extern char* do_independent_load_rwlocal_3R_1W_avx512(char* local_buf, char* write_buf , char* endp, int delay_t);
@@ -764,8 +770,9 @@ unsigned int ThruputThread(void* Parm)
 					if (use_avx256) {
 						processedp = do_independent_load_rwlocal_80R_20W_avx256(p->local_buf, p->write_buf, endp, delay_value);
 					} else
-					{
-						processedp = do_independent_load_rwlocal_80R_20W(p->local_buf, p->write_buf, endp, delay_value);
+					{       
+						
+						processedp = do_independent_load_rwlocal_5R_1W(p->local_buf, p->write_buf, endp, delay_value);
 					}
 
 				n_lines = (linesize_powerof2bits)? (processedp - p->local_buf) >> linesize_powerof2bits : (processedp - p->local_buf)/LineSize;
