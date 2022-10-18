@@ -1228,11 +1228,11 @@ ff_dpdk_init(int argc, char **argv)
      * Refer function header section for usage.
      */
     //printf("===== %s ======\n", cfg->dpdk.proc_type);
-    if(ff_global_cfg.dpdk.proc_id == 0){
-    	ret = fdir_add_tcp_flow(0, ff_global_cfg.dpdk.proc_id, FF_FLOW_INGRESS, 0, (9000 + ff_global_cfg.dpdk.proc_id));
-    	if (ret)
-		rte_exit(EXIT_FAILURE, "fdir_add_tcp_flow failed\n");
-    }    
+    
+    ret = fdir_add_tcp_flow(0, ff_global_cfg.dpdk.proc_id, FF_FLOW_INGRESS, 0, (9000 + ff_global_cfg.dpdk.proc_id));
+    if (ret)
+	rte_exit(EXIT_FAILURE, "fdir_add_tcp_flow failed\n");
+        
    
 #endif
 
