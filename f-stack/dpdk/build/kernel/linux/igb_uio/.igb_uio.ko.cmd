@@ -1,0 +1,1 @@
+cmd_/root/f-stack/dpdk/build/kernel/linux/igb_uio/igb_uio.ko := ld -r  -m elf_x86_64  --build-id=sha1  -T scripts/module.lds -o /root/f-stack/dpdk/build/kernel/linux/igb_uio/igb_uio.ko /root/f-stack/dpdk/build/kernel/linux/igb_uio/igb_uio.o /root/f-stack/dpdk/build/kernel/linux/igb_uio/igb_uio.mod.o;  true

@@ -1,0 +1,11 @@
+Build started at 2022-10-18T09:39:49.721490
+Main binary: /usr/bin/python3
+Build Options: 
+Python system: Linux
+The Meson build system
+Version: 0.61.5
+Source dir: /root/f-stack/dpdk/examples
+Build dir: /root/f-stack/dpdk/examples/build
+Build type: native build
+
+ERROR: Invalid source tree: first statement must be a call to project()

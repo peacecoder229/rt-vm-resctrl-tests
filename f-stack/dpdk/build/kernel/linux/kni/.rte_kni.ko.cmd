@@ -1,0 +1,1 @@
+cmd_/root/f-stack/dpdk/build/kernel/linux/kni/rte_kni.ko := ld -r  -m elf_x86_64  --build-id=sha1  -T scripts/module.lds -o /root/f-stack/dpdk/build/kernel/linux/kni/rte_kni.ko /root/f-stack/dpdk/build/kernel/linux/kni/rte_kni.o /root/f-stack/dpdk/build/kernel/linux/kni/rte_kni.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_/root/f-stack/dpdk/build/kernel/linux/kni/rte_kni.o := ld  -m elf_x86_64    -r -o /root/f-stack/dpdk/build/kernel/linux/kni/rte_kni.o /root/f-stack/dpdk/build/kernel/linux/kni/kni_net.o /root/f-stack/dpdk/build/kernel/linux/kni/kni_misc.o

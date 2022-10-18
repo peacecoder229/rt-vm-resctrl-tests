@@ -1,0 +1,15 @@
+ 0x000000000000000e (SONAME)             Library soname: [librte_bpf.so.22]
+DPDK_22 A
+EXPERIMENTAL A
+rte_bpf_convert@@EXPERIMENTAL T
+rte_bpf_destroy@@DPDK_22 T
+rte_bpf_dump@@EXPERIMENTAL T
+rte_bpf_elf_load@@DPDK_22 T
+rte_bpf_eth_rx_elf_load@@DPDK_22 T
+rte_bpf_eth_rx_unload@@DPDK_22 T
+rte_bpf_eth_tx_elf_load@@DPDK_22 T
+rte_bpf_eth_tx_unload@@DPDK_22 T
+rte_bpf_exec@@DPDK_22 T
+rte_bpf_exec_burst@@DPDK_22 T
+rte_bpf_get_jit@@DPDK_22 T
+rte_bpf_load@@DPDK_22 T

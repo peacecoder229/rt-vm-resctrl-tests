@@ -1,0 +1,11 @@
+ 0x000000000000000e (SONAME)             Library soname: [librte_reorder.so.22]
+DPDK_22 A
+EXPERIMENTAL A
+rte_reorder_create@@DPDK_22 T
+rte_reorder_drain@@DPDK_22 T
+rte_reorder_find_existing@@DPDK_22 T
+rte_reorder_free@@DPDK_22 T
+rte_reorder_init@@DPDK_22 T
+rte_reorder_insert@@DPDK_22 T
+rte_reorder_reset@@DPDK_22 T
+rte_reorder_seqn_dynfield_offset@@EXPERIMENTAL D 4

@@ -1,0 +1,4 @@
+ 0x000000000000000e (SONAME)             Library soname: [librte_mempool_octeontx2.so.22]
+INTERNAL A
+otx2_npa_lf_fini@@INTERNAL T
+otx2_npa_lf_init@@INTERNAL T

@@ -1,0 +1,3908 @@
+Build started at 2022-10-12T10:18:09.780330
+Main binary: /usr/bin/python3
+Build Options: -Denable_kmods=true
+Python system: Linux
+The Meson build system
+Version: 0.61.5
+Source dir: /root/f-stack/dpdk
+Build dir: /root/f-stack/dpdk/build
+Build type: native build
+Program cat found: YES (/usr/bin/cat)
+Running command: /usr/bin/cat /root/f-stack/dpdk/VERSION
+--- stdout ---
+21.11.2
+
+--- stderr ---
+
+
+Project name: DPDK
+Project version: 21.11.2
+Sanity testing C compiler: cc
+Is cross compiler: False.
+Sanity check compiler command line: cc sanitycheckc.c -o sanitycheckc.exe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /root/f-stack/dpdk/build/meson-private/sanitycheckc.exe
+C compiler for the host machine: cc (gcc 8.5.0 "cc (GCC) 8.5.0 20210514 (Red Hat 8.5.0-6)")
+C linker for the host machine: cc ld.bfd 2.36.1-3
+Sanity testing C compiler: cc
+Is cross compiler: False.
+Sanity check compiler command line: cc sanitycheckc.c -o sanitycheckc.exe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /root/f-stack/dpdk/build/meson-private/sanitycheckc.exe
+C compiler for the build machine: cc (gcc 8.5.0 "cc (GCC) 8.5.0 20210514 (Red Hat 8.5.0-6)")
+C linker for the build machine: cc ld.bfd 2.36.1-3
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Target machine cpu family: x86_64
+Target machine cpu: x86_64
+[Errno 21] Is a directory: '/root/f-stack/dpdk/buildtools/pkg-config'
+Unusable script '/root/f-stack/dpdk/buildtools/pkg-config'
+Program pkg-config found: YES (/usr/bin/pkg-config)
+Program check-symbols.sh found: YES (/root/f-stack/dpdk/buildtools/check-symbols.sh)
+Program options-ibverbs-static.sh found: YES (/root/f-stack/dpdk/buildtools/options-ibverbs-static.sh)
+Program objdump found: YES (/usr/bin/objdump)
+Program python3 found: YES (/usr/bin/python3)
+Running command: /usr/bin/python3 -c import importlib.util; import sys; exit(importlib.util.find_spec("elftools") is None)
+--- stdout ---
+
+--- stderr ---
+
+
+Program cat found: YES (/usr/bin/cat)
+Running command: /usr/bin/cat /root/f-stack/dpdk/ABI_VERSION
+--- stdout ---
+22.0
+
+--- stderr ---
+
+
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp5n2wl_i6
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp5n2wl_i6/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp5n2wl_i6/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include<stdio.h>
+        
+        int main(void) {
+            printf("%ld\n", (long)(sizeof(void *)));
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+8
+
+Program stderr:
+
+
+Checking for size of "void *" : 8
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpfm4srw24
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpfm4srw24/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpfm4srw24/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include<stdio.h>
+        
+        int main(void) {
+            printf("%ld\n", (long)(sizeof(void *)));
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+8
+
+Program stderr:
+
+
+Checking for size of "void *" : 8
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp6gvfeopa
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp6gvfeopa/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp6gvfeopa/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lm -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Library m found: YES
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpezsg9kxt
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpezsg9kxt/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpezsg9kxt/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lnuma -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Library numa found: YES
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpfn8thued
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpfn8thued/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("numaif.h")
+          #error "Header 'numaif.h' could not be found"
+         #endif
+        #else
+         #include <numaif.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "numaif.h" : YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp04jyuu8v
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp04jyuu8v/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp04jyuu8v/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -llibfdt -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /usr/bin/ld: cannot find -llibfdt
+collect2: error: ld returned 1 exit status
+
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpa01i833_
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpa01i833_/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpa01i833_/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include<stdio.h>
+        
+        int main(void) {
+            printf("%ld\n", (long)(sizeof(void *)));
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+8
+
+Program stderr:
+
+
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp3_2n9u11
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp3_2n9u11/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp3_2n9u11/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /usr/lib/gcc/x86_64-redhat-linux/8/
+programs: =/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/bin/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/bin/
+libraries: =/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/lib/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/x86_64-redhat-linux/8/:/lib/../lib64/:/usr/lib/x86_64-redhat-linux/8/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/lib/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/
+
+Compiler stderr:
+ 
+Library libfdt found: NO
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpfupmolnx
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpfupmolnx/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpfupmolnx/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -llibexecinfo -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /usr/bin/ld: cannot find -llibexecinfo
+collect2: error: ld returned 1 exit status
+
+Library libexecinfo found: NO
+Pkg-config binary for 1 is not cached.
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default Pkg-config fallback at pkg-config
+Found pkg-config: /usr/bin/pkg-config (1.4.2)
+Determining dependency 'libarchive' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion libarchive` -> 1
+
+Run-time dependency libarchive found: NO (tried pkgconfig)
+Pkg-config binary for 1 is cached.
+Determining dependency 'libbsd' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion libbsd` -> 1
+
+Run-time dependency libbsd found: NO (tried pkgconfig)
+Pkg-config binary for 1 is cached.
+Determining dependency 'jansson' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion jansson` -> 1
+
+Run-time dependency jansson found: NO (tried pkgconfig)
+Pkg-config binary for 1 is cached.
+Determining dependency 'libpcap' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion libpcap` -> 1
+
+Run-time dependency libpcap found: NO (tried pkgconfig)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpgkwbrec6
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpgkwbrec6/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpgkwbrec6/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lpcap -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /usr/bin/ld: cannot find -lpcap
+collect2: error: ld returned 1 exit status
+
+Library pcap found: NO
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpx_o53pj7
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpx_o53pj7/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpx_o53pj7/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wextra 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wextra: YES 
+config/meson.build:291: WARNING: Consider using the built-in warning_level option instead of using "-Wextra".
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp293ha0y_
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp293ha0y_/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp293ha0y_/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wcast-qual 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wcast-qual: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpx3opxqxy
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpx3opxqxy/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpx3opxqxy/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wdeprecated 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wdeprecated: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpc_b52pb8
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpc_b52pb8/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpc_b52pb8/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wformat 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wformat: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp35mywbc5
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp35mywbc5/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp35mywbc5/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wformat-nonliteral 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cc1: warning: -Wformat-nonliteral ignored without -Wformat [-Wformat-nonliteral]
+
+Compiler for C supports arguments -Wformat-nonliteral: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpft66hxtp
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpft66hxtp/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpft66hxtp/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wformat-security 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cc1: warning: -Wformat-security ignored without -Wformat [-Wformat-security]
+
+Compiler for C supports arguments -Wformat-security: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpg1jj7z3k
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpg1jj7z3k/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpg1jj7z3k/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wmissing-declarations 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp5twa78bu
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp5twa78bu/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp5twa78bu/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wmissing-prototypes 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpa88b_zka
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpa88b_zka/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpa88b_zka/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wnested-externs 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wnested-externs: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp_o3aevun
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp_o3aevun/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp_o3aevun/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wold-style-definition 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp8vlp3tge
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp8vlp3tge/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp8vlp3tge/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wpointer-arith 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpdmaljpw3
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpdmaljpw3/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpdmaljpw3/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wsign-compare 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wsign-compare: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpxjjijusi
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpxjjijusi/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpxjjijusi/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wstrict-prototypes 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpvv3e6rec
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpvv3e6rec/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpvv3e6rec/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wundef 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wundef: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpmdohcfki
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpmdohcfki/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpmdohcfki/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wwrite-strings 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpkkf08un2
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpkkf08un2/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpkkf08un2/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Waddress-of-packed-member -Wno-address-of-packed-member 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cc: error: unrecognized command line option '-Waddress-of-packed-member'
+
+Compiler for C supports arguments -Wno-address-of-packed-member: NO 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpjsz73ix3
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpjsz73ix3/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpjsz73ix3/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wpacked-not-aligned -Wno-packed-not-aligned 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-packed-not-aligned: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp_zr8pz38
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp_zr8pz38/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp_zr8pz38/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wmissing-field-initializers -Wno-missing-field-initializers 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Running command: /usr/bin/python3 /root/f-stack/dpdk/buildtools/binutils-avx512-check.py /usr/bin/objdump cc
+--- stdout ---
+
+--- stderr ---
+
+
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpkw0qz585
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpkw0qz585/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpkw0qz585/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -mavx512f 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -mavx512f: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp5gh0kxwd
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp5gh0kxwd/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp5gh0kxwd/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -mavx512f 
+
+Code:
+ #include <immintrin.h>
+    void test(__m512i zmm){
+        __m256i ymm = _mm512_extracti64x4_epi64(zmm, 0);}
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking if "AVX512 checking" compiles: YES 
+Running compile:
+Working directory:  /tmp/tmp85uirthp
+Command line:  cc /tmp/tmp85uirthp/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -march=native 
+
+Code:
+ 
+        
+        #ifndef __SSE4_2__
+        # define __SSE4_2__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__SSE4_2__
+Compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Compiler stderr:
+ 
+Fetching value of define "__SSE4_2__" : 1 
+Running compile:
+Working directory:  /tmp/tmp2g711ir9
+Command line:  cc /tmp/tmp2g711ir9/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -march=native 
+
+Code:
+ 
+        
+        #ifndef __AES__
+        # define __AES__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AES__
+Compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Compiler stderr:
+ 
+Fetching value of define "__AES__" : 1 
+Running compile:
+Working directory:  /tmp/tmp2an6gev3
+Command line:  cc /tmp/tmp2an6gev3/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -march=native 
+
+Code:
+ 
+        
+        #ifndef __AVX__
+        # define __AVX__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX__
+Compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Compiler stderr:
+ 
+Fetching value of define "__AVX__" : 1 
+Running compile:
+Working directory:  /tmp/tmp652v1_qu
+Command line:  cc /tmp/tmp652v1_qu/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -march=native 
+
+Code:
+ 
+        
+        #ifndef __AVX2__
+        # define __AVX2__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX2__
+Compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Compiler stderr:
+ 
+Fetching value of define "__AVX2__" : 1 
+Running compile:
+Working directory:  /tmp/tmpsy5oqd72
+Command line:  cc /tmp/tmpsy5oqd72/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -march=native 
+
+Code:
+ 
+        
+        #ifndef __AVX512BW__
+        # define __AVX512BW__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512BW__
+Compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Compiler stderr:
+ 
+Fetching value of define "__AVX512BW__" : 1 
+Running compile:
+Working directory:  /tmp/tmpexxrxita
+Command line:  cc /tmp/tmpexxrxita/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -march=native 
+
+Code:
+ 
+        
+        #ifndef __AVX512CD__
+        # define __AVX512CD__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512CD__
+Compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Compiler stderr:
+ 
+Fetching value of define "__AVX512CD__" : 1 
+Running compile:
+Working directory:  /tmp/tmp17zsj3at
+Command line:  cc /tmp/tmp17zsj3at/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -march=native 
+
+Code:
+ 
+        
+        #ifndef __AVX512DQ__
+        # define __AVX512DQ__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512DQ__
+Compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Compiler stderr:
+ 
+Fetching value of define "__AVX512DQ__" : 1 
+Running compile:
+Working directory:  /tmp/tmpgojglh2n
+Command line:  cc /tmp/tmpgojglh2n/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -march=native 
+
+Code:
+ 
+        
+        #ifndef __AVX512F__
+        # define __AVX512F__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512F__
+Compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Compiler stderr:
+ 
+Fetching value of define "__AVX512F__" : 1 
+Running compile:
+Working directory:  /tmp/tmpt623hgp3
+Command line:  cc /tmp/tmpt623hgp3/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -march=native 
+
+Code:
+ 
+        
+        #ifndef __AVX512VL__
+        # define __AVX512VL__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512VL__
+Compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Compiler stderr:
+ 
+Fetching value of define "__AVX512VL__" : 1 
+Running compile:
+Working directory:  /tmp/tmp5qcj9djs
+Command line:  cc /tmp/tmp5qcj9djs/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -march=native 
+
+Code:
+ 
+        
+        #ifndef __PCLMUL__
+        # define __PCLMUL__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__PCLMUL__
+Compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Compiler stderr:
+ 
+Fetching value of define "__PCLMUL__" : 1 
+Running compile:
+Working directory:  /tmp/tmpg90jba0j
+Command line:  cc /tmp/tmpg90jba0j/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -march=native 
+
+Code:
+ 
+        
+        #ifndef __RDRND__
+        # define __RDRND__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__RDRND__
+Compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Compiler stderr:
+ 
+Fetching value of define "__RDRND__" : 1 
+Running compile:
+Working directory:  /tmp/tmpw06u4a6d
+Command line:  cc /tmp/tmpw06u4a6d/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -march=native 
+
+Code:
+ 
+        
+        #ifndef __RDSEED__
+        # define __RDSEED__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__RDSEED__
+Compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Compiler stderr:
+ 
+Fetching value of define "__RDSEED__" : 1 
+Running compile:
+Working directory:  /tmp/tmp_iga7vxd
+Command line:  cc /tmp/tmp_iga7vxd/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -march=native 
+
+Code:
+ 
+        
+        #ifndef __VPCLMULQDQ__
+        # define __VPCLMULQDQ__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__VPCLMULQDQ__
+Compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Compiler stderr:
+ 
+Fetching value of define "__VPCLMULQDQ__" : 1 
+Running command: /usr/bin/python3 /root/f-stack/dpdk/buildtools/list-dir-globs.py 
+--- stdout ---
+
+--- stderr ---
+
+
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp9vm7cqks
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp9vm7cqks/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp9vm7cqks/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wformat-truncation -Wno-format-truncation 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-format-truncation: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmptq6w3tlv
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmptq6w3tlv/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmptq6w3tlv/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <unistd.h>
+#include <limits.h>
+
+        #if defined __stub_getentropy || defined __stub___getentropy
+        fail fail fail this function is not going to work
+        #endif
+        
+int main(void) {
+            void *a = (void*) &getentropy;
+            long long b = (long long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "getentropy" : YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __PCLMUL__
+        # define __PCLMUL__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__PCLMUL__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__PCLMUL__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512F__
+        # define __AVX512F__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512F__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512F__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512BW__
+        # define __AVX512BW__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512BW__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512BW__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512DQ__
+        # define __AVX512DQ__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512DQ__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512DQ__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512VL__
+        # define __AVX512VL__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512VL__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512VL__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __VPCLMULQDQ__
+        # define __VPCLMULQDQ__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__VPCLMULQDQ__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__VPCLMULQDQ__" : 1 (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpzm96q477
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpzm96q477/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpzm96q477/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -mpclmul 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -mpclmul: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpba_cdptj
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpba_cdptj/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpba_cdptj/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -maes 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -maes: YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -mavx512f: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpmu0hbm48
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpmu0hbm48/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpmu0hbm48/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -mavx512bw 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -mavx512bw: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpdc_ttiqd
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpdc_ttiqd/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpdc_ttiqd/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -mavx512dq 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -mavx512dq: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpco5_cax0
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpco5_cax0/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpco5_cax0/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -mavx512vl 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -mavx512vl: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpxb49_uag
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpxb49_uag/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpxb49_uag/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -mvpclmulqdq 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -mvpclmulqdq: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp1kp_9ow8
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp1kp_9ow8/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp1kp_9ow8/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -mavx2 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -mavx2: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp4mxahjna
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp4mxahjna/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp4mxahjna/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -mavx 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -mavx: YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX2__
+        # define __AVX2__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX2__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX2__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512F__
+        # define __AVX512F__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512F__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512F__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512VL__
+        # define __AVX512VL__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512VL__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512VL__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512CD__
+        # define __AVX512CD__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512CD__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512CD__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512BW__
+        # define __AVX512BW__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512BW__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512BW__" : 1 (cached)
+Pkg-config binary for 1 is cached.
+Determining dependency 'libelf' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion libelf` -> 0
+0.186
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags libelf` -> 0
+
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs libelf` -> 0
+-L/usr/lib64 -lelf
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs libelf` -> 0
+-lelf
+Run-time dependency libelf found: YES 0.186
+lib/bpf/meson.build:43: WARNING: libpcap is missing, rte_bpf_convert API will be disabled
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmplsir_to6
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmplsir_to6/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmplsir_to6/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wcast-qual -Wno-cast-qual 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-cast-qual: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpmidjh2ix
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpmidjh2ix/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("linux/userfaultfd.h")
+          #error "Header 'linux/userfaultfd.h' could not be found"
+         #endif
+        #else
+         #include <linux/userfaultfd.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "linux/userfaultfd.h" : YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512F__
+        # define __AVX512F__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512F__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512F__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512DQ__
+        # define __AVX512DQ__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512DQ__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512DQ__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512BW__
+        # define __AVX512BW__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512BW__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512BW__" : 1 (cached)
+Running command: /usr/bin/python3 /root/f-stack/dpdk/buildtools/list-dir-globs.py ,
+--- stdout ---
+
+--- stderr ---
+
+
+Running command: /usr/bin/python3 /root/f-stack/dpdk/buildtools/list-dir-globs.py ,
+--- stdout ---
+
+--- stderr ---
+
+
+Running command: /usr/bin/python3 /root/f-stack/dpdk/buildtools/list-dir-globs.py */*
+--- stdout ---
+baseband/acc100
+baseband/fpga_5gnr_fec
+baseband/fpga_lte_fec
+baseband/la12xx
+baseband/null
+baseband/turbo_sw
+bus/auxiliary
+bus/dpaa
+bus/fslmc
+bus/ifpga
+bus/pci
+bus/vdev
+bus/vmbus
+common/cnxk
+common/cpt
+common/dpaax
+common/iavf
+common/mlx5
+common/mvep
+common/octeontx
+common/octeontx2
+common/qat
+common/sfc_efx
+compress/isal
+compress/mlx5
+compress/octeontx
+compress/qat
+compress/zlib
+crypto/armv8
+crypto/bcmfs
+crypto/caam_jr
+crypto/ccp
+crypto/cnxk
+crypto/dpaa2_sec
+crypto/dpaa_sec
+crypto/ipsec_mb
+crypto/mlx5
+crypto/mvsam
+crypto/nitrox
+crypto/null
+crypto/octeontx
+crypto/octeontx2
+crypto/openssl
+crypto/qat
+crypto/scheduler
+crypto/virtio
+dma/cnxk
+dma/dpaa
+dma/hisilicon
+dma/idxd
+dma/ioat
+dma/skeleton
+event/cnxk
+event/dlb2
+event/dpaa
+event/dpaa2
+event/dsw
+event/octeontx
+event/octeontx2
+event/opdl
+event/skeleton
+event/sw
+gpu/cuda
+mempool/bucket
+mempool/cnxk
+mempool/dpaa
+mempool/dpaa2
+mempool/octeontx
+mempool/octeontx2
+mempool/ring
+mempool/stack
+net/af_packet
+net/af_xdp
+net/ark
+net/atlantic
+net/avp
+net/axgbe
+net/bnx2x
+net/bnxt
+net/bonding
+net/cnxk
+net/cxgbe
+net/dpaa
+net/dpaa2
+net/e1000
+net/ena
+net/enetc
+net/enetfec
+net/enic
+net/failsafe
+net/fm10k
+net/hinic
+net/hns3
+net/i40e
+net/iavf
+net/ice
+net/igc
+net/ionic
+net/ipn3ke
+net/ixgbe
+net/kni
+net/liquidio
+net/memif
+net/mlx4
+net/mlx5
+net/mvneta
+net/mvpp2
+net/netvsc
+net/nfb
+net/nfp
+net/ngbe
+net/null
+net/octeontx
+net/octeontx2
+net/octeontx_ep
+net/pcap
+net/pfe
+net/qede
+net/ring
+net/sfc
+net/softnic
+net/tap
+net/thunderx
+net/txgbe
+net/vdev_netvsc
+net/vhost
+net/virtio
+net/vmxnet3
+raw/cnxk_bphy
+raw/dpaa2_cmdif
+raw/dpaa2_qdma
+raw/ifpga
+raw/ioat
+raw/ntb
+raw/skeleton
+regex/mlx5
+regex/octeontx2
+vdpa/ifc
+vdpa/mlx5
+vdpa/sfc
+
+--- stderr ---
+
+
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-format-truncation: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-cast-qual: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpxzmvhb0d
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpxzmvhb0d/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpxzmvhb0d/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wpointer-arith -Wno-pointer-arith 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-pointer-arith: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpt2xnxboh
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpt2xnxboh/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpt2xnxboh/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wpointer-to-int-cast -Wno-pointer-to-int-cast 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-pointer-to-int-cast: YES 
+Pkg-config binary for 1 is cached.
+Determining dependency 'libmusdk' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion libmusdk` -> 1
+
+Run-time dependency libmusdk found: NO (tried pkgconfig)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-cast-qual: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-pointer-arith: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpsi0wa09r
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpsi0wa09r/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpsi0wa09r/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -std=c11 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -std=c11: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmphh5n_gny
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmphh5n_gny/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmphh5n_gny/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wstrict-prototypes -Wno-strict-prototypes 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-strict-prototypes: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp7iqw93is
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp7iqw93is/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp7iqw93is/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -D_BSD_SOURCE 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -D_BSD_SOURCE: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpd1lg9093
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpd1lg9093/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpd1lg9093/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -D_DEFAULT_SOURCE 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -D_DEFAULT_SOURCE: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp9_n4hicl
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp9_n4hicl/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp9_n4hicl/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -D_XOPEN_SOURCE=600 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -D_XOPEN_SOURCE=600: YES 
+Pkg-config binary for 1 is cached.
+Determining dependency 'libmlx5' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion libmlx5` -> 1
+
+Run-time dependency libmlx5 found: NO (tried pkgconfig)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmphfu_rwdg
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmphfu_rwdg/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmphfu_rwdg/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lmlx5 -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /usr/bin/ld: cannot find -lmlx5
+collect2: error: ld returned 1 exit status
+
+Library mlx5 found: NO
+Pkg-config binary for 1 is cached.
+Determining dependency 'libcrypto' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion libcrypto` -> 0
+1.1.1k
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags libcrypto` -> 0
+
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs libcrypto` -> 0
+-L/usr/lib64 -lcrypto
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs libcrypto` -> 0
+-lcrypto
+Run-time dependency libcrypto found: YES 1.1.1k
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp86vfi5ct
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp86vfi5ct/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp86vfi5ct/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wdisabled-optimization 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wdisabled-optimization: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpz2moehf6
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpz2moehf6/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpz2moehf6/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Waggregate-return 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Waggregate-return: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpraz80kse
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpraz80kse/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpraz80kse/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wbad-function-cast 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wbad-function-cast: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpn305akeu
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpn305akeu/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpn305akeu/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wsign-compare -Wno-sign-compare 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-sign-compare: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpc7qvfytd
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpc7qvfytd/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpc7qvfytd/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wunused-parameter -Wno-unused-parameter 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp2k2qf0i4
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp2k2qf0i4/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp2k2qf0i4/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wunused-variable -Wno-unused-variable 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-variable: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmprereo0ql
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmprereo0ql/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmprereo0ql/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wempty-body -Wno-empty-body 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-empty-body: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpjvmfsqn7
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpjvmfsqn7/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpjvmfsqn7/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wunused-but-set-variable -Wno-unused-but-set-variable 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-but-set-variable: YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-pointer-arith: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpkyyr2sq6
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpkyyr2sq6/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpkyyr2sq6/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -march=native 
+
+Code:
+ 
+#include <x86intrin.h>
+__attribute__((target("avx2")))
+__m256i fn(void *x) { return _mm256_loadu_si256(x); }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Pkg-config binary for 1 is cached.
+Determining dependency 'libxdp' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion libxdp` -> 1
+
+Run-time dependency libxdp found: NO (tried pkgconfig)
+Pkg-config binary for 1 is cached.
+Determining dependency 'libbpf' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion libbpf` -> 1
+
+Run-time dependency libbpf found: NO (tried pkgconfig)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpola9lsyi
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpola9lsyi/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpola9lsyi/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lbpf -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /usr/bin/ld: cannot find -lbpf
+collect2: error: ld returned 1 exit status
+
+Library bpf found: NO
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpgtf95cun
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpgtf95cun/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("linux/if_xdp.h")
+          #error "Header 'linux/if_xdp.h' could not be found"
+         #endif
+        #else
+         #include <linux/if_xdp.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "linux/if_xdp.h" : YES 
+Pkg-config binary for 1 is cached.
+Determining dependency 'zlib' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion zlib` -> 0
+1.2.11
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags zlib` -> 0
+
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs zlib` -> 0
+-L/usr/lib64 -lz
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs zlib` -> 0
+-lz
+Run-time dependency zlib found: YES 1.2.11
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpwuh4clmf
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpwuh4clmf/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpwuh4clmf/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -DSUPPORT_CFA_HW_ALL=1 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -DSUPPORT_CFA_HW_ALL=1: YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX2__
+        # define __AVX2__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX2__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX2__" : 1 (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpfqjzfazz
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpfqjzfazz/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpfqjzfazz/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -flax-vector-conversions 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -flax-vector-conversions: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp1mcua28c
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp1mcua28c/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp1mcua28c/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wstrict-aliasing -Wno-strict-aliasing 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-strict-aliasing: YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-pointer-arith: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpn49vek25
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpn49vek25/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpn49vek25/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wuninitialized -Wno-uninitialized 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-uninitialized: YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-parameter: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-variable: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp8ezuf6ks
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp8ezuf6ks/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp8ezuf6ks/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wmisleading-indentation -Wno-misleading-indentation 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-misleading-indentation: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp7bywdkn0
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp7bywdkn0/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp7bywdkn0/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wimplicit-fallthrough -Wno-implicit-fallthrough 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-implicit-fallthrough: YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX2__
+        # define __AVX2__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX2__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX2__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-parameter: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpa9ahu_x0
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpa9ahu_x0/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpa9ahu_x0/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wunused-value -Wno-unused-value 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-value: YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-strict-aliasing: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpr9uqlsyp
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpr9uqlsyp/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpr9uqlsyp/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wformat-extra-args -Wno-format-extra-args 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-format-extra-args: YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-variable: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-implicit-fallthrough: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-sign-compare: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-value: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpjdkaxgf7
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpjdkaxgf7/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpjdkaxgf7/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wformat -Wno-format 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-format: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpwz32mmcc
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpwz32mmcc/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpwz32mmcc/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wformat-security -Wno-format-security 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-format-security: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp6u5e0inu
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp6u5e0inu/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp6u5e0inu/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wformat-nonliteral -Wno-format-nonliteral 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-format-nonliteral: YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-strict-aliasing: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-but-set-variable: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-parameter: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX2__
+        # define __AVX2__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX2__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX2__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512F__
+        # define __AVX512F__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512F__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512F__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512BW__
+        # define __AVX512BW__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512BW__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512BW__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -mavx512f: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -mavx512bw: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpszk24uyf
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpszk24uyf/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpszk24uyf/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -march=skylake-avx512 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -march=skylake-avx512: YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX2__
+        # define __AVX2__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX2__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX2__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512F__
+        # define __AVX512F__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512F__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512F__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512BW__
+        # define __AVX512BW__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512BW__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512BW__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -mavx512f: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -mavx512bw: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -march=skylake-avx512: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-value: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-but-set-variable: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-variable: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-parameter: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX2__
+        # define __AVX2__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX2__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX2__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512F__
+        # define __AVX512F__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512F__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512F__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ 
+        
+        #ifndef __AVX512BW__
+        # define __AVX512BW__
+        #endif
+        "MESON_GET_DEFINE_DELIMITER"
+__AVX512BW__
+Cached compiler stdout:
+         "MESON_GET_DEFINE_DELIMITER"
+1
+
+Cached compiler stderr:
+ 
+Fetching value of define "__AVX512BW__" : 1 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -mavx512f: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -mavx512bw: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -march=skylake-avx512: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-value: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-but-set-variable: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-parameter: YES (cached)
+Pkg-config binary for 1 is cached.
+Determining dependency 'libmlx4' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion libmlx4` -> 1
+
+Run-time dependency libmlx4 found: NO (tried pkgconfig)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpr3qyz97a
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpr3qyz97a/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpr3qyz97a/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lmlx4 -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /usr/bin/ld: cannot find -lmlx4
+collect2: error: ld returned 1 exit status
+
+Library mlx4 found: NO
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -std=c11: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-strict-prototypes: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_BSD_SOURCE: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_DEFAULT_SOURCE: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_XOPEN_SOURCE=600: YES (cached)
+Message: Disabling mlx5 [drivers/net/mlx5]: missing internal dependency "common_mlx5"
+Pkg-config binary for 1 is cached.
+Determining dependency 'libmusdk' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Run-time dependency libmusdk found: NO (tried pkgconfig)
+Pkg-config binary for 1 is cached.
+Determining dependency 'libmusdk' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Run-time dependency libmusdk found: NO (tried pkgconfig)
+Pkg-config binary for 1 is cached.
+Determining dependency 'netcope-common' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion netcope-common` -> 1
+
+Run-time dependency netcope-common found: NO (tried pkgconfig)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -flax-vector-conversions: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-pointer-arith: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-parameter: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-sign-compare: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmphc0tevx1
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmphc0tevx1/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmphc0tevx1/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wmissing-prototypes -Wno-missing-prototypes 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-missing-prototypes: YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-cast-qual: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp_p1s3kq3
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp_p1s3kq3/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp_p1s3kq3/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wunused-function -Wno-unused-function 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-function: YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-variable: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-strict-aliasing: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-missing-prototypes: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-value: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-format-nonliteral: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpbl1auy1q
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpbl1auy1q/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpbl1auy1q/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wshift-negative-value -Wno-shift-negative-value 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-shift-negative-value: YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-but-set-variable: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmphwq9q21t
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmphwq9q21t/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmphwq9q21t/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wmissing-declarations -Wno-missing-declarations 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-missing-declarations: YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpeyg0rpk3
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpeyg0rpk3/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpeyg0rpk3/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wmaybe-uninitialized -Wno-maybe-uninitialized 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-maybe-uninitialized: YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-strict-prototypes: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-shift-negative-value: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-implicit-fallthrough: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-format-extra-args: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpjlda_cmp
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpjlda_cmp/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpjlda_cmp/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wvisibility -Wno-visibility 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cc: error: unrecognized command line option '-Wvisibility'
+
+Compiler for C supports arguments -Wno-visibility: NO 
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-empty-body: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpy4md2zre
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpy4md2zre/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpy4md2zre/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Winvalid-source-encoding -Wno-invalid-source-encoding 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cc: error: unrecognized command line option '-Winvalid-source-encoding'; did you mean '-Winvalid-memory-model'?
+
+Compiler for C supports arguments -Wno-invalid-source-encoding: NO 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmplq8nz_m8
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmplq8nz_m8/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmplq8nz_m8/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wsometimes-uninitialized -Wno-sometimes-uninitialized 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cc: error: unrecognized command line option '-Wsometimes-uninitialized'; did you mean '-Wmaybe-uninitialized'?
+
+Compiler for C supports arguments -Wno-sometimes-uninitialized: NO 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpqyo9ed9j
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpqyo9ed9j/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpqyo9ed9j/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wpointer-bool-conversion -Wno-pointer-bool-conversion 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cc: error: unrecognized command line option '-Wpointer-bool-conversion'; did you mean '-Wint-conversion'?
+
+Compiler for C supports arguments -Wno-pointer-bool-conversion: NO 
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-format-nonliteral: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-strict-aliasing: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wdisabled-optimization: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Waggregate-return: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wbad-function-cast: YES (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpxfu4z1vp
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpxfu4z1vp/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpxfu4z1vp/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+int main(void)
+{
+    __int128 a = 0;
+    __int128 b;
+
+    b = __atomic_load_n(&a, __ATOMIC_RELAXED);
+    __atomic_store(&b, &a, __ATOMIC_RELAXED);
+    __atomic_store_n(&b, a, __ATOMIC_RELAXED);
+    return 0;
+}
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /usr/bin/ld: /tmp/ccH67kzv.o: in function `main':
+testfile.c:(.text+0x26): undefined reference to `__atomic_load_16'
+/usr/bin/ld: testfile.c:(.text+0x50): undefined reference to `__atomic_store_16'
+/usr/bin/ld: testfile.c:(.text+0x72): undefined reference to `__atomic_store_16'
+collect2: error: ld returned 1 exit status
+
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp3q2hg1gz
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp3q2hg1gz/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp3q2hg1gz/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -latomic -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /usr/bin/ld: cannot find /usr/lib64/libatomic.so.1.2.0
+collect2: error: ld returned 1 exit status
+
+Library atomic found: YES
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmptu4_osps
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmptu4_osps/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmptu4_osps/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group /usr/lib/gcc/x86_64-redhat-linux/8/libatomic.so -Wl,--end-group 
+
+Code:
+ 
+int main(void)
+{
+    __int128 a = 0;
+    __int128 b;
+
+    b = __atomic_load_n(&a, __ATOMIC_RELAXED);
+    __atomic_store(&b, &a, __ATOMIC_RELAXED);
+    __atomic_store_n(&b, a, __ATOMIC_RELAXED);
+    return 0;
+}
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /usr/bin/ld: cannot find /usr/lib64/libatomic.so.1.2.0
+collect2: error: ld returned 1 exit status
+
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmphqmpq5mf
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmphqmpq5mf/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmphqmpq5mf/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #include <linux/pkt_cls.h>
+        int main(void) {
+            /* If it's not defined as a macro, try to use as a symbol */
+            #ifndef TCA_FLOWER_UNSPEC
+                TCA_FLOWER_UNSPEC;
+            #endif
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Header <linux/pkt_cls.h> has symbol "TCA_FLOWER_UNSPEC" : YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmprvcshss0
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmprvcshss0/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmprvcshss0/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #include <linux/pkt_cls.h>
+        int main(void) {
+            /* If it's not defined as a macro, try to use as a symbol */
+            #ifndef TCA_FLOWER_KEY_VLAN_PRIO
+                TCA_FLOWER_KEY_VLAN_PRIO;
+            #endif
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Header <linux/pkt_cls.h> has symbol "TCA_FLOWER_KEY_VLAN_PRIO" : YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmplpqlpex5
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmplpqlpex5/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmplpqlpex5/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #include <linux/pkt_cls.h>
+        int main(void) {
+            /* If it's not defined as a macro, try to use as a symbol */
+            #ifndef TCA_BPF_UNSPEC
+                TCA_BPF_UNSPEC;
+            #endif
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Header <linux/pkt_cls.h> has symbol "TCA_BPF_UNSPEC" : YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpasg_qkta
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpasg_qkta/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpasg_qkta/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #include <linux/pkt_cls.h>
+        int main(void) {
+            /* If it's not defined as a macro, try to use as a symbol */
+            #ifndef TCA_BPF_FD
+                TCA_BPF_FD;
+            #endif
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Header <linux/pkt_cls.h> has symbol "TCA_BPF_FD" : YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpt675oum7
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpt675oum7/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpt675oum7/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #include <linux/tc_act/tc_bpf.h>
+        int main(void) {
+            /* If it's not defined as a macro, try to use as a symbol */
+            #ifndef TCA_ACT_BPF_UNSPEC
+                TCA_ACT_BPF_UNSPEC;
+            #endif
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Header <linux/tc_act/tc_bpf.h> has symbol "TCA_ACT_BPF_UNSPEC" : YES 
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpxmxfhzbg
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpxmxfhzbg/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpxmxfhzbg/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #include <linux/tc_act/tc_bpf.h>
+        int main(void) {
+            /* If it's not defined as a macro, try to use as a symbol */
+            #ifndef TCA_ACT_BPF_FD
+                TCA_ACT_BPF_FD;
+            #endif
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Header <linux/tc_act/tc_bpf.h> has symbol "TCA_ACT_BPF_FD" : YES 
+Configuring tap_autoconf.h using configuration
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpvfbhugu4
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpvfbhugu4/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpvfbhugu4/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fno-prefetch-loop-arrays 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -fno-prefetch-loop-arrays: YES 
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-maybe-uninitialized: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_BSD_SOURCE: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_DEFAULT_SOURCE: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_XOPEN_SOURCE=600: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -mavx512f: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -mavx512vl: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -mavx512bw: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-parameter: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-value: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-strict-aliasing: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-format-extra-args: YES (cached)
+Pkg-config binary for 1 is cached.
+Determining dependency 'libAArch64crypto' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion libAArch64crypto` -> 1
+
+Run-time dependency libaarch64crypto found: NO (tried pkgconfig)
+Dependency libcrypto found: YES 1.1.1k (cached)
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmpcolhppet
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmpcolhppet/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmpcolhppet/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lIPSec_MB -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /usr/bin/ld: cannot find -lIPSec_MB
+collect2: error: ld returned 1 exit status
+
+Library IPSec_MB found: NO
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -std=c11: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-strict-prototypes: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_BSD_SOURCE: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_DEFAULT_SOURCE: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_XOPEN_SOURCE=600: YES (cached)
+Message: Disabling mlx5 [drivers/crypto/mlx5]: missing internal dependency "common_mlx5"
+Pkg-config binary for 1 is cached.
+Determining dependency 'libmusdk' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Run-time dependency libmusdk found: NO (tried pkgconfig)
+Dependency libcrypto found: YES 1.1.1k (cached)
+Pkg-config binary for 1 is cached.
+Determining dependency 'libisal' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion libisal` -> 1
+
+Run-time dependency libisal found: NO (tried pkgconfig)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -std=c11: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-strict-prototypes: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_BSD_SOURCE: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_DEFAULT_SOURCE: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_XOPEN_SOURCE=600: YES (cached)
+Message: Disabling mlx5 [drivers/compress/mlx5]: missing internal dependency "common_mlx5"
+Dependency zlib found: YES 1.2.11 (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -std=c11: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-strict-prototypes: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_BSD_SOURCE: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_DEFAULT_SOURCE: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_XOPEN_SOURCE=600: YES (cached)
+Message: Disabling mlx5 [drivers/regex/mlx5]: missing internal dependency "common_mlx5"
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp1sft4a1g
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp1sft4a1g/testfile.c -o /root/f-stack/dpdk/build/meson-private/tmp1sft4a1g/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -llibrxp_compiler -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /usr/bin/ld: cannot find -llibrxp_compiler
+collect2: error: ld returned 1 exit status
+
+Library librxp_compiler found: NO
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -std=c11: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-strict-prototypes: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_BSD_SOURCE: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_DEFAULT_SOURCE: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -D_XOPEN_SOURCE=600: YES (cached)
+Message: Disabling mlx5 [drivers/vdpa/mlx5]: missing internal dependency "common_mlx5"
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -flax-vector-conversions: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-strict-aliasing: YES (cached)
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-format-nonliteral: YES (cached)
+Library libturbo found: NO
+Library libldpc_decoder_5gnr found: NO
+Running compile:
+Working directory:  /root/f-stack/dpdk/build/meson-private/tmp4_k6jo5w
+Command line:  cc /root/f-stack/dpdk/build/meson-private/tmp4_k6jo5w/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("cuda.h")
+          #error "Header 'cuda.h' could not be found"
+         #endif
+        #else
+         #include <cuda.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ /root/f-stack/dpdk/build/meson-private/tmp4_k6jo5w/testfile.c:4:12: error: #error "Header 'cuda.h' could not be found"
+           #error "Header 'cuda.h' could not be found"
+            ^~~~~
+
+Has header "cuda.h" : NO 
+Using cached compile:
+Cached command line:   
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-format-truncation: YES (cached)
+Dependency zlib found: YES 1.2.11 (cached)
+Running command: /root/f-stack/dpdk/app/test/has-hugepage.sh
+--- stdout ---
+4096
+
+--- stderr ---
+
+
+Message: hugepage availability: true
+Adding test "acl_autotest"
+Adding test "atomic_autotest"
+Adding test "bitmap_autotest"
+Adding test "bpf_autotest"
+Adding test "bpf_convert_autotest"
+Adding test "bitops_autotest"
+Adding test "byteorder_autotest"
+Adding test "cksum_autotest"
+Adding test "cmdline_autotest"
+Adding test "common_autotest"
+Adding test "cpuflags_autotest"
+Adding test "debug_autotest"
+Adding test "devargs_autotest"
+Adding test "eal_flags_c_opt_autotest"
+Adding test "eal_flags_main_opt_autotest"
+Adding test "eal_flags_n_opt_autotest"
+Adding test "eal_flags_hpet_autotest"
+Adding test "eal_flags_no_huge_autotest"
+Adding test "eal_flags_a_opt_autotest"
+Adding test "eal_flags_b_opt_autotest"
+Adding test "eal_flags_vdev_opt_autotest"
+Adding test "eal_flags_r_opt_autotest"
+Adding test "eal_flags_mem_autotest"
+Adding test "eal_flags_file_prefix_autotest"
+Adding test "eal_flags_misc_autotest"
+Adding test "eal_fs_autotest"
+Adding test "errno_autotest"
+Adding test "ethdev_link_status"
+Adding test "event_ring_autotest"
+Adding test "fib_autotest"
+Adding test "fib6_autotest"
+Adding test "func_reentrancy_autotest"
+Adding test "flow_classify_autotest"
+Adding test "hash_autotest"
+Adding test "interrupt_autotest"
+Adding test "ipfrag_autotest"
+Adding test "lcores_autotest"
+Adding test "logs_autotest"
+Adding test "lpm_autotest"
+Adding test "lpm6_autotest"
+Adding test "malloc_autotest"
+Adding test "mbuf_autotest"
+Adding test "mcslock_autotest"
+Adding test "memcpy_autotest"
+Adding test "memory_autotest"
+Adding test "mempool_autotest"
+Adding test "memzone_autotest"
+Adding test "meter_autotest"
+Adding test "multiprocess_autotest"
+Adding test "per_lcore_autotest"
+Adding test "pflock_autotest"
+Adding test "prefetch_autotest"
+Adding test "rcu_qsbr_autotest"
+Adding test "pie_autotest"
+Adding test "rib_autotest"
+Adding test "rib6_autotest"
+Adding test "ring_autotest"
+Adding test "rwlock_test1_autotest"
+Adding test "rwlock_rda_autotest"
+Adding test "rwlock_rds_wrm_autotest"
+Adding test "rwlock_rde_wro_autotest"
+Adding test "sched_autotest"
+Adding test "security_autotest"
+Adding test "spinlock_autotest"
+Adding test "stack_autotest"
+Adding test "stack_lf_autotest"
+Adding test "string_autotest"
+Adding test "table_autotest"
+Adding test "tailq_autotest"
+Adding test "ticketlock_autotest"
+Adding test "timer_autotest"
+Adding test "user_delay_us"
+Adding test "version_autotest"
+Adding test "crc_autotest"
+Adding test "distributor_autotest"
+Adding test "eventdev_common_autotest"
+Adding test "fbarray_autotest"
+Adding test "hash_readwrite_func_autotest"
+Adding test "ipsec_autotest"
+Adding test "kni_autotest"
+Adding test "kvargs_autotest"
+Adding test "member_autotest"
+Adding test "power_cpufreq_autotest"
+Adding test "power_autotest"
+Adding test "power_kvm_vm_autotest"
+Adding test "reorder_autotest"
+Adding test "service_autotest"
+Adding test "thash_autotest"
+Adding test "trace_autotest"
+Adding test "metrics_autotest"
+Adding test "telemetry_json_autotest"
+Adding test "telemetry_data_autotest"
+Adding test "ring_pmd_autotest"
+Adding test "event_eth_tx_adapter_autotest"
+Adding test "bitratestats_autotest"
+Adding test "latencystats_autotest"
+Adding test "pdump_autotest"
+Adding test "vdev_autotest"
+Adding test "compressdev_autotest"
+Adding test "ring_perf_autotest"
+Adding test "mempool_perf_autotest"
+Adding test "memcpy_perf_autotest"
+Adding test "hash_perf_autotest"
+Adding test "timer_perf_autotest"
+Adding test "reciprocal_division"
+Adding test "reciprocal_division_perf"
+Adding test "lpm_perf_autotest"
+Adding test "rib_slow_autotest"
+Adding test "fib_slow_autotest"
+Adding test "fib_perf_autotest"
+Adding test "red_all"
+Adding test "pie_all"
+Adding test "barrier_autotest"
+Adding test "hash_multiwriter_autotest"
+Adding test "timer_racecond_autotest"
+Adding test "efd_autotest"
+Adding test "hash_functions_autotest"
+Adding test "member_perf_autotest"
+Adding test "efd_perf_autotest"
+Adding test "lpm6_perf_autotest"
+Adding test "rib6_slow_autotest"
+Adding test "fib6_slow_autotest"
+Adding test "fib6_perf_autotest"
+Adding test "rcu_qsbr_perf_autotest"
+Adding test "red_perf"
+Adding test "pie_perf"
+Adding test "distributor_perf_autotest"
+Adding test "pmd_perf_autotest"
+Adding test "stack_perf_autotest"
+Adding test "stack_lf_perf_autotest"
+Adding test "rand_perf_autotest"
+Adding test "hash_readwrite_perf_autotest"
+Adding test "hash_readwrite_lf_perf_autotest"
+Adding test "trace_perf_autotest"
+Adding test "ipsec_perf_autotest"
+Adding test "thash_perf_autotest"
+Adding test "ring_pmd_perf_autotest"
+Adding test "cryptodev_aesni_mb_autotest"
+Adding test "cryptodev_aesni_gcm_autotest"
+Adding test "cryptodev_cn9k_autotest"
+Adding test "cryptodev_cn10k_autotest"
+Adding test "cryptodev_dpaa_sec_autotest"
+Adding test "cryptodev_dpaa2_sec_autotest"
+Adding test "cryptodev_null_autotest"
+Adding test "cryptodev_octeontx2_autotest"
+Adding test "cryptodev_openssl_autotest"
+Adding test "cryptodev_openssl_asym_autotest"
+Adding test "cryptodev_qat_autotest"
+Adding test "cryptodev_sw_armv8_autotest"
+Adding test "cryptodev_sw_kasumi_autotest"
+Adding test "cryptodev_sw_mvsam_autotest"
+Adding test "cryptodev_sw_snow3g_autotest"
+Adding test "cryptodev_sw_zuc_autotest"
+Adding test "dmadev_autotest"
+Adding test "eventdev_selftest_octeontx"
+Adding test "eventdev_selftest_sw"
+Adding test "rawdev_autotest"
+Adding test "link_bonding_autotest"
+Adding test "link_bonding_rssconf_autotest"
+Adding test "link_bonding_mode4_autotest"
+Adding test "cryptodev_scheduler_autotest"
+Adding test "dump_struct_sizes"
+Adding test "dump_mempool"
+Adding test "dump_malloc_stats"
+Adding test "dump_devargs"
+Adding test "dump_log_types"
+Adding test "dump_ring"
+Adding test "dump_physmem"
+Adding test "dump_memzone"
+Adding test "alarm_autotest"
+Adding test "red_autotest"
+Program doxygen found: NO
+Program sphinx-build found: NO
+Running command: /usr/bin/uname -r
+--- stdout ---
+5.15.0-spr.bkc.pc.1.23.0.x86_64
+
+--- stderr ---
+
+
+Running command: /usr/bin/make -sC /lib/modules/5.15.0-spr.bkc.pc.1.23.0.x86_64/build kernelversion
+--- stdout ---
+5.15.0-spr.bkc.pc.1.23.0.x86_64
+
+--- stderr ---
+
+
+Running command: /usr/bin/grep ndo_tx_timeout /lib/modules/5.15.0-spr.bkc.pc.1.23.0.x86_64/source/include/linux/netdevice.h
+--- stdout ---
+ * void (*ndo_tx_timeout)(struct net_device *dev, unsigned int txqueue);
+	void			(*ndo_tx_timeout) (struct net_device *dev,
+
+--- stderr ---
+
+
+Configuring rte_build_config.h using configuration
+Running command: /usr/bin/python3 set-static-linker-flags.py
+--- stdout ---
+Processing /root/f-stack/dpdk/build/meson-private/libdpdk-libs.pc
+Processing /root/f-stack/dpdk/build/meson-private/libdpdk.pc
+Processing /root/f-stack/dpdk/build/meson-uninstalled/libdpdk-libs-uninstalled.pc
+Processing /root/f-stack/dpdk/build/meson-uninstalled/libdpdk-uninstalled.pc
+
+--- stderr ---
+
+
+Message: 
+=================
+Libraries Enabled
+=================
+
+libs:
+	kvargs, telemetry, eal, ring, rcu, mempool, mbuf, net, 
+	meter, ethdev, pci, cmdline, metrics, hash, timer, acl, 
+	bbdev, bitratestats, bpf, cfgfile, compressdev, cryptodev, distributor, efd, 
+	eventdev, gpudev, gro, gso, ip_frag, jobstats, kni, latencystats, 
+	lpm, member, pcapng, power, rawdev, regexdev, dmadev, rib, 
+	reorder, sched, security, stack, vhost, ipsec, fib, port, 
+	pdump, table, pipeline, flow_classify, graph, node, 
+
+Message: 
+===============
+Drivers Enabled
+===============
+
+common:
+	cpt, dpaax, iavf, octeontx, octeontx2, cnxk, qat, sfc_efx, 
+	
+bus:
+	auxiliary, dpaa, fslmc, ifpga, pci, vdev, vmbus, 
+mempool:
+	bucket, cnxk, dpaa, dpaa2, octeontx, octeontx2, ring, stack, 
+	
+dma:
+	cnxk, dpaa, hisilicon, idxd, ioat, skeleton, 
+net:
+	af_packet, ark, atlantic, avp, axgbe, bnx2x, bnxt, bond, 
+	cnxk, cxgbe, dpaa, dpaa2, e1000, ena, enetc, enetfec, 
+	enic, failsafe, fm10k, hinic, hns3, i40e, iavf, ice, 
+	igc, ionic, ixgbe, kni, liquidio, memif, netvsc, nfp, 
+	ngbe, null, octeontx, octeontx2, octeontx_ep, pfe, qede, ring, 
+	softnic, tap, thunderx, txgbe, vdev_netvsc, vhost, virtio, vmxnet3, 
+	
+raw:
+	cnxk_bphy, dpaa2_cmdif, dpaa2_qdma, ntb, skeleton, 
+crypto:
+	bcmfs, caam_jr, ccp, cnxk, dpaa_sec, dpaa2_sec, nitrox, null, 
+	octeontx, octeontx2, openssl, scheduler, virtio, 
+compress:
+	octeontx, zlib, 
+regex:
+	octeontx2, 
+vdpa:
+	ifc, sfc, 
+event:
+	cnxk, dlb2, dpaa, dpaa2, dsw, octeontx2, opdl, skeleton, 
+	sw, octeontx, 
+baseband:
+	acc100, fpga_5gnr_fec, fpga_lte_fec, la12xx, null, turbo_sw, 
+gpu:
+	
+
+Message: 
+=================
+Content Skipped
+=================
+
+libs:
+	
+drivers:
+	common/mvep:	missing dependency, "libmusdk"
+	common/mlx5:	missing dependency, "mlx5"
+	net/af_xdp:	missing dependency, "libxdp" and "libbpf"
+	net/ipn3ke:	missing dependency, "libfdt"
+	net/mlx4:	missing dependency, "mlx4"
+	net/mlx5:	missing internal dependency, "common_mlx5"
+	net/mvneta:	missing dependency, "libmusdk"
+	net/mvpp2:	missing dependency, "libmusdk"
+	net/nfb:	missing dependency, "libnfb"
+	net/pcap:	missing dependency, "libpcap"
+	net/sfc:	broken dependency, "libatomic"
+	raw/ifpga:	missing dependency, "libfdt"
+	raw/ioat:	replaced by dmadev drivers
+	crypto/armv8:	missing dependency, "libAArch64crypto"
+	crypto/ipsec_mb:	missing dependency, "libIPSec_MB"
+	crypto/mlx5:	missing internal dependency, "common_mlx5"
+	crypto/mvsam:	missing dependency, "libmusdk"
+	compress/isal:	missing dependency, "libisal"
+	compress/mlx5:	missing internal dependency, "common_mlx5"
+	regex/mlx5:	missing internal dependency, "common_mlx5"
+	vdpa/mlx5:	missing internal dependency, "common_mlx5"
+	gpu/cuda:	missing dependency, "cuda.h"
+	
+
+Build targets in project: 950
+
+DPDK 21.11.2
+
+  User defined options
+    enable_kmods: true
+
+Found ninja-1.10.2.git.kitware.jobserver-1 at /usr/local/bin/ninja
+NOTICE: You are using Python 3.6 which is EOL. Starting with v0.62.0, Meson will require Python 3.7 or newer

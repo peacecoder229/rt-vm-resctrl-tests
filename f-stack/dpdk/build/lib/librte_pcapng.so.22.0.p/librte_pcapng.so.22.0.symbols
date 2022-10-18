@@ -1,0 +1,8 @@
+ 0x000000000000000e (SONAME)             Library soname: [librte_pcapng.so.22]
+EXPERIMENTAL A
+rte_pcapng_close@@EXPERIMENTAL T
+rte_pcapng_copy@@EXPERIMENTAL T
+rte_pcapng_fdopen@@EXPERIMENTAL T
+rte_pcapng_mbuf_size@@EXPERIMENTAL T
+rte_pcapng_write_packets@@EXPERIMENTAL T
+rte_pcapng_write_stats@@EXPERIMENTAL T

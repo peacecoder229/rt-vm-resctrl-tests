@@ -1,0 +1,1 @@
+[{"name": "libelf", "version": "0.186", "compile_args": [], "link_args": ["/usr/lib64/libelf.so"]}, {"name": "libcrypto", "version": "1.1.1k", "compile_args": [], "link_args": ["/usr/lib64/libcrypto.so"]}, {"name": "zlib", "version": "1.2.11", "compile_args": [], "link_args": ["/usr/lib64/libz.so"]}]

@@ -1,0 +1,1 @@
+cmd_/root/f-stack/dpdk/build/kernel/linux/kni/rte_kni.mod := { echo  /root/f-stack/dpdk/build/kernel/linux/kni/kni_net.o /root/f-stack/dpdk/build/kernel/linux/kni/kni_misc.o;  echo; } > /root/f-stack/dpdk/build/kernel/linux/kni/rte_kni.mod

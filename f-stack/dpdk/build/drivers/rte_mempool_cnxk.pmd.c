@@ -1,0 +1,2 @@
+static __attribute__((unused)) const char *generator = "../buildtools/pmdinfogen.py";
+const char mempool_cnxk_pmd_info[] __attribute__((used)) = "PMD_INFO_STRING= {\"name\": \"mempool_cnxk\", \"params\": \"max_pools=<128-1048576>\", \"kmod\": \"vfio-pci\", \"pci_ids\": [[6013, 41211, 6013, 47360], [6013, 41211, 6013, 47360], [6013, 41211, 6013, 47616], [6013, 41212, 6013, 47360], [6013, 41212, 6013, 47360], [6013, 41212, 6013, 47616]]}";

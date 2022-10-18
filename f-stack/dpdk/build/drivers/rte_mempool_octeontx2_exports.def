@@ -1,0 +1,3 @@
+EXPORTS
+	otx2_npa_lf_fini
+	otx2_npa_lf_init

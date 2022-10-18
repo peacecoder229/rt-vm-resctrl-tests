@@ -1,0 +1,6 @@
+ 0x000000000000000e (SONAME)             Library soname: [librte_net_dpaa.so.22]
+dpaa_eth_eventq_attach@@INTERNAL T
+dpaa_eth_eventq_detach@@INTERNAL T
+DPDK_22 A
+INTERNAL A
+rte_pmd_dpaa_set_tx_loopback@@DPDK_22 T

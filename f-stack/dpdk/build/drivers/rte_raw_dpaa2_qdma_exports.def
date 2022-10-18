@@ -1,0 +1,2 @@
+EXPORTS
+	rte_qdma_vq_stats
