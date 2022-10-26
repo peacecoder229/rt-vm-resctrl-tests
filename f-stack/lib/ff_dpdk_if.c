@@ -1142,11 +1142,15 @@ fdir_add_tcp_flow(uint16_t port_id, uint16_t queue, uint16_t dir,
 
     res = rte_flow_validate(port_id, &attr, flow_pattern, flow_action, &rfe);
     if (res)
+    {
+	printf("flow validate error \n");
 	return (1);
-
+    }
     flow = rte_flow_create(port_id, &attr, flow_pattern, flow_action, &rfe);
-    if (!flow) 
+    if (!flow) {
+	printf("RTE flow create error \n");
 	return port_flow_complain(&rfe);
+    }
 
     return (0);
 }
@@ -1227,12 +1231,15 @@ ff_dpdk_init(int argc, char **argv)
     /*
      * Refer function header section for usage.
      */
-    //printf("===== %s ======\n", cfg->dpdk.proc_type);
-    
-    ret = fdir_add_tcp_flow(0, ff_global_cfg.dpdk.proc_id, FF_FLOW_INGRESS, 0, (9000 + ff_global_cfg.dpdk.proc_id));
-    if (ret)
-	rte_exit(EXIT_FAILURE, "fdir_add_tcp_flow failed\n");
-        
+    printf("===== %s ======\n", ff_global_cfg.dpdk.proc_type);
+    printf("FF_FDIR %d ====\n", ff_global_cfg.dpdk.proc_id);
+    if(strcmp(ff_global_cfg.dpdk.proc_type, "primary") == 0){
+      for(int i = 0; i < 24; i++) {
+	ret = fdir_add_tcp_flow(0, i, FF_FLOW_INGRESS, 0, (9000 + i));
+    	if (ret)
+		rte_exit(EXIT_FAILURE, "fdir_add_tcp_flow failed\n");
+      }
+    }
    
 #endif
 

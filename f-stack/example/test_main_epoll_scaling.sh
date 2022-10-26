@@ -10,13 +10,13 @@ ifconfig ens11 down
 sleep 5
 
 #Note: Please adjust the lcoremask parameter in config.ini file if you change number of processes
-./helloworld_epoll --conf config.ini --proc-type=primary --proc-id=0  10000 &
+./helloworld_epoll --conf config.ini --proc-type=primary --proc-id=0  9000 &
 
 sleep 10
 
-for i in {1..2}
+for i in {1..23}
 do
-  port=$((10000+i))
+  port=$((9000+i))
   ./helloworld_epoll --conf config.ini --proc-type=secondary --proc-id=$i  $port &
   echo $port
   sleep 5
