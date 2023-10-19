@@ -152,31 +152,42 @@ inline void imcPost(pcm::IMC& imc, double n_sample_in_sec)
     static std::vector<std::vector<pcm::uint64>> counter1, prev1;
     static std::vector<std::vector<pcm::uint64>> counter2, prev2;
     static std::vector<std::vector<pcm::uint64>> counter3, prev3;
+    static std::vector<std::vector<pcm::uint64>> counter4, prev4;
 
     if (prev0.empty()) {
     	imc.getCounter(prev0, 0);
     	imc.getCounter(prev1, 1);
     	imc.getCounter(prev2, 2);
     	imc.getCounter(prev3, 3);
+    	imc.getCounter(prev4, 4);
     }
 
     imc.getCounter(counter0, 0);
     imc.getCounter(counter1, 1);
     imc.getCounter(counter2, 2);
     imc.getCounter(counter3, 3);
+    imc.getCounter(counter4, 4);
 
     for(int soc = 0; soc < pcm::sockets; soc++){
-		double tbw = 0, rbw=0, wbw=0, wpq=0, rpq=0;
+		double tbw = 0, rbw=0, wbw=0, wpq=0, rpq=0, pmoncnt4=0;
 		//uint64 tbw_p = 0, rbw_p=0, wbw_p=0, wpq_p=0, rpq_p=0;
-		printf("  socket%d_BW=", soc);
+		//printf("  socket%d_BW=", soc);
 
 		for(int i = 0; i < counter0[soc].size(); i++){
 			wbw += (counter0[soc][i] - prev0[soc][i]);
 			rbw += (counter1[soc][i] - prev1[soc][i]);
 			wpq += (counter2[soc][i] - prev2[soc][i]);
-		    rpq += (counter3[soc][i] - prev3[soc][i]);
+		        rpq += (counter3[soc][i] - prev3[soc][i]);
+
+		        pmoncnt4 += (counter4[soc][i] - prev4[soc][i]);
+
+			std::cout <<"counter3[soc]["<<i<<"]"<< std::hex <<counter3[soc][i]<< "prev3[soc][i])="<< std::hex << prev3[soc][i] <<"rpq_delta="<< (counter3[soc][i] - prev3[soc][i])<<std::endl;
+
+			std::cout <<"counter4[soc]["<<i<<"]"<<counter4[soc][i]<< "prev4[soc][i])="<< prev4[soc][i] <<"pmoncnt4_delta="<< (counter4[soc][i] - prev4[soc][i])<<std::endl;
 		}
+
 		tbw=(((wbw + rbw) * 64) / 1e9) * n_sample_in_sec;
+		printf("  socket%d_BW=", soc);
 		printf("%.2f wr_bw=%.2f rd_bw=%.2f wpq=%.2f rpq=%.2f ", tbw, (wbw * 64 / 1e9)*n_sample_in_sec  , (rbw * 64 / 1e9)*n_sample_in_sec , (wpq / ddrcyclecount) , (rpq / ddrcyclecount));
 
     }
@@ -186,5 +197,7 @@ inline void imcPost(pcm::IMC& imc, double n_sample_in_sec)
     prev1 = counter1;
     prev2 = counter2;
     prev3 = counter3;
+
+    prev4 = counter4;
 
 }

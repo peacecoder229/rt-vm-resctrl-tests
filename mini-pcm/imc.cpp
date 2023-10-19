@@ -10,15 +10,18 @@ inline UncorePMU makeIMCPMU(std::shared_ptr<MMIORange>& handle)
         std::make_shared<MMIORegister32>(handle, SERVER_MC_CH_PMON_CTL1_OFFSET),
         std::make_shared<MMIORegister32>(handle, SERVER_MC_CH_PMON_CTL2_OFFSET),
         std::make_shared<MMIORegister32>(handle, SERVER_MC_CH_PMON_CTL3_OFFSET),
+        std::make_shared<MMIORegister32>(handle, SERVER_MC_CH_PMON_CTL4_OFFSET),
         std::make_shared<MMIORegister64>(handle, SERVER_MC_CH_PMON_CTR0_OFFSET),
         std::make_shared<MMIORegister64>(handle, SERVER_MC_CH_PMON_CTR1_OFFSET),
         std::make_shared<MMIORegister64>(handle, SERVER_MC_CH_PMON_CTR2_OFFSET),
         std::make_shared<MMIORegister64>(handle, SERVER_MC_CH_PMON_CTR3_OFFSET),
+        std::make_shared<MMIORegister64>(handle, SERVER_MC_CH_PMON_CTR4_OFFSET),
         std::make_shared<MMIORegister32>(handle, SERVER_MC_CH_PMON_FIXED_CTL_OFFSET),
         std::make_shared<MMIORegister64>(handle, SERVER_MC_CH_PMON_FIXED_CTR_OFFSET)
     );
 }
 
+//0x3251 for SPR
 const std::vector<uint32> IMC::UBOX0_DEV_IDS = { 0x3451, 0x3251 };
 
 IMC::IMC()
@@ -26,7 +29,9 @@ IMC::IMC()
     eventCount = 0;
     initSocket2Ubox0Bus();
     // TODO: change the hardcoded stuff
-    int numChannels = 3;
+    //int numChannels = 3;
+    //we only have 2 channels in on imc
+    int numChannels = 2;
     int imcno = 4;
     imcPMUs.resize(sockets);
     for(int socket_ = 0; socket_ < imcPMUs.size(); socket_++)
@@ -58,9 +63,9 @@ IMC::IMC()
 
 
 bool IMC::program(std::string configStr){
-    if (eventCount == SERVER_UNCORE_COUNTER_MAX_CONTROLLERS)
+    if (eventCount > SERVER_UNCORE_COUNTER_MAX_COUNTERS)
     {
-        std::cerr << "too many events for IMC unit" << std::endl;
+        std::cerr << "too many events for IMC Pmon counter, we only have " << SERVER_UNCORE_COUNTER_MAX_COUNTERS << std::endl;
         return false;
     }
 
@@ -213,6 +218,7 @@ void IMC::initSocket2Ubox0Bus()
 
         for (auto ubox_dev_id : UBOX0_DEV_IDS)
         {
+	   //std::cout << "DEBUG: check bus " << std::hex << bus << " with device ID " << device_id << std::dec << "\n";
            // match
            if(ubox_dev_id == device_id)
            {

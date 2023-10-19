@@ -8,10 +8,12 @@ UncorePMU::UncorePMU(const HWRegisterPtr& unitControl_,
     const HWRegisterPtr& counterControl1,
     const HWRegisterPtr& counterControl2,
     const HWRegisterPtr& counterControl3,
+    const HWRegisterPtr& counterControl4,
     const HWRegisterPtr& counterValue0,
     const HWRegisterPtr& counterValue1,
     const HWRegisterPtr& counterValue2,
     const HWRegisterPtr& counterValue3,
+    const HWRegisterPtr& counterValue4,
     const HWRegisterPtr& fixedCounterControl_,
     const HWRegisterPtr& fixedCounterValue_,
     const HWRegisterPtr& filter0,
@@ -20,8 +22,8 @@ UncorePMU::UncorePMU(const HWRegisterPtr& unitControl_,
     cpu_model_(0),
     eventCount(0),
     unitControl(unitControl_),
-    counterControl{ counterControl0, counterControl1, counterControl2, counterControl3 },
-    counterValue{ counterValue0, counterValue1, counterValue2, counterValue3 },
+    counterControl{ counterControl0, counterControl1, counterControl2, counterControl3,counterControl4 },
+    counterValue{ counterValue0, counterValue1, counterValue2, counterValue3, counterValue4 },
     fixedCounterControl(fixedCounterControl_),
     fixedCounterValue(fixedCounterValue_),
     filter{ filter0 , filter1 }
@@ -29,7 +31,7 @@ UncorePMU::UncorePMU(const HWRegisterPtr& unitControl_,
 
 void UncorePMU::cleanup()
 {
-    for (int i = 0; i < 4; ++i)
+    for (int i = 0; i < SERVER_UNCORE_COUNTER_MAX_COUNTERS; ++i)
     {
         if (counterControl[i].get()) *counterControl[i] = 0;
     }

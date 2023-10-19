@@ -24,8 +24,8 @@ class UncorePMU
     //HWRegisterPtr unitControl;
 public:
     HWRegisterPtr unitControl;
-    HWRegisterPtr counterControl[4];
-    HWRegisterPtr counterValue[4];
+    HWRegisterPtr counterControl[5];
+    HWRegisterPtr counterValue[5];
     HWRegisterPtr fixedCounterControl;
     HWRegisterPtr fixedCounterValue;
     HWRegisterPtr filter[2];
@@ -35,10 +35,12 @@ public:
         const HWRegisterPtr& counterControl1,
         const HWRegisterPtr& counterControl2,
         const HWRegisterPtr& counterControl3,
+        const HWRegisterPtr& counterControl4,
         const HWRegisterPtr& counterValue0,
         const HWRegisterPtr& counterValue1,
         const HWRegisterPtr& counterValue2,
         const HWRegisterPtr& counterValue3,
+        const HWRegisterPtr& counterValue4,
         const HWRegisterPtr& fixedCounterControl_ = HWRegisterPtr(),
         const HWRegisterPtr& fixedCounterValue_ = HWRegisterPtr(),
         const HWRegisterPtr& filter0 = HWRegisterPtr(),

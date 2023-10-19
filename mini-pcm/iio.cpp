@@ -11,10 +11,12 @@ inline UncorePMU makeIIOPMU(std::shared_ptr<SafeMsrHandle>& handle, int unit)
                     std::make_shared<MSRRegister>(handle, SPR_M2IOSF_IIO_CTL0 + SPR_M2IOSF_REG_STEP * unit + 1),
                     std::make_shared<MSRRegister>(handle, SPR_M2IOSF_IIO_CTL0 + SPR_M2IOSF_REG_STEP * unit + 2),
                     std::make_shared<MSRRegister>(handle, SPR_M2IOSF_IIO_CTL0 + SPR_M2IOSF_REG_STEP * unit + 3),
+                    std::make_shared<MSRRegister>(handle, SPR_M2IOSF_IIO_CTL0 + SPR_M2IOSF_REG_STEP * unit + 4),
                     std::make_shared<MSRRegister>(handle, SPR_M2IOSF_IIO_CTR0 + SPR_M2IOSF_REG_STEP * unit + 0),
                     std::make_shared<MSRRegister>(handle, SPR_M2IOSF_IIO_CTR0 + SPR_M2IOSF_REG_STEP * unit + 1),
                     std::make_shared<MSRRegister>(handle, SPR_M2IOSF_IIO_CTR0 + SPR_M2IOSF_REG_STEP * unit + 2),
-                    std::make_shared<MSRRegister>(handle, SPR_M2IOSF_IIO_CTR0 + SPR_M2IOSF_REG_STEP * unit + 3));
+                    std::make_shared<MSRRegister>(handle, SPR_M2IOSF_IIO_CTR0 + SPR_M2IOSF_REG_STEP * unit + 3),
+                    std::make_shared<MSRRegister>(handle, SPR_M2IOSF_IIO_CTR0 + SPR_M2IOSF_REG_STEP * unit + 4));
 }
 
 inline FreeRunBWCounters makeIIOFRCtr(std::shared_ptr<SafeMsrHandle>& handle, int unit)
