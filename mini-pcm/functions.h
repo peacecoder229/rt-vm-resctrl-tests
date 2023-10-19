@@ -152,21 +152,21 @@ inline void imcPost(pcm::IMC& imc, double n_sample_in_sec)
     static std::vector<std::vector<pcm::uint64>> counter1, prev1;
     static std::vector<std::vector<pcm::uint64>> counter2, prev2;
     static std::vector<std::vector<pcm::uint64>> counter3, prev3;
-    static std::vector<std::vector<pcm::uint64>> counter4, prev4;
+    //static std::vector<std::vector<pcm::uint64>> counter4, prev4;
 
     if (prev0.empty()) {
     	imc.getCounter(prev0, 0);
     	imc.getCounter(prev1, 1);
     	imc.getCounter(prev2, 2);
     	imc.getCounter(prev3, 3);
-    	imc.getCounter(prev4, 4);
+    	//imc.getCounter(prev4, 4);
     }
 
     imc.getCounter(counter0, 0);
     imc.getCounter(counter1, 1);
     imc.getCounter(counter2, 2);
     imc.getCounter(counter3, 3);
-    imc.getCounter(counter4, 4);
+    //imc.getCounter(counter4, 4);
 
     for(int soc = 0; soc < pcm::sockets; soc++){
 		double tbw = 0, rbw=0, wbw=0, wpq=0, rpq=0, pmoncnt4=0;
@@ -179,11 +179,10 @@ inline void imcPost(pcm::IMC& imc, double n_sample_in_sec)
 			wpq += (counter2[soc][i] - prev2[soc][i]);
 		        rpq += (counter3[soc][i] - prev3[soc][i]);
 
-		        pmoncnt4 += (counter4[soc][i] - prev4[soc][i]);
+		        //pmoncnt4 += (counter4[soc][i] - prev4[soc][i]);
 
 			std::cout <<"counter3[soc]["<<i<<"]"<< std::hex <<counter3[soc][i]<< "prev3[soc][i])="<< std::hex << prev3[soc][i] <<"rpq_delta="<< (counter3[soc][i] - prev3[soc][i])<<std::endl;
-
-			std::cout <<"counter4[soc]["<<i<<"]"<<counter4[soc][i]<< "prev4[soc][i])="<< prev4[soc][i] <<"pmoncnt4_delta="<< (counter4[soc][i] - prev4[soc][i])<<std::endl;
+			//std::cout <<"counter4[soc]["<<i<<"]"<<counter4[soc][i]<< "prev4[soc][i])="<< prev4[soc][i] <<"pmoncnt4_delta="<< (counter4[soc][i] - prev4[soc][i])<<std::endl;
 		}
 
 		tbw=(((wbw + rbw) * 64) / 1e9) * n_sample_in_sec;
@@ -197,6 +196,48 @@ inline void imcPost(pcm::IMC& imc, double n_sample_in_sec)
     prev1 = counter1;
     prev2 = counter2;
     prev3 = counter3;
+
+    //prev4 = counter4;
+
+}
+
+
+inline void imcPost_pmon_cnt4(pcm::IMC& imc, double n_sample_in_sec)
+{
+    static std::vector<std::vector<pcm::uint64>> counter4, prev4;
+
+    if(imc.eventCount == 0) return;
+
+    uint64_t io_wr, io_rd;
+    double IO_WR_BW, IO_RD_BW;
+    //Bloew division by n_sample_in_sec is just a hack.. at the end total number of RPQ nad WPQ are convreted in per second. 
+    double ddrcyclecount = (1e9 * (1*60) / (1/2.4)) * (1 / n_sample_in_sec);
+
+    if (prev4.empty()) {
+    	//imc.getCounter(prev4, 4);
+        imc.getCounter_imc_pmon_cnt4(prev4, 4);
+    }
+
+    imc.getCounter_imc_pmon_cnt4(counter4, 4);
+    //imc.getCounter(counter4, 4);
+
+    for(int soc = 0; soc < pcm::sockets; soc++){
+		double tbw = 0, rbw=0, wbw=0, wpq=0, rpq=0, pmoncnt4=0;
+		//uint64 tbw_p = 0, rbw_p=0, wbw_p=0, wpq_p=0, rpq_p=0;
+		//printf("  socket%d_BW=", soc);
+
+		for(int i = 0; i < counter4[soc].size(); i++){
+
+		        pmoncnt4 += (counter4[soc][i] - prev4[soc][i]);
+			std::cout <<"counter4[soc]["<<i<<"]"<<counter4[soc][i]<< "prev4[soc][i])="<< prev4[soc][i] <<"pmoncnt4_delta="<< (counter4[soc][i] - prev4[soc][i])<<std::endl;
+		}
+
+		//tbw=(((wbw + rbw) * 64) / 1e9) * n_sample_in_sec;
+		//printf("  socket%d_BW=", soc);
+		//printf("%.2f wr_bw=%.2f rd_bw=%.2f wpq=%.2f rpq=%.2f ", tbw, (wbw * 64 / 1e9)*n_sample_in_sec  , (rbw * 64 / 1e9)*n_sample_in_sec , (wpq / ddrcyclecount) , (rpq / ddrcyclecount));
+
+    }
+    printf("\n");
 
     prev4 = counter4;
 

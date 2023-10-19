@@ -14,9 +14,11 @@ class IMC{
     
     IMC();
     bool program(std::string configStr);
+    bool program_imc_pmon_cnt4();
     void enableFixed();
     void getDRAMClocks(std::vector<std::vector<uint64>>& M);
     void getCounter(std::vector<std::vector<uint64>>& M, int counterId);
+    void getCounter_imc_pmon_cnt4(std::vector<std::vector<uint64>>& M, int counterId);
     void getFixed(std::vector<std::vector<uint64>>& M);
     void getDRAMReads(std::vector<uint64>& M);
     void getDRAMWrites(std::vector<uint64>& M);

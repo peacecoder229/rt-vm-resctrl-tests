@@ -110,6 +110,9 @@ bool addEvent(string eventStr, pcm::IMC& imc, pcm::CHA& cha, pcm::IIO& iio)
                                                     {"cha", pmuType::CHA},
                                                     {"iio", pmuType::IIO}};
 
+
+    std::cout <<"====addEvent eventStr:"<<eventStr<< std::endl;
+
     const auto typeConfig = pcm::split(eventStr, '/');
     if (typeConfig.size() < 2)
     {
@@ -142,6 +145,14 @@ bool addEvent(string eventStr, pcm::IMC& imc, pcm::CHA& cha, pcm::IIO& iio)
         default:
             return false;
     }
+
+    return true;
+}
+
+bool addEvent_imc_pmon_cnt4(string eventStr, pcm::IMC& imc, pcm::CHA& cha, pcm::IIO& iio)
+{
+
+            imc.program_imc_pmon_cnt4();
 
     return true;
 }
@@ -213,6 +224,32 @@ int main(int argc, char* argv[])
             // any other options positional that is a floating point number is treated as <delay>,
             // while the other options are ignored with a warning issues to stderr
         }
+	else if (strncmp(*argv, "-s", 2) == 0)
+	{
+	    //specified parameters
+	    if (addEvent("imc/config=0x000000000000f005,name=UNC_M_CAS_COUNT.WR", imc, cha, iio) == false)
+            {
+                exit(EXIT_FAILURE);
+            }
+	    if (addEvent("imc/config=0x000000000000cf05,name=UNC_M_CAS_COUNT.RD", imc, cha, iio) == false)
+            {
+                exit(EXIT_FAILURE);
+            }
+
+	    if (addEvent("imc/config=0x0000000000000082,name=UNC_M_WPQ_OCCUPANCY_PCH0", imc, cha, iio) == false)
+            {
+                exit(EXIT_FAILURE);
+            }
+	    if (addEvent("imc/config=0x0000000000000080,name=UNC_M_RPQ_OCCUPANCY_PCH0", imc, cha, iio) == false)
+            {
+                exit(EXIT_FAILURE);
+            }
+	    if (addEvent_imc_pmon_cnt4("imc/config=0x0000000000000080,name=UNC_M_RPQ_OCCUPANCY_PCH0", imc, cha, iio) == false)
+            {
+                exit(EXIT_FAILURE);
+            }
+            continue;
+	}
     } while (argc > 1); // end of command line parsing loop
 
     imc.run();
@@ -239,6 +276,7 @@ int main(int argc, char* argv[])
         //chaPost(cha, tot_sample_in_sec, "iobw");
         chaPost(cha, tot_sample_in_sec, "latency");
         imcPost(imc, tot_sample_in_sec);
+        imcPost_pmon_cnt4(imc, tot_sample_in_sec);
         iioPost(iio, tot_sample_in_sec);
     }
 }

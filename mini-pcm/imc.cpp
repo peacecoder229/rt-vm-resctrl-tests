@@ -91,8 +91,27 @@ bool IMC::program(std::string configStr){
     for (auto& imcPMUsPerSocket : imcPMUs)
     {
         for (auto& imcPMU : imcPMUsPerSocket)
-        {
+        {   
             auto ctrl = imcPMU.counterControl[eventCount];
+            if (ctrl.get() != nullptr)
+                *ctrl = event;
+        }
+    }
+
+    eventCount++;
+    return true;
+}
+
+bool IMC::program_imc_pmon_cnt4(){
+
+    uint32 event=0x0000000000000080;
+    char pmon_cnt=4;
+    for (auto& imcPMUsPerSocket : imcPMUs)
+    {
+        for (auto& imcPMU : imcPMUsPerSocket)
+        {   
+	    std::cout <<"===="<<eventCount << std::endl;
+            auto ctrl = imcPMU.counterControl[pmon_cnt];
             if (ctrl.get() != nullptr)
                 *ctrl = event;
         }
@@ -164,6 +183,31 @@ void IMC::getCounter(std::vector<std::vector<uint64>>& M, int counterId)
         for(int j = 0; j < imcPMUs[i].size(); ++j){
             imcPMUs[i][j].freeze();
             M[i][j] = *(imcPMUs[i][j].counterValue[counterId]);
+            // printf("imcPMU[%d][%d] pmu.counterValue[%d] = %x value = %d\n", i, j, counterId, imcPMUs[i][j].counterValue[counterId], M[i][j]);
+            imcPMUs[i][j].unfreeze();
+        }
+    }
+}
+
+void IMC::getCounter_imc_pmon_cnt4(std::vector<std::vector<uint64>>& M, int counterId)
+{
+    char pmon_cnt=4;
+    if (counterId >= eventCount){
+//std::cerr << "Trying to read unused counter " << counterId << std::endl;
+        return;
+    }
+
+    if (M.size() != imcPMUs.size()) {
+        M.resize(imcPMUs.size());
+        for(int i = 0; i < imcPMUs.size(); ++i){
+            M[i].resize(imcPMUs[i].size());
+        }
+    }
+
+    for(int i = 0; i < imcPMUs.size(); ++i){
+        for(int j = 0; j < imcPMUs[i].size(); ++j){
+            imcPMUs[i][j].freeze();
+            M[i][j] = *(imcPMUs[i][j].counterValue[pmon_cnt]);
             // printf("imcPMU[%d][%d] pmu.counterValue[%d] = %x value = %d\n", i, j, counterId, imcPMUs[i][j].counterValue[counterId], M[i][j]);
             imcPMUs[i][j].unfreeze();
         }
