@@ -40,6 +40,7 @@ bool flushLine = false;
 pcm::IMC* global_imc_ptr = nullptr;
 pcm::CHA* global_cha_ptr = nullptr;
 pcm::IIO* global_iio_ptr = nullptr;
+bool use_imc_pmon_cnt4 = false;
 
 double calibratedMicroSeconds(unsigned long delay_micros){
 	//std::cout << "Sleeping for " << delay_micros << " micro seconds \n";
@@ -120,6 +121,7 @@ bool addEvent(string eventStr, pcm::IMC& imc, pcm::CHA& cha, pcm::IIO& iio)
         return false;
     }
     std::string pmuName = typeConfig[0];
+
     if (pmuName.empty())
     {
         pmuName = "core";
@@ -152,7 +154,7 @@ bool addEvent(string eventStr, pcm::IMC& imc, pcm::CHA& cha, pcm::IIO& iio)
 bool addEvent_imc_pmon_cnt4(string eventStr, pcm::IMC& imc, pcm::CHA& cha, pcm::IIO& iio)
 {
 
-            imc.program_imc_pmon_cnt4();
+    imc.program_imc_pmon_cnt4();
 
     return true;
 }
@@ -205,11 +207,22 @@ int main(int argc, char* argv[])
         {
             argv++;
             argc--;
-
+            
+            if(imc.eventCount <= 3 )
+	    {
             if (addEvent(*argv, imc, cha, iio) == false)
             {
                 exit(EXIT_FAILURE);
             }
+	    }else
+	    {
+		use_imc_pmon_cnt4 = true;
+            	if (addEvent_imc_pmon_cnt4("imc/config=0x0000000000000080,name=UNC_M_RPQ_OCCUPANCY_PCH0", imc, cha, iio) == false)
+            	{
+                exit(EXIT_FAILURE);
+            	}
+
+	    }
 
             continue;
         }
@@ -226,6 +239,7 @@ int main(int argc, char* argv[])
         }
 	else if (strncmp(*argv, "-s", 2) == 0)
 	{
+            use_imc_pmon_cnt4 = true;
 	    //specified parameters
 	    if (addEvent("imc/config=0x000000000000f005,name=UNC_M_CAS_COUNT.WR", imc, cha, iio) == false)
             {
@@ -236,11 +250,11 @@ int main(int argc, char* argv[])
                 exit(EXIT_FAILURE);
             }
 
-	    if (addEvent("imc/config=0x0000000000000082,name=UNC_M_WPQ_OCCUPANCY_PCH0", imc, cha, iio) == false)
+	    /*if (addEvent("imc/config=0x0000000000000082,name=UNC_M_WPQ_OCCUPANCY_PCH0", imc, cha, iio) == false)
             {
                 exit(EXIT_FAILURE);
-            }
-	    if (addEvent("imc/config=0x0000000000000080,name=UNC_M_RPQ_OCCUPANCY_PCH0", imc, cha, iio) == false)
+            }*/
+            if (addEvent("imc/config=0x0000000000000080,name=UNC_M_RPQ_OCCUPANCY_PCH0", imc, cha, iio) == false)
             {
                 exit(EXIT_FAILURE);
             }
@@ -275,8 +289,20 @@ int main(int argc, char* argv[])
         // iio.printFR();
         //chaPost(cha, tot_sample_in_sec, "iobw");
         chaPost(cha, tot_sample_in_sec, "latency");
-        imcPost(imc, tot_sample_in_sec);
+
+        if (use_imc_pmon_cnt4)
+	{
+         if (imc.eventCount > 1 )
+            {
+            imcPost(imc, tot_sample_in_sec);
+	    }
+        
         imcPost_pmon_cnt4(imc, tot_sample_in_sec);
+        }else
+        {
+        imcPost(imc, tot_sample_in_sec);
+        }
+
         iioPost(iio, tot_sample_in_sec);
     }
 }
