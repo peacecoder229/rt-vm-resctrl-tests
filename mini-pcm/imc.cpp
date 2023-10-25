@@ -104,10 +104,11 @@ bool IMC::program(std::string configStr){
 
 bool IMC::program_imc_pmon_cnt4(){
 
+    char pmon_cnt=4;
     uint32 event=0x80;
     names.push_back("UNC_M_RPQ_OCCUPANCY_PCH0");
 
-    char pmon_cnt=4;
+    /* all 8 channels get one event sampling
     for (auto& imcPMUsPerSocket : imcPMUs)
     {
         for (auto& imcPMU : imcPMUsPerSocket)
@@ -117,6 +118,19 @@ bool IMC::program_imc_pmon_cnt4(){
                 *ctrl = event;
         }
     }
+    */
+    /*all 8 channels get 4 event, more channel space between the same event sampling, get more accurate result*/
+             *(imcPMUs[0][0].counterControl[pmon_cnt])=0xf005;
+             *(imcPMUs[0][4].counterControl[pmon_cnt])=0xf005;
+
+             *(imcPMUs[0][1].counterControl[pmon_cnt])=0xcf05;
+             *(imcPMUs[0][5].counterControl[pmon_cnt])=0xcf05;
+
+             *(imcPMUs[0][2].counterControl[pmon_cnt])=0x0082;
+             *(imcPMUs[0][6].counterControl[pmon_cnt])=0x0082;
+
+             *(imcPMUs[0][3].counterControl[pmon_cnt])=0x0080;
+             *(imcPMUs[0][7].counterControl[pmon_cnt])=0x0080;
 
     eventCount++;
     return true;
@@ -284,7 +298,6 @@ void IMC::print()
 
     if(eventCount == 0) return;
 
-    std::cout<<"===============================================================print"<<std::endl;
     if (M.empty()){
         M.resize(eventCount);
         for(int i = 0; i < eventCount; ++i){

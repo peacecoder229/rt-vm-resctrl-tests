@@ -181,6 +181,8 @@ inline void imcPost(pcm::IMC& imc, double n_sample_in_sec)
 		}
 
 		tbw=(((wbw + rbw) * 64) / 1e9) * n_sample_in_sec;
+
+		printf("PmonCNT0~CNT3:", soc);
 		printf("  socket%d_BW=", soc);
 		printf("%.2f wr_bw=%.2f rd_bw=%.2f wpq=%.2f rpq=%.2f ", tbw, (wbw * 64 / 1e9)*n_sample_in_sec  , (rbw * 64 / 1e9)*n_sample_in_sec , (wpq / ddrcyclecount) , (rpq / ddrcyclecount));
 
@@ -216,18 +218,38 @@ inline void imcPost_pmon_cnt4(pcm::IMC& imc, double n_sample_in_sec)
     imc.getCounter(counter4, 4);
 
     for(int soc = 0; soc < pcm::sockets; soc++){
-		//double tbw = 0, rbw=0, wbw=0, wpq=0, rpq=0, pmoncnt4=0;
+		double tbw = 0, rbw=0, wbw=0, wpq=0, rpq=0;
                 double pmoncnt4=0;
-		//printf("  socket%d_BW=", soc);
+ 			/* more channel space between the same event sampling, get more accurate result*/
+                        wbw += (counter4[soc][0] - prev4[soc][0]);
+                        wbw += (counter4[soc][4] - prev4[soc][4]);
 
+                        rbw += (counter4[soc][1] - prev4[soc][1]);
+                        rbw += (counter4[soc][5] - prev4[soc][5]);
+
+                        wpq += (counter4[soc][2] - prev4[soc][2]);
+                        wpq += (counter4[soc][6] - prev4[soc][6]);
+
+                        rpq += (counter4[soc][3] - prev4[soc][3]);
+                        rpq += (counter4[soc][7] - prev4[soc][7]);
+
+		wbw = wbw*4;
+		rbw = rbw*4;
+		wpq = wpq*4;
+		rpq = rpq*4;
+
+		tbw=(((wbw + rbw) * 64) / 1e9) * n_sample_in_sec;
+		
+		printf("PmonCNT4 only:");
+		printf("  socket%d_BW=", soc);
+		printf("%.2f wr_bw=%.2f rd_bw=%.2f wpq=%.2f rpq=%.2f ", tbw, (wbw * 64 / 1e9)*n_sample_in_sec  , (rbw * 64 / 1e9)*n_sample_in_sec , (wpq / ddrcyclecount) , (rpq / ddrcyclecount));
+
+/*all 8 channels pmon cnt4 sample same event
 		for(int i = 0; i < counter4[soc].size(); i++){
 		        pmoncnt4 += (counter4[soc][i] - prev4[soc][i]);
 			std::cout <<"counter4["<<soc<<"]["<<i<<"]"<< std::hex <<counter4[soc][i]<< "prev4[soc][i])="<< prev4[soc][i] <<"pmoncnt4_delta="<< (counter4[soc][i] - prev4[soc][i])<<std::endl;
 		}
-
-		//tbw=(((wbw + rbw) * 64) / 1e9) * n_sample_in_sec;
-		//printf("  socket%d_BW=", soc);
-		//printf("%.2f wr_bw=%.2f rd_bw=%.2f wpq=%.2f rpq=%.2f ", tbw, (wbw * 64 / 1e9)*n_sample_in_sec  , (rbw * 64 / 1e9)*n_sample_in_sec , (wpq / ddrcyclecount) , (rpq / ddrcyclecount));
+*/
 
     }
     printf("\n");

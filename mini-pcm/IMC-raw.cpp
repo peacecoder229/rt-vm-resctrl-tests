@@ -250,10 +250,10 @@ int main(int argc, char* argv[])
                 exit(EXIT_FAILURE);
             }
 
-	    /*if (addEvent("imc/config=0x0000000000000082,name=UNC_M_WPQ_OCCUPANCY_PCH0", imc, cha, iio) == false)
+	    if (addEvent("imc/config=0x0000000000000082,name=UNC_M_WPQ_OCCUPANCY_PCH0", imc, cha, iio) == false)
             {
                 exit(EXIT_FAILURE);
-            }*/
+            }
             if (addEvent("imc/config=0x0000000000000080,name=UNC_M_RPQ_OCCUPANCY_PCH0", imc, cha, iio) == false)
             {
                 exit(EXIT_FAILURE);
