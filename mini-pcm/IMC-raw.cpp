@@ -241,7 +241,7 @@ int main(int argc, char* argv[])
 	{
             use_imc_pmon_cnt4 = true;
 	    //specified parameters
-	    if (addEvent("imc/config=0x000000000000f005,name=UNC_M_CAS_COUNT.WR", imc, cha, iio) == false)
+	    /*if (addEvent("imc/config=0x000000000000f005,name=UNC_M_CAS_COUNT.WR", imc, cha, iio) == false)
             {
                 exit(EXIT_FAILURE);
             }
@@ -257,7 +257,7 @@ int main(int argc, char* argv[])
             if (addEvent("imc/config=0x0000000000000080,name=UNC_M_RPQ_OCCUPANCY_PCH0", imc, cha, iio) == false)
             {
                 exit(EXIT_FAILURE);
-            }
+            }*/
 	    if (addEvent_imc_pmon_cnt4("imc/config=0x0000000000000080,name=UNC_M_RPQ_OCCUPANCY_PCH0", imc, cha, iio) == false)
             {
                 exit(EXIT_FAILURE);
@@ -281,7 +281,7 @@ int main(int argc, char* argv[])
         //::sleep(delay);
 	actualmicro =  calibratedMicroSeconds(dlymicro);
 	double tot_sample_in_sec = 1e6 / actualmicro;
-	std::cout << "Actual sleep duration: " << actualmicro << " microseconds and total samples in seconds is " << tot_sample_in_sec << "\n"  ;
+	//std::cout << "Actual sleep duration: " << actualmicro << " microseconds and total samples in seconds is " << tot_sample_in_sec << "\n"  ;
 
         // imc.print();
         // cha.print();

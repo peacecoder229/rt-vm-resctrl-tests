@@ -108,7 +108,7 @@ bool IMC::program_imc_pmon_cnt4(){
     uint32 event=0x80;
     names.push_back("UNC_M_RPQ_OCCUPANCY_PCH0");
 
-    /* all 8 channels get one event sampling
+    /* all 8 channels get one event sampling */
     for (auto& imcPMUsPerSocket : imcPMUs)
     {
         for (auto& imcPMU : imcPMUsPerSocket)
@@ -118,7 +118,7 @@ bool IMC::program_imc_pmon_cnt4(){
                 *ctrl = event;
         }
     }
-    */
+
     /*all 8 channels get 4 event, more channel space between the same event sampling, get more accurate result*/
              *(imcPMUs[0][0].counterControl[pmon_cnt])=0xf005;
              *(imcPMUs[0][4].counterControl[pmon_cnt])=0xf005;

@@ -232,7 +232,16 @@ inline void imcPost_pmon_cnt4(pcm::IMC& imc, double n_sample_in_sec)
 
                         rpq += (counter4[soc][3] - prev4[soc][3]);
                         rpq += (counter4[soc][7] - prev4[soc][7]);
+#if 0
+//debug the pmon counter 4 raw data
+                for(int i = 0; i < 8; i++){
 
+                        std::cout <<"counter4[soc]["<<i<<"]"<< std::hex <<counter4[soc][i]<< "prev4[soc][i])="<< std::hex << prev4[soc][i] <<"rpq_delta="<< (counter4[soc][i] - prev4[soc][i])<<std::endl;
+                }
+
+#endif
+
+#if 1
 		wbw = wbw*4;
 		rbw = rbw*4;
 		wpq = wpq*4;
@@ -243,6 +252,11 @@ inline void imcPost_pmon_cnt4(pcm::IMC& imc, double n_sample_in_sec)
 		printf("PmonCNT4 only:");
 		printf("  socket%d_BW=", soc);
 		printf("%.2f wr_bw=%.2f rd_bw=%.2f wpq=%.2f rpq=%.2f ", tbw, (wbw * 64 / 1e9)*n_sample_in_sec  , (rbw * 64 / 1e9)*n_sample_in_sec , (wpq / ddrcyclecount) , (rpq / ddrcyclecount));
+#else
+		printf("rpq=%.2f \n", ( (wbw+rbw+wpq+rpq) / ddrcyclecount));
+#endif
+
+
 
 /*all 8 channels pmon cnt4 sample same event
 		for(int i = 0; i < counter4[soc].size(); i++){
